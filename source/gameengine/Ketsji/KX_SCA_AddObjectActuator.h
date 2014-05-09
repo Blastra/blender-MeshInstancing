@@ -87,6 +87,7 @@ public:
 		bool linv_local,
 		const float *angvel,
 		bool angv_local
+		
 	);
 
 	~KX_SCA_AddObjectActuator(void);

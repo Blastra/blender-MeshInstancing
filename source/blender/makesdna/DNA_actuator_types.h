@@ -20,10 +20,10 @@
  *
  * The Original Code is: all of this file.
  *
- * Contributor(s): none yet.
+ * Contributor(s):  Rakholl.
  *
  * ***** END GPL LICENSE BLOCK *****
- */
+ *
 
 /** \file DNA_actuator_types.h
  *  \ingroup DNA
@@ -45,7 +45,7 @@ struct Text;
 /* unused now, moved to editobjectactuator in 2.02. Still needed for dna */
 typedef struct bAddObjectActuator {
 	int time, pad;
-	struct Object *ob;
+	struct Object *ob;	
 } bAddObjectActuator;
 
 typedef struct bActionActuator {
@@ -87,7 +87,7 @@ typedef struct bSoundActuator {
 } bSoundActuator;
 
 typedef struct bEditObjectActuator {
-	int time;
+	int time;	
 	short type, flag;
 	struct Object *ob;
 	struct Mesh *me;
@@ -97,6 +97,8 @@ typedef struct bEditObjectActuator {
 	float mass;
 	short localflag; /* flag for the lin & ang. vel: apply locally   */
 	short dyn_operation;
+	short instancedProduction;
+	
 } bEditObjectActuator;
 
 typedef struct bSceneActuator {

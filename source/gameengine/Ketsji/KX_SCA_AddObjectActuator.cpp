@@ -51,7 +51,8 @@ KX_SCA_AddObjectActuator::KX_SCA_AddObjectActuator(SCA_IObject *gameobj,
 												   const float *linvel,
 												   bool linv_local,
 												   const float *angvel,
-												   bool angv_local)
+												   bool angv_local
+												   )
 	: 
 	SCA_IActuator(gameobj, KX_ACT_ADD_OBJECT),
 	m_OriginalObject(original),
