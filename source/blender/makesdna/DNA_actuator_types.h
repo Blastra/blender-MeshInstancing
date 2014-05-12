@@ -25,7 +25,7 @@
  * ***** END GPL LICENSE BLOCK *****
  *
 
-/** \file DNA_actuator_types.h
+ ** \file DNA_actuator_types.h
  *  \ingroup DNA
  *
  * #bActuator type is specifically for use by Object logic-bricks in the game-engine.
@@ -98,6 +98,7 @@ typedef struct bEditObjectActuator {
 	short localflag; /* flag for the lin & ang. vel: apply locally   */
 	short dyn_operation;
 	short instancedProduction;
+	char pad[2], pad2[4];
 	
 } bEditObjectActuator;
 
