@@ -97,8 +97,8 @@ typedef struct bEditObjectActuator {
 	float mass;
 	short localflag; /* flag for the lin & ang. vel: apply locally   */
 	short dyn_operation;
-	short instancedProduction;
-	char pad[2], pad2[4];
+	char instancedProduction;
+	char pad,pad2[2],pad3[4];
 	
 } bEditObjectActuator;
 
@@ -441,8 +441,7 @@ typedef struct bActuator {
 #define ACT_EDOB_SET_MASS		4
 
 /* editObjectActuator->instancedProduction */
-#define ACT_INSTANCEDPROD_OFF	0
-#define ACT_INSTANCEDPROD_ON	1
+#define ACT_INSTANCEDPROD	1
 
 /* SceneActuator->type */
 #define ACT_SCENE_RESTART		0

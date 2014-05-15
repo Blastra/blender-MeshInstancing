@@ -1698,6 +1698,8 @@ static void draw_actuator_edit_object(uiLayout *layout, PointerRNA *ptr)
 			row = uiLayoutRow(split, false);
 			uiItemR(row, ptr, "angular_velocity", 0, NULL, ICON_NONE);
 			uiItemR(split, ptr, "use_local_angular_velocity", UI_ITEM_R_TOGGLE, NULL, ICON_NONE);
+			row = uiLayoutRow(layout, false);
+			uiItemR(row, ptr, "instanced_production", 0, NULL, ICON_NONE);
 			break;
 		case ACT_EDOB_END_OBJECT:
 			break;

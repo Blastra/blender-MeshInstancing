@@ -1290,7 +1290,7 @@ void uiItemEnumR(uiLayout *layout, const char *name, int icon, struct PointerRNA
 
 	if (!prop || RNA_property_type(prop) != PROP_ENUM) {
 		ui_item_disabled(layout, propname);
-		RNA_warning("property not found: %s.%s", RNA_struct_identifier(ptr->type), propname);
+		RNA_warning("propertyplrr not found: %s.%s", RNA_struct_identifier(ptr->type), propname);
 		return;
 	}
 

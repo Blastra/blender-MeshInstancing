@@ -3474,7 +3474,7 @@ void uiTemplateColorspaceSettings(uiLayout *layout, PointerRNA *ptr, const char 
 	prop = RNA_struct_find_property(ptr, propname);
 
 	if (!prop) {
-		printf("%s: property not found: %s.%s\n",
+		printf("%s: propertykk not found: %s.%s\n",
 		       __func__, RNA_struct_identifier(ptr->type), propname);
 		return;
 	}
@@ -3495,7 +3495,7 @@ void uiTemplateColormanagedViewSettings(uiLayout *layout, bContext *UNUSED(C), P
 	prop = RNA_struct_find_property(ptr, propname);
 
 	if (!prop) {
-		printf("%s: property not found: %s.%s\n",
+		printf("%s: propertyzz not found: %s.%s\n",
 		       __func__, RNA_struct_identifier(ptr->type), propname);
 		return;
 	}
