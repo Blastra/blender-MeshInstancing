@@ -4337,7 +4337,7 @@ static int texture_paint_camera_project_exec(bContext *C, wmOperator *op)
 	scene->toolsettings->imapaint.flag |= IMAGEPAINT_DRAWING;
 
 	ED_undo_paint_push_begin(UNDO_PAINT_IMAGE, op->type->name,
-	                      ED_image_undo_restore, ED_image_undo_free);
+	                         ED_image_undo_restore, ED_image_undo_free);
 
 	/* allocate and initialize spatial data structures */
 	project_paint_begin(&ps);
@@ -4390,6 +4390,7 @@ void PAINT_OT_project_image(wmOperatorType *ot)
 
 	prop = RNA_def_enum(ot->srna, "image", DummyRNA_NULL_items, 0, "Image", "");
 	RNA_def_enum_funcs(prop, RNA_image_itemf);
+	RNA_def_property_flag(prop, PROP_ENUM_NO_TRANSLATE);
 	ot->prop = prop;
 }
 

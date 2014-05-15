@@ -1237,6 +1237,16 @@ bool KX_BlenderSceneConverter::FreeBlendFile(struct Main *maggie)
 								gameobj->RemoveMeshes(); /* XXX - slack, should only remove meshes that are library items but mostly objects only have 1 mesh */
 								break;
 							}
+							else {
+								/* also free the mesh if it's using a tagged material */
+								int mat_index = mesh->NumMaterials();
+								while (mat_index--) {
+									if (IS_TAGGED(mesh->GetMeshMaterial(mat_index)->m_bucket->GetPolyMaterial()->GetBlenderMaterial())) {
+										gameobj->RemoveMeshes(); /* XXX - slack, same as above */
+										break;
+									}
+								}
+							}
 						}
 
 						/* make sure action actuators are not referencing tagged actions */
@@ -1372,10 +1382,42 @@ bool KX_BlenderSceneConverter::FreeBlendFile(struct Main *maggie)
 	}
 
 	vector<pair<KX_Scene*,RAS_MeshObject*> >::iterator meshit;
+	RAS_BucketManager::BucketList::iterator bit;
+	list<RAS_MeshSlot>::iterator msit;
+	RAS_BucketManager::BucketList buckets;
+
 	size = m_meshobjects.size();
 	for (i=0, meshit=m_meshobjects.begin(); i<size; ) {
 		RAS_MeshObject *me= (*meshit).second;
 		if (IS_TAGGED(me->GetMesh())) {
+			// Before deleting the mesh object, make sure the rasterizer is
+			// no longer referencing it.
+			buckets = meshit->first->GetBucketManager()->GetSolidBuckets();
+			for (bit=buckets.begin(); bit!=buckets.end(); bit++) {
+				msit = (*bit)->msBegin();
+
+				while (msit != (*bit)->msEnd()) {
+					if (msit->m_mesh == meshit->second)
+						(*bit)->RemoveMesh(&(*msit++));
+					else
+						msit++;
+				}
+			}
+
+			// And now the alpha buckets
+			buckets = meshit->first->GetBucketManager()->GetAlphaBuckets();
+			for (bit=buckets.begin(); bit!=buckets.end(); bit++) {
+				msit = (*bit)->msBegin();
+
+				while (msit != (*bit)->msEnd()) {
+					if (msit->m_mesh == meshit->second)
+						(*bit)->RemoveMesh(&(*msit++));
+					else
+						msit++;
+				}
+			}
+
+			// Now it should be safe to delete
 			delete (*meshit).second;
 			*meshit = m_meshobjects.back();
 			m_meshobjects.pop_back();
@@ -1458,6 +1500,20 @@ RAS_MeshObject *KX_BlenderSceneConverter::ConvertMeshSpecial(KX_Scene* kx_scene,
 {
 	/* Find a mesh in the current main */
 	ID *me= static_cast<ID *>(BLI_findstring(&m_maggie->mesh, name, offsetof(ID, name) + 2));
+	Main *from_maggie = m_maggie;
+
+	if (me == NULL) {
+		// The mesh wasn't in the current main, try any dynamic (i.e., LibLoaded) ones
+		vector<Main*>::iterator it;
+
+		for (it = GetMainDynamic().begin(); it != GetMainDynamic().end(); it++) {
+			me = static_cast<ID *>(BLI_findstring(&(*it)->mesh, name, offsetof(ID, name) + 2));
+			from_maggie = *it;
+
+			if (me)
+				break;
+		}
+	}
 	
 	if (me==NULL) {
 		printf("Could not be found \"%s\"\n", name);
@@ -1467,10 +1523,10 @@ RAS_MeshObject *KX_BlenderSceneConverter::ConvertMeshSpecial(KX_Scene* kx_scene,
 	/* Watch this!, if its used in the original scene can cause big troubles */
 	if (me->us > 0) {
 		printf("Mesh has a user \"%s\"\n", name);
-		me = (ID*)BKE_mesh_copy((Mesh*)me);
+		me = (ID*)BKE_mesh_copy_ex(from_maggie, (Mesh*)me);
 		me->us--;
 	}
-	BLI_remlink(&m_maggie->mesh, me); /* even if we made the copy it needs to be removed */
+	BLI_remlink(&from_maggie->mesh, me); /* even if we made the copy it needs to be removed */
 	BLI_addtail(&maggie->mesh, me);
 
 	
@@ -1496,7 +1552,7 @@ RAS_MeshObject *KX_BlenderSceneConverter::ConvertMeshSpecial(KX_Scene* kx_scene,
 				mat_new->id.flag |= LIB_DOIT;
 				mat_old->id.us--;
 				
-				BLI_remlink(&m_maggie->mat, mat_new);
+				BLI_remlink(&G.main->mat, mat_new); // BKE_material_copy uses G.main, and there is no BKE_material_copy_ex
 				BLI_addtail(&maggie->mat, mat_new);
 				
 				mesh->mat[i] = mat_new;
@@ -1512,7 +1568,8 @@ RAS_MeshObject *KX_BlenderSceneConverter::ConvertMeshSpecial(KX_Scene* kx_scene,
 			}
 		}
 	}
-	
+
+	m_currentScene = kx_scene; // This needs to be set in case we LibLoaded earlier
 	RAS_MeshObject *meshobj = BL_ConvertMesh((Mesh *)me, NULL, kx_scene, this, false);
 	kx_scene->GetLogicManager()->RegisterMeshName(meshobj->GetName(),meshobj);
 	m_map_mesh_to_gamemesh.clear(); /* This is at runtime so no need to keep this, BL_ConvertMesh adds */

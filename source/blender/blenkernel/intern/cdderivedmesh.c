@@ -222,24 +222,39 @@ static const MeshElemMap *cdDM_getPolyMap(Object *ob, DerivedMesh *dm)
 	return cddm->pmap;
 }
 
+static bool check_sculpt_object_deformed(Object *object, bool for_construction)
+{
+	bool deformed = false;
+
+	/* Active modifiers means extra deformation, which can't be handled correct
+	 * on birth of PBVH and sculpt "layer" levels, so use PBVH only for internal brush
+	 * stuff and show final DerivedMesh so user would see actual object shape.
+	 */
+	deformed |= object->sculpt->modifiers_active;
+
+	if (for_construction) {
+		deformed |= object->sculpt->kb != NULL;
+	}
+	else {
+		/* As in case with modifiers, we can't synchronize deformation made against
+		 * PBVH and non-locked keyblock, so also use PBVH only for brushes and
+		 * final DM to give final result to user.
+		 */
+		deformed |= object->sculpt->kb && (object->shapeflag & OB_SHAPE_LOCK) == 0;
+	}
+
+	return deformed;
+}
+
 static bool can_pbvh_draw(Object *ob, DerivedMesh *dm)
 {
 	CDDerivedMesh *cddm = (CDDerivedMesh *) dm;
 	Mesh *me = ob->data;
-	int deformed = 0;
+	bool deformed = check_sculpt_object_deformed(ob, false);
 
-	/* active modifiers means extra deformation, which can't be handled correct
-	 * on birth of PBVH and sculpt "layer" levels, so use PBVH only for internal brush
-	 * stuff and show final DerivedMesh so user would see actual object shape */
-	deformed |= ob->sculpt->modifiers_active;
-
-	/* as in case with modifiers, we can't synchronize deformation made against
-	 * PBVH and non-locked keyblock, so also use PBVH only for brushes and
-	 * final DM to give final result to user */
-	deformed |= ob->sculpt->kb && (ob->shapeflag & OB_SHAPE_LOCK) == 0;
-
-	if (deformed)
-		return 0;
+	if (deformed) {
+		return false;
+	}
 
 	return cddm->mvert == me->mvert || ob->sculpt->kb;
 }
@@ -279,9 +294,8 @@ static PBVH *cdDM_getPBVH(Object *ob, DerivedMesh *dm)
 	 * this derivedmesh is just original mesh. it's the multires subsurf dm
 	 * that this is actually for, to support a pbvh on a modified mesh */
 	if (!cddm->pbvh && ob->type == OB_MESH) {
-		SculptSession *ss = ob->sculpt;
 		Mesh *me = ob->data;
-		int deformed = 0;
+		bool deformed;
 
 		cddm->pbvh = BKE_pbvh_new();
 		cddm->pbvh_draw = can_pbvh_draw(ob, dm);
@@ -293,7 +307,7 @@ static PBVH *cdDM_getPBVH(Object *ob, DerivedMesh *dm)
 
 		pbvh_show_diffuse_color_set(cddm->pbvh, ob->sculpt->show_diffuse_color);
 
-		deformed = ss->modifiers_active || me->key;
+		deformed = check_sculpt_object_deformed(ob, true);
 
 		if (deformed && ob->derivedDeform) {
 			DerivedMesh *deformdm = ob->derivedDeform;
@@ -583,7 +597,6 @@ static void cdDM_drawFacesSolid(DerivedMesh *dm,
 						glNormal3sv((const GLshort *)lnors[0][3]);
 						glVertex3fv(mvert[mface->v4].co);
 					}
-					lnors++;
 				}
 				else if (shademodel == GL_FLAT) {
 					if (nors) {
@@ -621,7 +634,10 @@ static void cdDM_drawFacesSolid(DerivedMesh *dm,
 				}
 			}
 
-			if (nors) nors += 3;
+			if (nors)
+				nors += 3;
+			if (lnors)
+				lnors++;
 		}
 		glEnd();
 	}
@@ -785,11 +801,13 @@ static void cdDM_drawFacesTex_common(DerivedMesh *dm,
 					else if (mf->flag & ME_SMOOTH) glNormal3sv(mvert->no);
 					glVertex3fv(mvert->co);
 				}
-				if (lnors) lnors++;
 				glEnd();
 			}
 			
-			if (nors) nors += 3;
+			if (nors)
+				nors += 3;
+			if (lnors)
+				lnors++;
 		}
 	}
 	else { /* use OpenGL VBOs or Vertex Arrays instead for better, faster rendering */
@@ -959,7 +977,6 @@ static void cdDM_drawMappedFaces(DerivedMesh *dm,
 						glNormal3sv((const GLshort *)lnors[0][3]);
 						glVertex3fv(mv[mf->v4].co);
 					}
-					lnors++;
 				}
 				else if (!drawSmooth) {
 					if (nors) {
@@ -1010,7 +1027,10 @@ static void cdDM_drawMappedFaces(DerivedMesh *dm,
 					glDisable(GL_POLYGON_STIPPLE);
 			}
 			
-			if (nors) nors += 3;
+			if (nors)
+				nors += 3;
+			if (lnors)
+				lnors++;
 		}
 	}
 	else { /* use OpenGL VBOs or Vertex Arrays instead for better, faster rendering */

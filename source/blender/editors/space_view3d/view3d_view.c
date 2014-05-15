@@ -782,7 +782,7 @@ void ED_view3d_polygon_offset(const RegionView3D *rv3d, const float dist)
 }
 
 /**
- * \param rect, optional for picking (can be NULL).
+ * \param rect optional for picking (can be NULL).
  */
 void view3d_winmatrix_set(ARegion *ar, View3D *v3d, rctf *rect)
 {
@@ -1407,6 +1407,11 @@ static int localview_exec(bContext *C, wmOperator *op)
 	if (changed) {
 		DAG_id_type_tag(bmain, ID_OB);
 		ED_area_tag_redraw(sa);
+
+		/* unselected objects become selected when exiting */
+		if (v3d->localvd == NULL) {
+			WM_event_add_notifier(C, NC_SCENE | ND_OB_SELECT, scene);
+		}
 
 		return OPERATOR_FINISHED;
 	}

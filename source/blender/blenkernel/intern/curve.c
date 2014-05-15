@@ -717,7 +717,7 @@ void BKE_nurb_bezierPoints_add(Nurb *nu, int number)
 	BezTriple *bezt;
 	int i;
 
-	nu->bezt = MEM_recallocN(nu->bp, (nu->pntsu + number) * sizeof(BezTriple));
+	nu->bezt = MEM_recallocN(nu->bezt, (nu->pntsu + number) * sizeof(BezTriple));
 
 	for (i = 0, bezt = &nu->bezt[nu->pntsu]; i < number; i++, bezt++) {
 		bezt->radius = 1.0f;
@@ -2899,7 +2899,7 @@ static void calchandleNurb_intern(BezTriple *bezt, BezTriple *prev, BezTriple *n
 	float *p1, *p2, *p3, pt[3];
 	float dvec_a[3], dvec_b[3];
 	float len, len_a, len_b;
-	float orig_len_ratio;
+	float len_ratio;
 	const float eps = 1e-5;
 
 	if (bezt->h1 == 0 && bezt->h2 == 0) {
@@ -2944,7 +2944,7 @@ static void calchandleNurb_intern(BezTriple *bezt, BezTriple *prev, BezTriple *n
 	if (len_a == 0.0f) len_a = 1.0f;
 	if (len_b == 0.0f) len_b = 1.0f;
 
-	orig_len_ratio = len_a / len_b;
+	len_ratio = len_a / len_b;
 
 	if (ELEM(bezt->h1, HD_AUTO, HD_AUTO_ANIM) || ELEM(bezt->h2, HD_AUTO, HD_AUTO_ANIM)) {    /* auto */
 		float tvec[3];
@@ -3079,13 +3079,21 @@ static void calchandleNurb_intern(BezTriple *bezt, BezTriple *prev, BezTriple *n
 		return;
 	}
 
-	len_a = len_v3v3(p2, p2_h1);
-	len_b = len_v3v3(p2, p2_h2);
+	if (is_fcurve == false) {
+		len_a = len_v3v3(p2, p2_h1);
+		len_b = len_v3v3(p2, p2_h2);
+
+		if (len_a == 0.0f)
+			len_a = 1.0f;
+		if (len_b == 0.0f)
+			len_b = 1.0f;
+		len_ratio = len_a / len_b;
+	}
 
 	if (bezt->f1 & SELECT) { /* order of calculation */
 		if (ELEM(bezt->h2, HD_ALIGN, HD_ALIGN_DOUBLESIDE)) { /* aligned */
 			if (len_a > eps) {
-				len = 1.0f / orig_len_ratio;
+				len = 1.0f / len_ratio;
 				p2_h2[0] = p2[0] + len * (p2[0] - p2_h1[0]);
 				p2_h2[1] = p2[1] + len * (p2[1] - p2_h1[1]);
 				p2_h2[2] = p2[2] + len * (p2[2] - p2_h1[2]);
@@ -3093,7 +3101,7 @@ static void calchandleNurb_intern(BezTriple *bezt, BezTriple *prev, BezTriple *n
 		}
 		if (ELEM(bezt->h1, HD_ALIGN, HD_ALIGN_DOUBLESIDE)) {
 			if (len_b > eps) {
-				len = orig_len_ratio;
+				len = len_ratio;
 				p2_h1[0] = p2[0] + len * (p2[0] - p2_h2[0]);
 				p2_h1[1] = p2[1] + len * (p2[1] - p2_h2[1]);
 				p2_h1[2] = p2[2] + len * (p2[2] - p2_h2[2]);
@@ -3103,7 +3111,7 @@ static void calchandleNurb_intern(BezTriple *bezt, BezTriple *prev, BezTriple *n
 	else {
 		if (ELEM(bezt->h1, HD_ALIGN, HD_ALIGN_DOUBLESIDE)) {
 			if (len_b > eps) {
-				len = orig_len_ratio;
+				len = len_ratio;
 				p2_h1[0] = p2[0] + len * (p2[0] - p2_h2[0]);
 				p2_h1[1] = p2[1] + len * (p2[1] - p2_h2[1]);
 				p2_h1[2] = p2[2] + len * (p2[2] - p2_h2[2]);
@@ -3111,7 +3119,7 @@ static void calchandleNurb_intern(BezTriple *bezt, BezTriple *prev, BezTriple *n
 		}
 		if (ELEM(bezt->h2, HD_ALIGN, HD_ALIGN_DOUBLESIDE)) {   /* aligned */
 			if (len_a > eps) {
-				len = 1.0f / orig_len_ratio;
+				len = 1.0f / len_ratio;
 				p2_h2[0] = p2[0] + len * (p2[0] - p2_h1[0]);
 				p2_h2[1] = p2[1] + len * (p2[1] - p2_h1[1]);
 				p2_h2[2] = p2[2] + len * (p2[2] - p2_h1[2]);

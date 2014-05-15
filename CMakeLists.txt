@@ -820,6 +820,7 @@ if(UNIX AND NOT APPLE)
 							OUTPUT_VARIABLE LLVM_LIBPATH
 							OUTPUT_STRIP_TRAILING_WHITESPACE)
 			set(LLVM_LIBPATH ${LLVM_LIBPATH} CACHE PATH "Path to the LLVM library path")
+			mark_as_advanced(LLVM_LIBPATH)
 		endif()
 
 		if(LLVM_STATIC)
@@ -956,12 +957,8 @@ elseif(WIN32)
 	add_definitions(-DWIN32)
 
 	if(MSVC)
-		set(PLATFORM_LINKLIBS ws2_32 vfw32 winmm kernel32 user32 gdi32 comdlg32 advapi32 shfolder shell32 ole32 oleaut32 uuid psapi)
 
-		# MSVC11 SDL is not hard linked to dxguid.lib
-		if(MSVC11 AND WITH_SDL)
-			set(PLATFORM_LINKLIBS ${PLATFORM_LINKLIBS} dxguid)
-		endif()
+		set(PLATFORM_LINKLIBS ws2_32 vfw32 winmm kernel32 user32 gdi32 comdlg32 advapi32 shfolder shell32 ole32 oleaut32 uuid psapi)
 
 		add_definitions(
 			-D_CRT_NONSTDC_NO_DEPRECATE
@@ -1051,9 +1048,6 @@ elseif(WIN32)
 			if(MSVC12)
 				message(STATUS "Visual C++ 2013 detected.")
 				set(LIBDIR ${LIBDIR_BASE}_vc12)
-			elseif(MSVC11)
-				message(STATUS "Visual C++ 2012 detected.")
-				set(LIBDIR ${LIBDIR_BASE}_vc11)
 			else()
 				set(LIBDIR ${LIBDIR_BASE})
 			endif()
@@ -1087,6 +1081,9 @@ elseif(WIN32)
 			set(PNG_LIBPATH ${PNG}/lib) # not cmake defined
 		endif()
 
+		if(MSVC90)
+			set(JPEG_NAMES ${JPEG_NAMES} libjpeg)
+		endif()
 		find_package(jpeg REQUIRED)
 
 		set(PTHREADS_INCLUDE_DIRS ${LIBDIR}/pthreads/include)
@@ -1143,14 +1140,8 @@ elseif(WIN32)
 			find_package(FFMPEG)
 			if(NOT FFMPEG_FOUND)
 				message(WARNING "Using HARDCODED ffmpeg locations")
-				# MSVC11 FFMPEG libs are newer
-				if(MSVC11)
-					set(FFMPEG_LIBRARY_VERSION 54)
-					set(FFMPEG_LIBRARY_VERSION_AVU 52)
-				else()
-					set(FFMPEG_LIBRARY_VERSION 55)
-					set(FFMPEG_LIBRARY_VERSION_AVU 52)
-				endif()
+				set(FFMPEG_LIBRARY_VERSION 55)
+				set(FFMPEG_LIBRARY_VERSION_AVU 52)
 				set(FFMPEG_LIBRARIES
 					${LIBDIR}/ffmpeg/lib/avcodec-${FFMPEG_LIBRARY_VERSION}.lib
 					${LIBDIR}/ffmpeg/lib/avformat-${FFMPEG_LIBRARY_VERSION}.lib
@@ -1231,10 +1222,6 @@ elseif(WIN32)
 					set(BOOST_LIBPATH ${BOOST}/lib)
 					set(BOOST_POSTFIX "vc120-mt-s-1_55.lib")
 					set(BOOST_DEBUG_POSTFIX "vc120-mt-sgd-1_55.lib")
-				elseif(MSVC11)
-					set(BOOST_LIBPATH ${BOOST}/lib)
-					set(BOOST_POSTFIX "vc110-mt-s-1_53.lib")
-					set(BOOST_DEBUG_POSTFIX "vc110-mt-sgd-1_53.lib")
 				else()
 					set(BOOST_LIBPATH ${BOOST}/lib)
 					set(BOOST_POSTFIX "vc90-mt-s-1_49.lib")
@@ -1553,7 +1540,7 @@ elseif(WIN32)
 		set(OPENAL ${LIBDIR}/openal)
 		set(OPENALDIR ${LIBDIR}/openal)
 		set(OPENAL_INCLUDE_DIR ${OPENAL}/include)
-		if(MSVC11 OR MSVC12)
+		if(MSVC12)
 			set(OPENAL_LIBRARY openal32)
 		else()
 			set(OPENAL_LIBRARY wrap_oal)

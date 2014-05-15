@@ -34,12 +34,6 @@
 #include <stdio.h>
 #include <string.h>
 
-#ifndef WIN32
-#  include <unistd.h>
-#else
-#  include <io.h>
-#endif
-
 #include "MEM_guardedalloc.h"
 
 #include "DNA_anim_types.h"
@@ -475,6 +469,23 @@ Scene *BKE_scene_add(Main *bmain, const char *name)
 	sce->r.bake_normal_space = R_BAKE_SPACE_TANGENT;
 	sce->r.bake_samples = 256;
 	sce->r.bake_biasdist = 0.001;
+
+	sce->r.bake.flag = R_BAKE_CLEAR;
+	sce->r.bake.width = 512;
+	sce->r.bake.height = 512;
+	sce->r.bake.margin = 16;
+	sce->r.bake.normal_space = R_BAKE_SPACE_TANGENT;
+	sce->r.bake.normal_swizzle[0] = R_BAKE_POSX;
+	sce->r.bake.normal_swizzle[1] = R_BAKE_POSY;
+	sce->r.bake.normal_swizzle[2] = R_BAKE_POSZ;
+	BLI_strncpy(sce->r.bake.filepath, U.renderdir, sizeof(sce->r.bake.filepath));
+
+	sce->r.bake.im_format.planes = R_IMF_PLANES_RGBA;
+	sce->r.bake.im_format.imtype = R_IMF_IMTYPE_PNG;
+	sce->r.bake.im_format.depth = R_IMF_CHAN_DEPTH_8;
+	sce->r.bake.im_format.quality = 90;
+	sce->r.bake.im_format.compress = 15;
+
 	sce->r.scemode = R_DOCOMP | R_DOSEQ | R_EXTENSION;
 	sce->r.stamp = R_STAMP_TIME | R_STAMP_FRAME | R_STAMP_DATE | R_STAMP_CAMERA | R_STAMP_SCENE | R_STAMP_FILENAME | R_STAMP_RENDERTIME;
 	sce->r.stamp_font_id = 12;
@@ -1588,7 +1599,20 @@ void BKE_scene_update_tagged(EvaluationContext *eval_ctx, Main *bmain, Scene *sc
 				BKE_animsys_evaluate_animdata(scene, &material->id, adt, ctime, 0);
 		}
 	}
-	
+
+	/* Also do the same for node trees. */
+	if (DAG_id_type_tagged(bmain, ID_NT)) {
+		float ctime = BKE_scene_frame_get(scene);
+
+		FOREACH_NODETREE(bmain, ntree, id)
+		{
+			AnimData *adt = BKE_animdata_from_id(&ntree->id);
+			if (adt && (adt->recalc & ADT_RECALC_ANIM))
+				BKE_animsys_evaluate_animdata(scene, &ntree->id, adt, ctime, 0);
+		}
+		FOREACH_NODETREE_END
+	}
+
 	/* notify editors and python about recalc */
 	BLI_callback_exec(bmain, &scene->id, BLI_CB_EVT_SCENE_UPDATE_POST);
 	DAG_ids_check_recalc(bmain, scene, false);

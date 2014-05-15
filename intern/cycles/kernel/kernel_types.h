@@ -160,7 +160,35 @@ typedef uint RNG;
 
 typedef enum ShaderEvalType {
 	SHADER_EVAL_DISPLACE,
-	SHADER_EVAL_BACKGROUND
+	SHADER_EVAL_BACKGROUND,
+	/* bake types */
+	SHADER_EVAL_BAKE, /* no real shade, it's used in the code to
+	                   * differentiate the type of shader eval from the above
+	                   */
+	/* data passes */
+	SHADER_EVAL_NORMAL,
+	SHADER_EVAL_UV,
+	SHADER_EVAL_DIFFUSE_COLOR,
+	SHADER_EVAL_GLOSSY_COLOR,
+	SHADER_EVAL_TRANSMISSION_COLOR,
+	SHADER_EVAL_SUBSURFACE_COLOR,
+	SHADER_EVAL_EMISSION,
+
+	/* light passes */
+	SHADER_EVAL_AO,
+	SHADER_EVAL_COMBINED,
+	SHADER_EVAL_SHADOW,
+	SHADER_EVAL_DIFFUSE_DIRECT,
+	SHADER_EVAL_GLOSSY_DIRECT,
+	SHADER_EVAL_TRANSMISSION_DIRECT,
+	SHADER_EVAL_SUBSURFACE_DIRECT,
+	SHADER_EVAL_DIFFUSE_INDIRECT,
+	SHADER_EVAL_GLOSSY_INDIRECT,
+	SHADER_EVAL_TRANSMISSION_INDIRECT,
+	SHADER_EVAL_SUBSURFACE_INDIRECT,
+
+	/* extra */
+	SHADER_EVAL_ENVIRONMENT,
 } ShaderEvalType;
 
 /* Path Tracing
@@ -176,10 +204,8 @@ enum PathTraceDimension {
 	PRNG_UNUSED_0 = 5,
 	PRNG_UNUSED_1 = 6,	/* for some reason (6, 7) is a bad sobol pattern */
 	PRNG_UNUSED_2 = 7,  /* with a low number of samples (< 64) */
-	PRNG_BASE_NUM = 8,
-#else
-	PRNG_BASE_NUM = 4,
 #endif
+	PRNG_BASE_NUM = 8,
 
 	PRNG_BSDF_U = 0,
 	PRNG_BSDF_V = 1,
@@ -281,7 +307,8 @@ typedef enum PassType {
 	PASS_MIST = 2097152,
 	PASS_SUBSURFACE_DIRECT = 4194304,
 	PASS_SUBSURFACE_INDIRECT = 8388608,
-	PASS_SUBSURFACE_COLOR = 16777216
+	PASS_SUBSURFACE_COLOR = 16777216,
+	PASS_LIGHT = 33554432, /* no real pass, used to force use_light_pass */
 } PassType;
 
 #define PASS_ALL (~0)
