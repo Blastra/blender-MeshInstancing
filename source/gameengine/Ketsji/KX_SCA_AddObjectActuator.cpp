@@ -51,15 +51,18 @@ KX_SCA_AddObjectActuator::KX_SCA_AddObjectActuator(SCA_IObject *gameobj,
 												   const float *linvel,
 												   bool linv_local,
 												   const float *angvel,
-												   bool angv_local
-												   )
+												   bool angv_local,
+		
+		   bool instancedProduction	
+											   )
 	: 
 	SCA_IActuator(gameobj, KX_ACT_ADD_OBJECT),
 	m_OriginalObject(original),
 	m_scene(scene),
 	
 	m_localLinvFlag(linv_local),
-	m_localAngvFlag(angv_local)
+	m_localAngvFlag(angv_local),
+	m_instancedProduction(instancedProduction)
 {
 	m_linear_velocity[0] = linvel[0];
 	m_linear_velocity[1] = linvel[1];
@@ -73,6 +76,7 @@ KX_SCA_AddObjectActuator::KX_SCA_AddObjectActuator(SCA_IObject *gameobj,
 
 	m_lastCreatedObject = NULL;
 	m_timeProp = time;
+		
 } 
 
 
@@ -200,6 +204,7 @@ PyAttributeDef KX_SCA_AddObjectActuator::Attributes[] = {
 	KX_PYATTRIBUTE_INT_RW("time",0,2000,true,KX_SCA_AddObjectActuator,m_timeProp),
 	KX_PYATTRIBUTE_FLOAT_ARRAY_RW("linearVelocity",-FLT_MAX,FLT_MAX,KX_SCA_AddObjectActuator,m_linear_velocity,3),
 	KX_PYATTRIBUTE_FLOAT_ARRAY_RW("angularVelocity",-FLT_MAX,FLT_MAX,KX_SCA_AddObjectActuator,m_angular_velocity,3),
+	KX_PYATTRIBUTE_BOOL_RW("instancedProduction", KX_SCA_AddObjectActuator, m_instancedProduction),	
 	{ NULL }	//Sentinel
 };
 

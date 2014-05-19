@@ -66,7 +66,7 @@ class KX_SCA_AddObjectActuator : public SCA_IActuator
 	/// Apply the velocity locally 
 	bool m_localAngvFlag; 
 	
-	
+	bool m_instancedProduction;	
 	
 	
 	SCA_IObject*	m_lastCreatedObject;
@@ -86,8 +86,8 @@ public:
 		const float *linvel,
 		bool linv_local,
 		const float *angvel,
-		bool angv_local
-		
+		bool angv_local,
+		bool instancedProduction
 	);
 
 	~KX_SCA_AddObjectActuator(void);

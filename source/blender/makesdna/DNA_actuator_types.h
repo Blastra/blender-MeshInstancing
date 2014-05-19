@@ -425,6 +425,7 @@ typedef struct bActuator {
 /* editObjectActuator->localflag */
 #define ACT_EDOB_LOCAL_LINV		2
 #define ACT_EDOB_LOCAL_ANGV		4
+#define ACT_EDOB_INSTANCEDPROD   	5
 
 /* editObjectActuator->flag */
 #define ACT_TRACK_3D			1
@@ -440,8 +441,6 @@ typedef struct bActuator {
 #define ACT_EDOB_DISABLE_RB		3
 #define ACT_EDOB_SET_MASS		4
 
-/* editObjectActuator->instancedProduction */
-#define ACT_INSTANCEDPROD	1
 
 /* SceneActuator->type */
 #define ACT_SCENE_RESTART		0

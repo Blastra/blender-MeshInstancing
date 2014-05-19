@@ -183,6 +183,7 @@ void BL_ConvertActuators(const char* maggiename,
 				bitLocalFlag.CharacterJump = bool((obact->flag & ACT_CHAR_JUMP)!=0);
 				bitLocalFlag.AddOrSetLinV = bool((obact->flag & ACT_ADD_LIN_VEL)!=0);
 				bitLocalFlag.AddOrSetCharLoc = bool((obact->flag & ACT_ADD_CHAR_LOC)!=0);
+				bitLocalFlag.instancedProduction = bool((obact->flag & ACT_EDOB_INSTANCEDPROD) != 0);
 				if (obact->reference && bitLocalFlag.ServoControl)
 				{
 					obref = converter->FindGameObject(obact->reference);
@@ -499,7 +500,8 @@ void BL_ConvertActuators(const char* maggiename,
 						            editobact->linVelocity,
 						            (editobact->localflag & ACT_EDOB_LOCAL_LINV) != 0,
 						            editobact->angVelocity,
-						            (editobact->localflag & ACT_EDOB_LOCAL_ANGV) != 0);
+						            (editobact->localflag & ACT_EDOB_LOCAL_ANGV) != 0,
+							    editobact->instancedProduction);
 
 								//editobact->ob to gameobj
 								baseact = tmpaddact;

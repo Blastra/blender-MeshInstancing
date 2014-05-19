@@ -63,7 +63,8 @@ struct KX_LocalFlags {
 		ZeroDRot(false),
 		ZeroDLoc(false),
 		ZeroLinearVelocity(false),
-		ZeroAngularVelocity(false)
+		ZeroAngularVelocity(false),
+		instancedProduction(false)
 	{
 	}
 
@@ -84,6 +85,7 @@ struct KX_LocalFlags {
 	bool ZeroDLoc;
 	bool ZeroLinearVelocity;
 	bool ZeroAngularVelocity;
+	bool instancedProduction;
 };
 
 class KX_ObjectActuator : public SCA_IActuator
