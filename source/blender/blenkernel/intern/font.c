@@ -518,6 +518,24 @@ static float char_width(Curve *cu, VChar *che, CharInfo *info)
 	}
 }
 
+static void textbox_scale(TextBox *tb_dst, const TextBox *tb_src, float scale)
+{
+	tb_dst->x = tb_src->x * scale;
+	tb_dst->y = tb_src->y * scale;
+	tb_dst->w = tb_src->w * scale;
+	tb_dst->h = tb_src->h * scale;
+}
+
+/**
+ * Used for storing per-line data for alignment & wrapping.
+ */
+struct TempLineInfo {
+	float x_min;      /* left margin */
+	float x_max;      /* right margin */
+	int   char_nr;    /* number of characters */
+	int   wspace_nr;  /* number of whitespaces of line */
+};
+
 bool BKE_vfont_to_curve_ex(Main *bmain, Object *ob, int mode, ListBase *r_nubase,
                            const wchar_t **r_text, int *r_text_len, bool *r_text_free,
                            struct CharTrans **r_chartransdata)
@@ -528,18 +546,25 @@ bool BKE_vfont_to_curve_ex(Main *bmain, Object *ob, int mode, ListBase *r_nubase
 	VFont *vfont, *oldvfont;
 	VFontData *vfd = NULL;
 	CharInfo *info = NULL, *custrinfo;
-	TextBox *tb;
+	TextBox tb_scale;
+	bool use_textbox;
 	VChar *che;
 	struct CharTrans *chartransdata = NULL, *ct;
-	float *f, xof, yof, xtrax, linedist, *linedata, *linedata2, *linedata3, *linedata4;
+	struct TempLineInfo *lineinfo;
+	float *f, xof, yof, xtrax, linedist;
 	float twidth, maxlen = 0;
 	int i, slen, j;
 	int curbox;
 	int selstart, selend;
-	short cnr = 0, lnr = 0, wsnr = 0;
+	int cnr = 0, lnr = 0, wsnr = 0;
 	const wchar_t *mem;
 	wchar_t ascii;
 	bool ok = false;
+	const float xof_scale = cu->xof / cu->fsize;
+	const float yof_scale = cu->yof / cu->fsize;
+
+#define MARGIN_X_MIN (xof_scale + tb_scale.x)
+#define MARGIN_Y_MIN (yof_scale + tb_scale.y)
 
 	/* remark: do calculations including the trailing '\0' of a string
 	 * because the cursor can be at that location */
@@ -598,25 +623,26 @@ bool BKE_vfont_to_curve_ex(Main *bmain, Object *ob, int mode, ListBase *r_nubase
 	ct = chartransdata = MEM_callocN((slen + 1) * sizeof(struct CharTrans), "buildtext");
 
 	/* We assume the worst case: 1 character per line (is freed at end anyway) */
-
-	linedata  = MEM_mallocN(sizeof(float) * (slen * 2 + 1), "buildtext2");
-	linedata2 = MEM_mallocN(sizeof(float) * (slen * 2 + 1), "buildtext3");
-	linedata3 = MEM_callocN(sizeof(float) * (slen * 2 + 1), "buildtext4");
-	linedata4 = MEM_callocN(sizeof(float) * (slen * 2 + 1), "buildtext5");
+	lineinfo = MEM_mallocN(sizeof(*lineinfo) * (slen * 2 + 1), "lineinfo");
 	
 	linedist = cu->linedist;
 	
-	xof = cu->xof + (cu->tb[0].x / cu->fsize);
-	yof = cu->yof + (cu->tb[0].y / cu->fsize);
+	curbox = 0;
+	textbox_scale(&tb_scale, &cu->tb[curbox], 1.0f / cu->fsize);
+	use_textbox = (tb_scale.w != 0.0f);
+
+
+	xof = MARGIN_X_MIN;
+	yof = MARGIN_Y_MIN;
 
 	xtrax = 0.5f * cu->spacing - 0.5f;
 
 	oldvfont = NULL;
 
-	for (i = 0; i < slen; i++) custrinfo[i].flag &= ~(CU_CHINFO_WRAP | CU_CHINFO_SMALLCAPS_CHECK);
+	for (i = 0; i < slen; i++) {
+		custrinfo[i].flag &= ~(CU_CHINFO_WRAP | CU_CHINFO_SMALLCAPS_CHECK);
+	}
 
-	tb = &(cu->tb[0]);
-	curbox = 0;
 	for (i = 0; i <= slen; i++) {
 makebreak:
 		/* Characters in the list */
@@ -642,6 +668,7 @@ makebreak:
 		if (!vfd) {
 			MEM_freeN(chartransdata);
 			chartransdata = NULL;
+			MEM_freeN(lineinfo);
 			goto finally;
 		}
 
@@ -676,9 +703,9 @@ makebreak:
 		twidth = char_width(cu, che, info);
 
 		/* Calculate positions */
-		if ((tb->w != 0.0f) &&
+		if ((tb_scale.w != 0.0f) &&
 		    (ct->dobreak == 0) &&
-		    (((xof - (tb->x / cu->fsize) + twidth) * cu->fsize) > tb->w + cu->xof * cu->fsize))
+		    (((xof - tb_scale.x) + twidth) > xof_scale + tb_scale.w))
 		{
 			//		fprintf(stderr, "linewidth exceeded: %c%c%c...\n", mem[i], mem[i+1], mem[i+2]);
 			for (j = i; j && (mem[j] != '\n') && (chartransdata[j].dobreak == 0); j--) {
@@ -714,31 +741,33 @@ makebreak:
 
 			yof -= linedist;
 
-			linedata[lnr] = (xof - xtrax) - (tb->x / cu->fsize);
-			linedata2[lnr] = cnr;
-			linedata3[lnr] = tb->w / cu->fsize;
-			linedata4[lnr] = wsnr;
+			lineinfo[lnr].x_min     = (xof - xtrax) - tb_scale.x;
+			lineinfo[lnr].x_max     = tb_scale.w;
+			lineinfo[lnr].char_nr   = cnr;
+			lineinfo[lnr].wspace_nr = wsnr;
 
-			CLAMP_MIN(maxlen, linedata[lnr]);
+			CLAMP_MIN(maxlen, lineinfo[lnr].x_min);
 
-			if ((tb->h != 0.0f) &&
-			    ((-(yof - (tb->y / cu->fsize))) > ((tb->h / cu->fsize) - (linedist * cu->fsize)) - cu->yof) &&
-			    (cu->totbox > (curbox + 1)) )
+			if ((tb_scale.h != 0.0f) &&
+			    (cu->totbox > (curbox + 1)) &&
+			    ((-(yof - tb_scale.y)) > (tb_scale.h - (linedist * cu->fsize)) - yof_scale))
 			{
 				maxlen = 0;
-				tb++;
 				curbox++;
-				yof = cu->yof + tb->y / cu->fsize;
+
+				textbox_scale(&tb_scale, &cu->tb[curbox], 1.0f / cu->fsize);
+
+				yof = MARGIN_Y_MIN;
 			}
 
 			/* XXX, has been unused for years, need to check if this is useful, r4613 r5282 - campbell */
 #if 0
 			if (ascii == '\n')
-				xof = cu->xof;
+				xof = xof_scale;
 			else
-				xof = cu->xof + (tb->x / cu->fsize);
+				xof = MARGIN_X_MIN;
 #else
-			xof = cu->xof + (tb->x / cu->fsize);
+			xof = MARGIN_X_MIN;
 #endif
 			lnr++;
 			cnr = 0;
@@ -752,9 +781,9 @@ makebreak:
 			ct->linenr = lnr;
 			ct->charnr = cnr++;
 
-			tabfac = (xof - cu->xof + 0.01f);
+			tabfac = (xof - MARGIN_X_MIN + 0.01f);
 			tabfac = 2.0f * ceilf(tabfac / 2.0f);
-			xof = cu->xof + tabfac;
+			xof = MARGIN_X_MIN + tabfac;
 		}
 		else {
 			EditFontSelBox *sb = NULL;
@@ -799,44 +828,57 @@ makebreak:
 		if (ascii == '\n' || ct->dobreak) cu->lines++;
 	}
 
-	/* linedata is now: width of line
-	 * linedata2 is now: number of characters
-	 * linedata3 is now: maxlen of that line
-	 * linedata4 is now: number of whitespaces of line */
+	/* linedata is now: width of line */
 
 	if (cu->spacemode != CU_LEFT) {
 		ct = chartransdata;
 
 		if (cu->spacemode == CU_RIGHT) {
-			for (i = 0; i < lnr; i++) linedata[i] = (linedata3[i] - linedata[i]) + cu->xof;
+			struct TempLineInfo *li;
+
+			for (i = 0, li = lineinfo; i < lnr; i++, li++) {
+				li->x_min = (li->x_max - li->x_min) + xof_scale;
+			}
+
 			for (i = 0; i <= slen; i++) {
-				ct->xof += linedata[ct->linenr];
+				ct->xof += lineinfo[ct->linenr].x_min;
 				ct++;
 			}
 		}
 		else if (cu->spacemode == CU_MIDDLE) {
-			for (i = 0; i < lnr; i++) linedata[i] = ((linedata3[i] - linedata[i]) + cu->xof) / 2;
+			struct TempLineInfo *li;
+
+			for (i = 0, li = lineinfo; i < lnr; i++, li++) {
+				li->x_min = ((li->x_max - li->x_min) + xof_scale) / 2.0f;
+			}
+
 			for (i = 0; i <= slen; i++) {
-				ct->xof += linedata[ct->linenr];
+				ct->xof += lineinfo[ct->linenr].x_min;
 				ct++;
 			}
 		}
-		else if ((cu->spacemode == CU_FLUSH) && (cu->tb[0].w != 0.0f)) {
-			for (i = 0; i < lnr; i++)
-				if (linedata2[i] > 1)
-					linedata[i] = ((linedata3[i] - linedata[i]) + cu->xof) / (linedata2[i] - 1);
+		else if ((cu->spacemode == CU_FLUSH) && use_textbox) {
+			struct TempLineInfo *li;
+
+			for (i = 0, li = lineinfo; i < lnr; i++, li++) {
+				li->x_min = ((li->x_max - li->x_min) + xof_scale);
+
+				if (li->char_nr > 1) {
+					li->x_min /= (float)(li->char_nr - 1);
+				}
+			}
 			for (i = 0; i <= slen; i++) {
 				for (j = i; (!ELEM(mem[j], '\0', '\n')) && (chartransdata[j].dobreak == 0) && (j < slen); j++) {
 					/* do nothing */
 				}
 
 //				if ((mem[j] != '\n') && (mem[j])) {
-				ct->xof += ct->charnr * linedata[ct->linenr];
+				ct->xof += ct->charnr * lineinfo[ct->linenr].x_min;
 //				}
 				ct++;
 			}
 		}
-		else if ((cu->spacemode == CU_JUSTIFY) && (cu->tb[0].w != 0.0f)) {
+		else if ((cu->spacemode == CU_JUSTIFY) && use_textbox) {
 			float curofs = 0.0f;
 			for (i = 0; i <= slen; i++) {
 				for (j = i;
@@ -849,8 +891,12 @@ makebreak:
 				if ((mem[j] != '\n') &&
 				    ((chartransdata[j].dobreak != 0)))
 				{
-					if (mem[i] == ' ')
-						curofs += ((linedata3[ct->linenr] - linedata[ct->linenr]) + cu->xof) / linedata4[ct->linenr];
+					if (mem[i] == ' ') {
+						struct TempLineInfo *li;
+
+						li = &lineinfo[ct->linenr];
+						curofs += ((li->x_max - li->x_min) + xof_scale) / (float)li->wspace_nr;
+					}
 					ct->xof += curofs;
 				}
 				if (mem[i] == '\n' || chartransdata[i].dobreak) curofs = 0;
@@ -858,7 +904,9 @@ makebreak:
 			}
 		}
 	}
-	
+
+	MEM_freeN(lineinfo);
+
 	/* TEXT ON CURVE */
 	/* Note: Only OB_CURVE objects could have a path  */
 	if (cu->textoncurve && cu->textoncurve->type == OB_CURVE) {
@@ -1030,11 +1078,6 @@ makebreak:
 		
 	}
 
-	MEM_freeN(linedata);
-	MEM_freeN(linedata2);
-	MEM_freeN(linedata3);
-	MEM_freeN(linedata4);
-
 	if (mode == FO_SELCHANGE) {
 		MEM_freeN(chartransdata);
 		chartransdata = NULL;
@@ -1120,6 +1163,9 @@ finally:
 	}
 
 	return ok;
+
+#undef MARGIN_X_MIN
+#undef MARGIN_Y_MIN
 }
 
 
