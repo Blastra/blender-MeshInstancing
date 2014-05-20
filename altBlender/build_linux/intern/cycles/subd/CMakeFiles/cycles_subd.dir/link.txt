@@ -1,0 +1,2 @@
+/usr/bin/ar cr ../../../lib/libcycles_subd.a  CMakeFiles/cycles_subd.dir/subd_dice.cpp.o CMakeFiles/cycles_subd.dir/subd_mesh.cpp.o CMakeFiles/cycles_subd.dir/subd_patch.cpp.o CMakeFiles/cycles_subd.dir/subd_split.cpp.o
+/usr/bin/ranlib ../../../lib/libcycles_subd.a

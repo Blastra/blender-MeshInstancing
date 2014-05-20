@@ -1,0 +1,1295 @@
+The system is: Linux - 3.14.4-1-ARCH - x86_64
+Compiling the C compiler identification source file "CMakeCCompilerId.c" succeeded.
+Compiler: /usr/bin/cc 
+Build flags: 
+Id flags: 
+
+The output was:
+0
+
+
+Compilation of the C compiler identification source "CMakeCCompilerId.c" produced "a.out"
+
+The C compiler identification is GNU, found in "/home/arad/gitProjects/blender/altBlender/build_linux/CMakeFiles/2.8.12.2/CompilerIdC/a.out"
+
+Compiling the CXX compiler identification source file "CMakeCXXCompilerId.cpp" succeeded.
+Compiler: /usr/bin/c++ 
+Build flags: 
+Id flags: 
+
+The output was:
+0
+
+
+Compilation of the CXX compiler identification source "CMakeCXXCompilerId.cpp" produced "a.out"
+
+The CXX compiler identification is GNU, found in "/home/arad/gitProjects/blender/altBlender/build_linux/CMakeFiles/2.8.12.2/CompilerIdCXX/a.out"
+
+Determining if the C compiler works passed with the following output:
+Change Dir: /home/arad/gitProjects/blender/altBlender/build_linux/CMakeFiles/CMakeTmp
+
+Run Build Command:/usr/bin/make "cmTryCompileExec3155886331/fast"
+make[1]: Entering directory '/home/arad/gitProjects/blender/altBlender/build_linux/CMakeFiles/CMakeTmp'
+/usr/bin/make -f CMakeFiles/cmTryCompileExec3155886331.dir/build.make CMakeFiles/cmTryCompileExec3155886331.dir/build
+make[2]: Entering directory '/home/arad/gitProjects/blender/altBlender/build_linux/CMakeFiles/CMakeTmp'
+/usr/bin/cmake -E cmake_progress_report /home/arad/gitProjects/blender/altBlender/build_linux/CMakeFiles/CMakeTmp/CMakeFiles 1
+Building C object CMakeFiles/cmTryCompileExec3155886331.dir/testCCompiler.c.o
+/usr/bin/cc    -o CMakeFiles/cmTryCompileExec3155886331.dir/testCCompiler.c.o   -c /home/arad/gitProjects/blender/altBlender/build_linux/CMakeFiles/CMakeTmp/testCCompiler.c
+Linking C executable cmTryCompileExec3155886331
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTryCompileExec3155886331.dir/link.txt --verbose=1
+/usr/bin/cc       CMakeFiles/cmTryCompileExec3155886331.dir/testCCompiler.c.o  -o cmTryCompileExec3155886331 -rdynamic 
+make[2]: Leaving directory '/home/arad/gitProjects/blender/altBlender/build_linux/CMakeFiles/CMakeTmp'
+make[1]: Leaving directory '/home/arad/gitProjects/blender/altBlender/build_linux/CMakeFiles/CMakeTmp'
+
+
+Detecting C compiler ABI info compiled with the following output:
+Change Dir: /home/arad/gitProjects/blender/altBlender/build_linux/CMakeFiles/CMakeTmp
+
+Run Build Command:/usr/bin/make "cmTryCompileExec3522947339/fast"
+make[1]: Entering directory '/home/arad/gitProjects/blender/altBlender/build_linux/CMakeFiles/CMakeTmp'
+/usr/bin/make -f CMakeFiles/cmTryCompileExec3522947339.dir/build.make CMakeFiles/cmTryCompileExec3522947339.dir/build
+make[2]: Entering directory '/home/arad/gitProjects/blender/altBlender/build_linux/CMakeFiles/CMakeTmp'
+/usr/bin/cmake -E cmake_progress_report /home/arad/gitProjects/blender/altBlender/build_linux/CMakeFiles/CMakeTmp/CMakeFiles 1
+Building C object CMakeFiles/cmTryCompileExec3522947339.dir/CMakeCCompilerABI.c.o
+/usr/bin/cc    -o CMakeFiles/cmTryCompileExec3522947339.dir/CMakeCCompilerABI.c.o   -c /usr/share/cmake-2.8/Modules/CMakeCCompilerABI.c
+Linking C executable cmTryCompileExec3522947339
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTryCompileExec3522947339.dir/link.txt --verbose=1
+/usr/bin/cc     -v CMakeFiles/cmTryCompileExec3522947339.dir/CMakeCCompilerABI.c.o  -o cmTryCompileExec3522947339 -rdynamic  
+Using built-in specs.
+COLLECT_GCC=/usr/bin/cc
+COLLECT_LTO_WRAPPER=/usr/lib/gcc/x86_64-unknown-linux-gnu/4.9.0/lto-wrapper
+Target: x86_64-unknown-linux-gnu
+Configured with: /build/gcc-multilib/src/gcc-4.9-20140507/configure --prefix=/usr --libdir=/usr/lib --libexecdir=/usr/lib --mandir=/usr/share/man --infodir=/usr/share/info --with-bugurl=https://bugs.archlinux.org/ --enable-languages=c,c++,ada,fortran,go,lto,objc,obj-c++ --enable-shared --enable-threads=posix --with-system-zlib --enable-__cxa_atexit --disable-libunwind-exceptions --enable-clocale=gnu --disable-libstdcxx-pch --disable-libssp --enable-gnu-unique-object --enable-linker-build-id --enable-cloog-backend=isl --disable-cloog-version-check --enable-lto --enable-plugin --enable-install-libiberty --with-linker-hash-style=gnu --enable-multilib --disable-werror --enable-checking=release
+Säiemalli: posix
+gcc-versio 4.9.0 20140507 (prerelease) (GCC) 
+COMPILER_PATH=/usr/lib/gcc/x86_64-unknown-linux-gnu/4.9.0/:/usr/lib/gcc/x86_64-unknown-linux-gnu/4.9.0/:/usr/lib/gcc/x86_64-unknown-linux-gnu/:/usr/lib/gcc/x86_64-unknown-linux-gnu/4.9.0/:/usr/lib/gcc/x86_64-unknown-linux-gnu/
+LIBRARY_PATH=/usr/lib/gcc/x86_64-unknown-linux-gnu/4.9.0/:/usr/lib/gcc/x86_64-unknown-linux-gnu/4.9.0/../../../../lib/:/lib/../lib/:/usr/lib/../lib/:/usr/lib/gcc/x86_64-unknown-linux-gnu/4.9.0/../../../:/lib/:/usr/lib/
+COLLECT_GCC_OPTIONS='-v' '-o' 'cmTryCompileExec3522947339' '-rdynamic' '-mtune=generic' '-march=x86-64'
+ /usr/lib/gcc/x86_64-unknown-linux-gnu/4.9.0/collect2 -plugin /usr/lib/gcc/x86_64-unknown-linux-gnu/4.9.0/liblto_plugin.so -plugin-opt=/usr/lib/gcc/x86_64-unknown-linux-gnu/4.9.0/lto-wrapper -plugin-opt=-fresolution=/tmp/ccKE33MH.res -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_s --build-id --eh-frame-hdr --hash-style=gnu -m elf_x86_64 -export-dynamic -dynamic-linker /lib64/ld-linux-x86-64.so.2 -o cmTryCompileExec3522947339 /usr/lib/gcc/x86_64-unknown-linux-gnu/4.9.0/../../../../lib/crt1.o /usr/lib/gcc/x86_64-unknown-linux-gnu/4.9.0/../../../../lib/crti.o /usr/lib/gcc/x86_64-unknown-linux-gnu/4.9.0/crtbegin.o -L/usr/lib/gcc/x86_64-unknown-linux-gnu/4.9.0 -L/usr/lib/gcc/x86_64-unknown-linux-gnu/4.9.0/../../../../lib -L/lib/../lib -L/usr/lib/../lib -L/usr/lib/gcc/x86_64-unknown-linux-gnu/4.9.0/../../.. CMakeFiles/cmTryCompileExec3522947339.dir/CMakeCCompilerABI.c.o -lgcc --as-needed -lgcc_s --no-as-needed -lc -lgcc --as-needed -lgcc_s --no-as-needed /usr/lib/gcc/x86_64-unknown-linux-gnu/4.9.0/crtend.o /usr/lib/gcc/x86_64-unknown-linux-gnu/4.9.0/../../../../lib/crtn.o
+make[2]: Leaving directory '/home/arad/gitProjects/blender/altBlender/build_linux/CMakeFiles/CMakeTmp'
+make[1]: Leaving directory '/home/arad/gitProjects/blender/altBlender/build_linux/CMakeFiles/CMakeTmp'
+
+
+Parsed C implicit link information from above output:
+  link line regex: [^( *|.*[/\])(ld|([^/\]+-)?ld|collect2)[^/\]*( |$)]
+  ignore line: [Change Dir: /home/arad/gitProjects/blender/altBlender/build_linux/CMakeFiles/CMakeTmp]
+  ignore line: []
+  ignore line: [Run Build Command:/usr/bin/make "cmTryCompileExec3522947339/fast"]
+  ignore line: [make[1]: Entering directory '/home/arad/gitProjects/blender/altBlender/build_linux/CMakeFiles/CMakeTmp']
+  ignore line: [/usr/bin/make -f CMakeFiles/cmTryCompileExec3522947339.dir/build.make CMakeFiles/cmTryCompileExec3522947339.dir/build]
+  ignore line: [make[2]: Entering directory '/home/arad/gitProjects/blender/altBlender/build_linux/CMakeFiles/CMakeTmp']
+  ignore line: [/usr/bin/cmake -E cmake_progress_report /home/arad/gitProjects/blender/altBlender/build_linux/CMakeFiles/CMakeTmp/CMakeFiles 1]
+  ignore line: [Building C object CMakeFiles/cmTryCompileExec3522947339.dir/CMakeCCompilerABI.c.o]
+  ignore line: [/usr/bin/cc    -o CMakeFiles/cmTryCompileExec3522947339.dir/CMakeCCompilerABI.c.o   -c /usr/share/cmake-2.8/Modules/CMakeCCompilerABI.c]
+  ignore line: [Linking C executable cmTryCompileExec3522947339]
+  ignore line: [/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTryCompileExec3522947339.dir/link.txt --verbose=1]
+  ignore line: [/usr/bin/cc     -v CMakeFiles/cmTryCompileExec3522947339.dir/CMakeCCompilerABI.c.o  -o cmTryCompileExec3522947339 -rdynamic  ]
+  ignore line: [Using built-in specs.]
+  ignore line: [COLLECT_GCC=/usr/bin/cc]
+  ignore line: [COLLECT_LTO_WRAPPER=/usr/lib/gcc/x86_64-unknown-linux-gnu/4.9.0/lto-wrapper]
+  ignore line: [Target: x86_64-unknown-linux-gnu]
+  ignore line: [Configured with: /build/gcc-multilib/src/gcc-4.9-20140507/configure --prefix=/usr --libdir=/usr/lib --libexecdir=/usr/lib --mandir=/usr/share/man --infodir=/usr/share/info --with-bugurl=https://bugs.archlinux.org/ --enable-languages=c,c++,ada,fortran,go,lto,objc,obj-c++ --enable-shared --enable-threads=posix --with-system-zlib --enable-__cxa_atexit --disable-libunwind-exceptions --enable-clocale=gnu --disable-libstdcxx-pch --disable-libssp --enable-gnu-unique-object --enable-linker-build-id --enable-cloog-backend=isl --disable-cloog-version-check --enable-lto --enable-plugin --enable-install-libiberty --with-linker-hash-style=gnu --enable-multilib --disable-werror --enable-checking=release]
+  ignore line: [Säiemalli: posix]
+  ignore line: [gcc-versio 4.9.0 20140507 (prerelease) (GCC) ]
+  ignore line: [COMPILER_PATH=/usr/lib/gcc/x86_64-unknown-linux-gnu/4.9.0/:/usr/lib/gcc/x86_64-unknown-linux-gnu/4.9.0/:/usr/lib/gcc/x86_64-unknown-linux-gnu/:/usr/lib/gcc/x86_64-unknown-linux-gnu/4.9.0/:/usr/lib/gcc/x86_64-unknown-linux-gnu/]
+  ignore line: [LIBRARY_PATH=/usr/lib/gcc/x86_64-unknown-linux-gnu/4.9.0/:/usr/lib/gcc/x86_64-unknown-linux-gnu/4.9.0/../../../../lib/:/lib/../lib/:/usr/lib/../lib/:/usr/lib/gcc/x86_64-unknown-linux-gnu/4.9.0/../../../:/lib/:/usr/lib/]
+  ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'cmTryCompileExec3522947339' '-rdynamic' '-mtune=generic' '-march=x86-64']
+  link line: [ /usr/lib/gcc/x86_64-unknown-linux-gnu/4.9.0/collect2 -plugin /usr/lib/gcc/x86_64-unknown-linux-gnu/4.9.0/liblto_plugin.so -plugin-opt=/usr/lib/gcc/x86_64-unknown-linux-gnu/4.9.0/lto-wrapper -plugin-opt=-fresolution=/tmp/ccKE33MH.res -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_s --build-id --eh-frame-hdr --hash-style=gnu -m elf_x86_64 -export-dynamic -dynamic-linker /lib64/ld-linux-x86-64.so.2 -o cmTryCompileExec3522947339 /usr/lib/gcc/x86_64-unknown-linux-gnu/4.9.0/../../../../lib/crt1.o /usr/lib/gcc/x86_64-unknown-linux-gnu/4.9.0/../../../../lib/crti.o /usr/lib/gcc/x86_64-unknown-linux-gnu/4.9.0/crtbegin.o -L/usr/lib/gcc/x86_64-unknown-linux-gnu/4.9.0 -L/usr/lib/gcc/x86_64-unknown-linux-gnu/4.9.0/../../../../lib -L/lib/../lib -L/usr/lib/../lib -L/usr/lib/gcc/x86_64-unknown-linux-gnu/4.9.0/../../.. CMakeFiles/cmTryCompileExec3522947339.dir/CMakeCCompilerABI.c.o -lgcc --as-needed -lgcc_s --no-as-needed -lc -lgcc --as-needed -lgcc_s --no-as-needed /usr/lib/gcc/x86_64-unknown-linux-gnu/4.9.0/crtend.o /usr/lib/gcc/x86_64-unknown-linux-gnu/4.9.0/../../../../lib/crtn.o]
+    arg [/usr/lib/gcc/x86_64-unknown-linux-gnu/4.9.0/collect2] ==> ignore
+    arg [-plugin] ==> ignore
+    arg [/usr/lib/gcc/x86_64-unknown-linux-gnu/4.9.0/liblto_plugin.so] ==> ignore
+    arg [-plugin-opt=/usr/lib/gcc/x86_64-unknown-linux-gnu/4.9.0/lto-wrapper] ==> ignore
+    arg [-plugin-opt=-fresolution=/tmp/ccKE33MH.res] ==> ignore
+    arg [-plugin-opt=-pass-through=-lgcc] ==> ignore
+    arg [-plugin-opt=-pass-through=-lgcc_s] ==> ignore
+    arg [-plugin-opt=-pass-through=-lc] ==> ignore
+    arg [-plugin-opt=-pass-through=-lgcc] ==> ignore
+    arg [-plugin-opt=-pass-through=-lgcc_s] ==> ignore
+    arg [--build-id] ==> ignore
+    arg [--eh-frame-hdr] ==> ignore
+    arg [--hash-style=gnu] ==> ignore
+    arg [-m] ==> ignore
+    arg [elf_x86_64] ==> ignore
+    arg [-export-dynamic] ==> ignore
+    arg [-dynamic-linker] ==> ignore
+    arg [/lib64/ld-linux-x86-64.so.2] ==> ignore
+    arg [-o] ==> ignore
+    arg [cmTryCompileExec3522947339] ==> ignore
+    arg [/usr/lib/gcc/x86_64-unknown-linux-gnu/4.9.0/../../../../lib/crt1.o] ==> ignore
+    arg [/usr/lib/gcc/x86_64-unknown-linux-gnu/4.9.0/../../../../lib/crti.o] ==> ignore
+    arg [/usr/lib/gcc/x86_64-unknown-linux-gnu/4.9.0/crtbegin.o] ==> ignore
+    arg [-L/usr/lib/gcc/x86_64-unknown-linux-gnu/4.9.0] ==> dir [/usr/lib/gcc/x86_64-unknown-linux-gnu/4.9.0]
+    arg [-L/usr/lib/gcc/x86_64-unknown-linux-gnu/4.9.0/../../../../lib] ==> dir [/usr/lib/gcc/x86_64-unknown-linux-gnu/4.9.0/../../../../lib]
+    arg [-L/lib/../lib] ==> dir [/lib/../lib]
+    arg [-L/usr/lib/../lib] ==> dir [/usr/lib/../lib]
+    arg [-L/usr/lib/gcc/x86_64-unknown-linux-gnu/4.9.0/../../..] ==> dir [/usr/lib/gcc/x86_64-unknown-linux-gnu/4.9.0/../../..]
+    arg [CMakeFiles/cmTryCompileExec3522947339.dir/CMakeCCompilerABI.c.o] ==> ignore
+    arg [-lgcc] ==> lib [gcc]
+    arg [--as-needed] ==> ignore
+    arg [-lgcc_s] ==> lib [gcc_s]
+    arg [--no-as-needed] ==> ignore
+    arg [-lc] ==> lib [c]
+    arg [-lgcc] ==> lib [gcc]
+    arg [--as-needed] ==> ignore
+    arg [-lgcc_s] ==> lib [gcc_s]
+    arg [--no-as-needed] ==> ignore
+    arg [/usr/lib/gcc/x86_64-unknown-linux-gnu/4.9.0/crtend.o] ==> ignore
+    arg [/usr/lib/gcc/x86_64-unknown-linux-gnu/4.9.0/../../../../lib/crtn.o] ==> ignore
+  remove lib [gcc]
+  remove lib [gcc_s]
+  remove lib [gcc]
+  remove lib [gcc_s]
+  collapse library dir [/usr/lib/gcc/x86_64-unknown-linux-gnu/4.9.0] ==> [/usr/lib/gcc/x86_64-unknown-linux-gnu/4.9.0]
+  collapse library dir [/usr/lib/gcc/x86_64-unknown-linux-gnu/4.9.0/../../../../lib] ==> [/usr/lib]
+  collapse library dir [/lib/../lib] ==> [/lib]
+  collapse library dir [/usr/lib/../lib] ==> [/usr/lib]
+  collapse library dir [/usr/lib/gcc/x86_64-unknown-linux-gnu/4.9.0/../../..] ==> [/usr/lib]
+  implicit libs: [c]
+  implicit dirs: [/usr/lib/gcc/x86_64-unknown-linux-gnu/4.9.0;/usr/lib;/lib]
+  implicit fwks: []
+
+
+Determining if the CXX compiler works passed with the following output:
+Change Dir: /home/arad/gitProjects/blender/altBlender/build_linux/CMakeFiles/CMakeTmp
+
+Run Build Command:/usr/bin/make "cmTryCompileExec123244222/fast"
+make[1]: Entering directory '/home/arad/gitProjects/blender/altBlender/build_linux/CMakeFiles/CMakeTmp'
+/usr/bin/make -f CMakeFiles/cmTryCompileExec123244222.dir/build.make CMakeFiles/cmTryCompileExec123244222.dir/build
+make[2]: Entering directory '/home/arad/gitProjects/blender/altBlender/build_linux/CMakeFiles/CMakeTmp'
+/usr/bin/cmake -E cmake_progress_report /home/arad/gitProjects/blender/altBlender/build_linux/CMakeFiles/CMakeTmp/CMakeFiles 1
+Building CXX object CMakeFiles/cmTryCompileExec123244222.dir/testCXXCompiler.cxx.o
+/usr/bin/c++     -o CMakeFiles/cmTryCompileExec123244222.dir/testCXXCompiler.cxx.o -c /home/arad/gitProjects/blender/altBlender/build_linux/CMakeFiles/CMakeTmp/testCXXCompiler.cxx
+Linking CXX executable cmTryCompileExec123244222
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTryCompileExec123244222.dir/link.txt --verbose=1
+/usr/bin/c++        CMakeFiles/cmTryCompileExec123244222.dir/testCXXCompiler.cxx.o  -o cmTryCompileExec123244222 -rdynamic 
+make[2]: Leaving directory '/home/arad/gitProjects/blender/altBlender/build_linux/CMakeFiles/CMakeTmp'
+make[1]: Leaving directory '/home/arad/gitProjects/blender/altBlender/build_linux/CMakeFiles/CMakeTmp'
+
+
+Detecting CXX compiler ABI info compiled with the following output:
+Change Dir: /home/arad/gitProjects/blender/altBlender/build_linux/CMakeFiles/CMakeTmp
+
+Run Build Command:/usr/bin/make "cmTryCompileExec1610345248/fast"
+make[1]: Entering directory '/home/arad/gitProjects/blender/altBlender/build_linux/CMakeFiles/CMakeTmp'
+/usr/bin/make -f CMakeFiles/cmTryCompileExec1610345248.dir/build.make CMakeFiles/cmTryCompileExec1610345248.dir/build
+make[2]: Entering directory '/home/arad/gitProjects/blender/altBlender/build_linux/CMakeFiles/CMakeTmp'
+/usr/bin/cmake -E cmake_progress_report /home/arad/gitProjects/blender/altBlender/build_linux/CMakeFiles/CMakeTmp/CMakeFiles 1
+Building CXX object CMakeFiles/cmTryCompileExec1610345248.dir/CMakeCXXCompilerABI.cpp.o
+/usr/bin/c++     -o CMakeFiles/cmTryCompileExec1610345248.dir/CMakeCXXCompilerABI.cpp.o -c /usr/share/cmake-2.8/Modules/CMakeCXXCompilerABI.cpp
+Linking CXX executable cmTryCompileExec1610345248
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTryCompileExec1610345248.dir/link.txt --verbose=1
+/usr/bin/c++      -v CMakeFiles/cmTryCompileExec1610345248.dir/CMakeCXXCompilerABI.cpp.o  -o cmTryCompileExec1610345248 -rdynamic  
+Using built-in specs.
+COLLECT_GCC=/usr/bin/c++
+COLLECT_LTO_WRAPPER=/usr/lib/gcc/x86_64-unknown-linux-gnu/4.9.0/lto-wrapper
+Target: x86_64-unknown-linux-gnu
+Configured with: /build/gcc-multilib/src/gcc-4.9-20140507/configure --prefix=/usr --libdir=/usr/lib --libexecdir=/usr/lib --mandir=/usr/share/man --infodir=/usr/share/info --with-bugurl=https://bugs.archlinux.org/ --enable-languages=c,c++,ada,fortran,go,lto,objc,obj-c++ --enable-shared --enable-threads=posix --with-system-zlib --enable-__cxa_atexit --disable-libunwind-exceptions --enable-clocale=gnu --disable-libstdcxx-pch --disable-libssp --enable-gnu-unique-object --enable-linker-build-id --enable-cloog-backend=isl --disable-cloog-version-check --enable-lto --enable-plugin --enable-install-libiberty --with-linker-hash-style=gnu --enable-multilib --disable-werror --enable-checking=release
+Säiemalli: posix
+gcc-versio 4.9.0 20140507 (prerelease) (GCC) 
+COMPILER_PATH=/usr/lib/gcc/x86_64-unknown-linux-gnu/4.9.0/:/usr/lib/gcc/x86_64-unknown-linux-gnu/4.9.0/:/usr/lib/gcc/x86_64-unknown-linux-gnu/:/usr/lib/gcc/x86_64-unknown-linux-gnu/4.9.0/:/usr/lib/gcc/x86_64-unknown-linux-gnu/
+LIBRARY_PATH=/usr/lib/gcc/x86_64-unknown-linux-gnu/4.9.0/:/usr/lib/gcc/x86_64-unknown-linux-gnu/4.9.0/../../../../lib/:/lib/../lib/:/usr/lib/../lib/:/usr/lib/gcc/x86_64-unknown-linux-gnu/4.9.0/../../../:/lib/:/usr/lib/
+COLLECT_GCC_OPTIONS='-v' '-o' 'cmTryCompileExec1610345248' '-rdynamic' '-shared-libgcc' '-mtune=generic' '-march=x86-64'
+ /usr/lib/gcc/x86_64-unknown-linux-gnu/4.9.0/collect2 -plugin /usr/lib/gcc/x86_64-unknown-linux-gnu/4.9.0/liblto_plugin.so -plugin-opt=/usr/lib/gcc/x86_64-unknown-linux-gnu/4.9.0/lto-wrapper -plugin-opt=-fresolution=/tmp/ccSbmIM0.res -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc --build-id --eh-frame-hdr --hash-style=gnu -m elf_x86_64 -export-dynamic -dynamic-linker /lib64/ld-linux-x86-64.so.2 -o cmTryCompileExec1610345248 /usr/lib/gcc/x86_64-unknown-linux-gnu/4.9.0/../../../../lib/crt1.o /usr/lib/gcc/x86_64-unknown-linux-gnu/4.9.0/../../../../lib/crti.o /usr/lib/gcc/x86_64-unknown-linux-gnu/4.9.0/crtbegin.o -L/usr/lib/gcc/x86_64-unknown-linux-gnu/4.9.0 -L/usr/lib/gcc/x86_64-unknown-linux-gnu/4.9.0/../../../../lib -L/lib/../lib -L/usr/lib/../lib -L/usr/lib/gcc/x86_64-unknown-linux-gnu/4.9.0/../../.. CMakeFiles/cmTryCompileExec1610345248.dir/CMakeCXXCompilerABI.cpp.o -lstdc++ -lm -lgcc_s -lgcc -lc -lgcc_s -lgcc /usr/lib/gcc/x86_64-unknown-linux-gnu/4.9.0/crtend.o /usr/lib/gcc/x86_64-unknown-linux-gnu/4.9.0/../../../../lib/crtn.o
+make[2]: Leaving directory '/home/arad/gitProjects/blender/altBlender/build_linux/CMakeFiles/CMakeTmp'
+make[1]: Leaving directory '/home/arad/gitProjects/blender/altBlender/build_linux/CMakeFiles/CMakeTmp'
+
+
+Parsed CXX implicit link information from above output:
+  link line regex: [^( *|.*[/\])(ld|([^/\]+-)?ld|collect2)[^/\]*( |$)]
+  ignore line: [Change Dir: /home/arad/gitProjects/blender/altBlender/build_linux/CMakeFiles/CMakeTmp]
+  ignore line: []
+  ignore line: [Run Build Command:/usr/bin/make "cmTryCompileExec1610345248/fast"]
+  ignore line: [make[1]: Entering directory '/home/arad/gitProjects/blender/altBlender/build_linux/CMakeFiles/CMakeTmp']
+  ignore line: [/usr/bin/make -f CMakeFiles/cmTryCompileExec1610345248.dir/build.make CMakeFiles/cmTryCompileExec1610345248.dir/build]
+  ignore line: [make[2]: Entering directory '/home/arad/gitProjects/blender/altBlender/build_linux/CMakeFiles/CMakeTmp']
+  ignore line: [/usr/bin/cmake -E cmake_progress_report /home/arad/gitProjects/blender/altBlender/build_linux/CMakeFiles/CMakeTmp/CMakeFiles 1]
+  ignore line: [Building CXX object CMakeFiles/cmTryCompileExec1610345248.dir/CMakeCXXCompilerABI.cpp.o]
+  ignore line: [/usr/bin/c++     -o CMakeFiles/cmTryCompileExec1610345248.dir/CMakeCXXCompilerABI.cpp.o -c /usr/share/cmake-2.8/Modules/CMakeCXXCompilerABI.cpp]
+  ignore line: [Linking CXX executable cmTryCompileExec1610345248]
+  ignore line: [/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTryCompileExec1610345248.dir/link.txt --verbose=1]
+  ignore line: [/usr/bin/c++      -v CMakeFiles/cmTryCompileExec1610345248.dir/CMakeCXXCompilerABI.cpp.o  -o cmTryCompileExec1610345248 -rdynamic  ]
+  ignore line: [Using built-in specs.]
+  ignore line: [COLLECT_GCC=/usr/bin/c++]
+  ignore line: [COLLECT_LTO_WRAPPER=/usr/lib/gcc/x86_64-unknown-linux-gnu/4.9.0/lto-wrapper]
+  ignore line: [Target: x86_64-unknown-linux-gnu]
+  ignore line: [Configured with: /build/gcc-multilib/src/gcc-4.9-20140507/configure --prefix=/usr --libdir=/usr/lib --libexecdir=/usr/lib --mandir=/usr/share/man --infodir=/usr/share/info --with-bugurl=https://bugs.archlinux.org/ --enable-languages=c,c++,ada,fortran,go,lto,objc,obj-c++ --enable-shared --enable-threads=posix --with-system-zlib --enable-__cxa_atexit --disable-libunwind-exceptions --enable-clocale=gnu --disable-libstdcxx-pch --disable-libssp --enable-gnu-unique-object --enable-linker-build-id --enable-cloog-backend=isl --disable-cloog-version-check --enable-lto --enable-plugin --enable-install-libiberty --with-linker-hash-style=gnu --enable-multilib --disable-werror --enable-checking=release]
+  ignore line: [Säiemalli: posix]
+  ignore line: [gcc-versio 4.9.0 20140507 (prerelease) (GCC) ]
+  ignore line: [COMPILER_PATH=/usr/lib/gcc/x86_64-unknown-linux-gnu/4.9.0/:/usr/lib/gcc/x86_64-unknown-linux-gnu/4.9.0/:/usr/lib/gcc/x86_64-unknown-linux-gnu/:/usr/lib/gcc/x86_64-unknown-linux-gnu/4.9.0/:/usr/lib/gcc/x86_64-unknown-linux-gnu/]
+  ignore line: [LIBRARY_PATH=/usr/lib/gcc/x86_64-unknown-linux-gnu/4.9.0/:/usr/lib/gcc/x86_64-unknown-linux-gnu/4.9.0/../../../../lib/:/lib/../lib/:/usr/lib/../lib/:/usr/lib/gcc/x86_64-unknown-linux-gnu/4.9.0/../../../:/lib/:/usr/lib/]
+  ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'cmTryCompileExec1610345248' '-rdynamic' '-shared-libgcc' '-mtune=generic' '-march=x86-64']
+  link line: [ /usr/lib/gcc/x86_64-unknown-linux-gnu/4.9.0/collect2 -plugin /usr/lib/gcc/x86_64-unknown-linux-gnu/4.9.0/liblto_plugin.so -plugin-opt=/usr/lib/gcc/x86_64-unknown-linux-gnu/4.9.0/lto-wrapper -plugin-opt=-fresolution=/tmp/ccSbmIM0.res -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc --build-id --eh-frame-hdr --hash-style=gnu -m elf_x86_64 -export-dynamic -dynamic-linker /lib64/ld-linux-x86-64.so.2 -o cmTryCompileExec1610345248 /usr/lib/gcc/x86_64-unknown-linux-gnu/4.9.0/../../../../lib/crt1.o /usr/lib/gcc/x86_64-unknown-linux-gnu/4.9.0/../../../../lib/crti.o /usr/lib/gcc/x86_64-unknown-linux-gnu/4.9.0/crtbegin.o -L/usr/lib/gcc/x86_64-unknown-linux-gnu/4.9.0 -L/usr/lib/gcc/x86_64-unknown-linux-gnu/4.9.0/../../../../lib -L/lib/../lib -L/usr/lib/../lib -L/usr/lib/gcc/x86_64-unknown-linux-gnu/4.9.0/../../.. CMakeFiles/cmTryCompileExec1610345248.dir/CMakeCXXCompilerABI.cpp.o -lstdc++ -lm -lgcc_s -lgcc -lc -lgcc_s -lgcc /usr/lib/gcc/x86_64-unknown-linux-gnu/4.9.0/crtend.o /usr/lib/gcc/x86_64-unknown-linux-gnu/4.9.0/../../../../lib/crtn.o]
+    arg [/usr/lib/gcc/x86_64-unknown-linux-gnu/4.9.0/collect2] ==> ignore
+    arg [-plugin] ==> ignore
+    arg [/usr/lib/gcc/x86_64-unknown-linux-gnu/4.9.0/liblto_plugin.so] ==> ignore
+    arg [-plugin-opt=/usr/lib/gcc/x86_64-unknown-linux-gnu/4.9.0/lto-wrapper] ==> ignore
+    arg [-plugin-opt=-fresolution=/tmp/ccSbmIM0.res] ==> ignore
+    arg [-plugin-opt=-pass-through=-lgcc_s] ==> ignore
+    arg [-plugin-opt=-pass-through=-lgcc] ==> ignore
+    arg [-plugin-opt=-pass-through=-lc] ==> ignore
+    arg [-plugin-opt=-pass-through=-lgcc_s] ==> ignore
+    arg [-plugin-opt=-pass-through=-lgcc] ==> ignore
+    arg [--build-id] ==> ignore
+    arg [--eh-frame-hdr] ==> ignore
+    arg [--hash-style=gnu] ==> ignore
+    arg [-m] ==> ignore
+    arg [elf_x86_64] ==> ignore
+    arg [-export-dynamic] ==> ignore
+    arg [-dynamic-linker] ==> ignore
+    arg [/lib64/ld-linux-x86-64.so.2] ==> ignore
+    arg [-o] ==> ignore
+    arg [cmTryCompileExec1610345248] ==> ignore
+    arg [/usr/lib/gcc/x86_64-unknown-linux-gnu/4.9.0/../../../../lib/crt1.o] ==> ignore
+    arg [/usr/lib/gcc/x86_64-unknown-linux-gnu/4.9.0/../../../../lib/crti.o] ==> ignore
+    arg [/usr/lib/gcc/x86_64-unknown-linux-gnu/4.9.0/crtbegin.o] ==> ignore
+    arg [-L/usr/lib/gcc/x86_64-unknown-linux-gnu/4.9.0] ==> dir [/usr/lib/gcc/x86_64-unknown-linux-gnu/4.9.0]
+    arg [-L/usr/lib/gcc/x86_64-unknown-linux-gnu/4.9.0/../../../../lib] ==> dir [/usr/lib/gcc/x86_64-unknown-linux-gnu/4.9.0/../../../../lib]
+    arg [-L/lib/../lib] ==> dir [/lib/../lib]
+    arg [-L/usr/lib/../lib] ==> dir [/usr/lib/../lib]
+    arg [-L/usr/lib/gcc/x86_64-unknown-linux-gnu/4.9.0/../../..] ==> dir [/usr/lib/gcc/x86_64-unknown-linux-gnu/4.9.0/../../..]
+    arg [CMakeFiles/cmTryCompileExec1610345248.dir/CMakeCXXCompilerABI.cpp.o] ==> ignore
+    arg [-lstdc++] ==> lib [stdc++]
+    arg [-lm] ==> lib [m]
+    arg [-lgcc_s] ==> lib [gcc_s]
+    arg [-lgcc] ==> lib [gcc]
+    arg [-lc] ==> lib [c]
+    arg [-lgcc_s] ==> lib [gcc_s]
+    arg [-lgcc] ==> lib [gcc]
+    arg [/usr/lib/gcc/x86_64-unknown-linux-gnu/4.9.0/crtend.o] ==> ignore
+    arg [/usr/lib/gcc/x86_64-unknown-linux-gnu/4.9.0/../../../../lib/crtn.o] ==> ignore
+  remove lib [gcc_s]
+  remove lib [gcc]
+  remove lib [gcc_s]
+  remove lib [gcc]
+  collapse library dir [/usr/lib/gcc/x86_64-unknown-linux-gnu/4.9.0] ==> [/usr/lib/gcc/x86_64-unknown-linux-gnu/4.9.0]
+  collapse library dir [/usr/lib/gcc/x86_64-unknown-linux-gnu/4.9.0/../../../../lib] ==> [/usr/lib]
+  collapse library dir [/lib/../lib] ==> [/lib]
+  collapse library dir [/usr/lib/../lib] ==> [/usr/lib]
+  collapse library dir [/usr/lib/gcc/x86_64-unknown-linux-gnu/4.9.0/../../..] ==> [/usr/lib]
+  implicit libs: [stdc++;m;c]
+  implicit dirs: [/usr/lib/gcc/x86_64-unknown-linux-gnu/4.9.0;/usr/lib;/lib]
+  implicit fwks: []
+
+
+Performing C SOURCE FILE Test SUPPORT_SSE_BUILD succeded with the following output:
+Change Dir: /home/arad/gitProjects/blender/altBlender/build_linux/CMakeFiles/CMakeTmp
+
+Run Build Command:/usr/bin/make "cmTryCompileExec4168922006/fast"
+make[1]: Entering directory '/home/arad/gitProjects/blender/altBlender/build_linux/CMakeFiles/CMakeTmp'
+/usr/bin/make -f CMakeFiles/cmTryCompileExec4168922006.dir/build.make CMakeFiles/cmTryCompileExec4168922006.dir/build
+make[2]: Entering directory '/home/arad/gitProjects/blender/altBlender/build_linux/CMakeFiles/CMakeTmp'
+/usr/bin/cmake -E cmake_progress_report /home/arad/gitProjects/blender/altBlender/build_linux/CMakeFiles/CMakeTmp/CMakeFiles 1
+Building C object CMakeFiles/cmTryCompileExec4168922006.dir/src.c.o
+/usr/bin/cc   -DSUPPORT_SSE_BUILD -msse -msse2   -o CMakeFiles/cmTryCompileExec4168922006.dir/src.c.o   -c /home/arad/gitProjects/blender/altBlender/build_linux/CMakeFiles/CMakeTmp/src.c
+Linking C executable cmTryCompileExec4168922006
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTryCompileExec4168922006.dir/link.txt --verbose=1
+/usr/bin/cc   -DSUPPORT_SSE_BUILD -msse -msse2    CMakeFiles/cmTryCompileExec4168922006.dir/src.c.o  -o cmTryCompileExec4168922006 -rdynamic 
+make[2]: Leaving directory '/home/arad/gitProjects/blender/altBlender/build_linux/CMakeFiles/CMakeTmp'
+make[1]: Leaving directory '/home/arad/gitProjects/blender/altBlender/build_linux/CMakeFiles/CMakeTmp'
+
+Return value: 1
+Source file was:
+
+			#include <xmmintrin.h>
+			int main(void) { __m128 v = _mm_setzero_ps(); return 0; }
+Performing C SOURCE FILE Test SUPPORT_SSE2_BUILD succeded with the following output:
+Change Dir: /home/arad/gitProjects/blender/altBlender/build_linux/CMakeFiles/CMakeTmp
+
+Run Build Command:/usr/bin/make "cmTryCompileExec1592030965/fast"
+make[1]: Entering directory '/home/arad/gitProjects/blender/altBlender/build_linux/CMakeFiles/CMakeTmp'
+/usr/bin/make -f CMakeFiles/cmTryCompileExec1592030965.dir/build.make CMakeFiles/cmTryCompileExec1592030965.dir/build
+make[2]: Entering directory '/home/arad/gitProjects/blender/altBlender/build_linux/CMakeFiles/CMakeTmp'
+/usr/bin/cmake -E cmake_progress_report /home/arad/gitProjects/blender/altBlender/build_linux/CMakeFiles/CMakeTmp/CMakeFiles 1
+Building C object CMakeFiles/cmTryCompileExec1592030965.dir/src.c.o
+/usr/bin/cc   -DSUPPORT_SSE2_BUILD -msse -msse2   -o CMakeFiles/cmTryCompileExec1592030965.dir/src.c.o   -c /home/arad/gitProjects/blender/altBlender/build_linux/CMakeFiles/CMakeTmp/src.c
+Linking C executable cmTryCompileExec1592030965
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTryCompileExec1592030965.dir/link.txt --verbose=1
+/usr/bin/cc   -DSUPPORT_SSE2_BUILD -msse -msse2    CMakeFiles/cmTryCompileExec1592030965.dir/src.c.o  -o cmTryCompileExec1592030965 -rdynamic 
+make[2]: Leaving directory '/home/arad/gitProjects/blender/altBlender/build_linux/CMakeFiles/CMakeTmp'
+make[1]: Leaving directory '/home/arad/gitProjects/blender/altBlender/build_linux/CMakeFiles/CMakeTmp'
+
+Return value: 1
+Source file was:
+
+			#include <emmintrin.h>
+			int main(void) { __m128d v = _mm_setzero_pd(); return 0; }
+Performing C SOURCE FILE Test HAVE_STDBOOL_H succeded with the following output:
+Change Dir: /home/arad/gitProjects/blender/altBlender/build_linux/CMakeFiles/CMakeTmp
+
+Run Build Command:/usr/bin/make "cmTryCompileExec841160197/fast"
+make[1]: Entering directory '/home/arad/gitProjects/blender/altBlender/build_linux/CMakeFiles/CMakeTmp'
+/usr/bin/make -f CMakeFiles/cmTryCompileExec841160197.dir/build.make CMakeFiles/cmTryCompileExec841160197.dir/build
+make[2]: Entering directory '/home/arad/gitProjects/blender/altBlender/build_linux/CMakeFiles/CMakeTmp'
+/usr/bin/cmake -E cmake_progress_report /home/arad/gitProjects/blender/altBlender/build_linux/CMakeFiles/CMakeTmp/CMakeFiles 1
+Building C object CMakeFiles/cmTryCompileExec841160197.dir/src.c.o
+/usr/bin/cc   -DHAVE_STDBOOL_H   -o CMakeFiles/cmTryCompileExec841160197.dir/src.c.o   -c /home/arad/gitProjects/blender/altBlender/build_linux/CMakeFiles/CMakeTmp/src.c
+Linking C executable cmTryCompileExec841160197
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTryCompileExec841160197.dir/link.txt --verbose=1
+/usr/bin/cc   -DHAVE_STDBOOL_H    CMakeFiles/cmTryCompileExec841160197.dir/src.c.o  -o cmTryCompileExec841160197 -rdynamic 
+make[2]: Leaving directory '/home/arad/gitProjects/blender/altBlender/build_linux/CMakeFiles/CMakeTmp'
+make[1]: Leaving directory '/home/arad/gitProjects/blender/altBlender/build_linux/CMakeFiles/CMakeTmp'
+
+Return value: 1
+Source file was:
+
+		#include <stdbool.h>
+		int main(void) { return (int)false; }
+Determining if files pthread.h exist passed with the following output:
+Change Dir: /home/arad/gitProjects/blender/altBlender/build_linux/CMakeFiles/CMakeTmp
+
+Run Build Command:/usr/bin/make "cmTryCompileExec415127169/fast"
+make[1]: Entering directory '/home/arad/gitProjects/blender/altBlender/build_linux/CMakeFiles/CMakeTmp'
+/usr/bin/make -f CMakeFiles/cmTryCompileExec415127169.dir/build.make CMakeFiles/cmTryCompileExec415127169.dir/build
+make[2]: Entering directory '/home/arad/gitProjects/blender/altBlender/build_linux/CMakeFiles/CMakeTmp'
+/usr/bin/cmake -E cmake_progress_report /home/arad/gitProjects/blender/altBlender/build_linux/CMakeFiles/CMakeTmp/CMakeFiles 1
+Building C object CMakeFiles/cmTryCompileExec415127169.dir/CheckIncludeFiles.c.o
+/usr/bin/cc    -o CMakeFiles/cmTryCompileExec415127169.dir/CheckIncludeFiles.c.o   -c /home/arad/gitProjects/blender/altBlender/build_linux/CMakeFiles/CMakeTmp/CheckIncludeFiles.c
+Linking C executable cmTryCompileExec415127169
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTryCompileExec415127169.dir/link.txt --verbose=1
+/usr/bin/cc       CMakeFiles/cmTryCompileExec415127169.dir/CheckIncludeFiles.c.o  -o cmTryCompileExec415127169 -rdynamic 
+make[2]: Leaving directory '/home/arad/gitProjects/blender/altBlender/build_linux/CMakeFiles/CMakeTmp'
+make[1]: Leaving directory '/home/arad/gitProjects/blender/altBlender/build_linux/CMakeFiles/CMakeTmp'
+
+
+Determining if the function pthread_create exists in the pthread passed with the following output:
+Change Dir: /home/arad/gitProjects/blender/altBlender/build_linux/CMakeFiles/CMakeTmp
+
+Run Build Command:/usr/bin/make "cmTryCompileExec1622960525/fast"
+make[1]: Entering directory '/home/arad/gitProjects/blender/altBlender/build_linux/CMakeFiles/CMakeTmp'
+/usr/bin/make -f CMakeFiles/cmTryCompileExec1622960525.dir/build.make CMakeFiles/cmTryCompileExec1622960525.dir/build
+make[2]: Entering directory '/home/arad/gitProjects/blender/altBlender/build_linux/CMakeFiles/CMakeTmp'
+/usr/bin/cmake -E cmake_progress_report /home/arad/gitProjects/blender/altBlender/build_linux/CMakeFiles/CMakeTmp/CMakeFiles 1
+Building C object CMakeFiles/cmTryCompileExec1622960525.dir/CheckFunctionExists.c.o
+/usr/bin/cc   -DCHECK_FUNCTION_EXISTS=pthread_create   -o CMakeFiles/cmTryCompileExec1622960525.dir/CheckFunctionExists.c.o   -c /usr/share/cmake-2.8/Modules/CheckFunctionExists.c
+Linking C executable cmTryCompileExec1622960525
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTryCompileExec1622960525.dir/link.txt --verbose=1
+/usr/bin/cc   -DCHECK_FUNCTION_EXISTS=pthread_create    CMakeFiles/cmTryCompileExec1622960525.dir/CheckFunctionExists.c.o  -o cmTryCompileExec1622960525 -rdynamic -lpthread 
+make[2]: Leaving directory '/home/arad/gitProjects/blender/altBlender/build_linux/CMakeFiles/CMakeTmp'
+make[1]: Leaving directory '/home/arad/gitProjects/blender/altBlender/build_linux/CMakeFiles/CMakeTmp'
+
+
+Determining if the function XOpenDisplay exists in the /usr/lib64/libX11.so;/usr/lib64/libXext.so passed with the following output:
+Change Dir: /home/arad/gitProjects/blender/altBlender/build_linux/CMakeFiles/CMakeTmp
+
+Run Build Command:/usr/bin/make "cmTryCompileExec1710333424/fast"
+make[1]: Entering directory '/home/arad/gitProjects/blender/altBlender/build_linux/CMakeFiles/CMakeTmp'
+/usr/bin/make -f CMakeFiles/cmTryCompileExec1710333424.dir/build.make CMakeFiles/cmTryCompileExec1710333424.dir/build
+make[2]: Entering directory '/home/arad/gitProjects/blender/altBlender/build_linux/CMakeFiles/CMakeTmp'
+/usr/bin/cmake -E cmake_progress_report /home/arad/gitProjects/blender/altBlender/build_linux/CMakeFiles/CMakeTmp/CMakeFiles 1
+Building C object CMakeFiles/cmTryCompileExec1710333424.dir/CheckFunctionExists.c.o
+/usr/bin/cc   -DCHECK_FUNCTION_EXISTS=XOpenDisplay   -o CMakeFiles/cmTryCompileExec1710333424.dir/CheckFunctionExists.c.o   -c /usr/share/cmake-2.8/Modules/CheckFunctionExists.c
+Linking C executable cmTryCompileExec1710333424
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTryCompileExec1710333424.dir/link.txt --verbose=1
+/usr/bin/cc   -DCHECK_FUNCTION_EXISTS=XOpenDisplay    CMakeFiles/cmTryCompileExec1710333424.dir/CheckFunctionExists.c.o  -o cmTryCompileExec1710333424 -rdynamic -lX11 -lXext 
+make[2]: Leaving directory '/home/arad/gitProjects/blender/altBlender/build_linux/CMakeFiles/CMakeTmp'
+make[1]: Leaving directory '/home/arad/gitProjects/blender/altBlender/build_linux/CMakeFiles/CMakeTmp'
+
+
+Determining if the function gethostbyname exists passed with the following output:
+Change Dir: /home/arad/gitProjects/blender/altBlender/build_linux/CMakeFiles/CMakeTmp
+
+Run Build Command:/usr/bin/make "cmTryCompileExec2081555682/fast"
+make[1]: Entering directory '/home/arad/gitProjects/blender/altBlender/build_linux/CMakeFiles/CMakeTmp'
+/usr/bin/make -f CMakeFiles/cmTryCompileExec2081555682.dir/build.make CMakeFiles/cmTryCompileExec2081555682.dir/build
+make[2]: Entering directory '/home/arad/gitProjects/blender/altBlender/build_linux/CMakeFiles/CMakeTmp'
+/usr/bin/cmake -E cmake_progress_report /home/arad/gitProjects/blender/altBlender/build_linux/CMakeFiles/CMakeTmp/CMakeFiles 1
+Building C object CMakeFiles/cmTryCompileExec2081555682.dir/CheckFunctionExists.c.o
+/usr/bin/cc   -DCHECK_FUNCTION_EXISTS=gethostbyname   -o CMakeFiles/cmTryCompileExec2081555682.dir/CheckFunctionExists.c.o   -c /usr/share/cmake-2.8/Modules/CheckFunctionExists.c
+Linking C executable cmTryCompileExec2081555682
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTryCompileExec2081555682.dir/link.txt --verbose=1
+/usr/bin/cc   -DCHECK_FUNCTION_EXISTS=gethostbyname    CMakeFiles/cmTryCompileExec2081555682.dir/CheckFunctionExists.c.o  -o cmTryCompileExec2081555682 -rdynamic 
+make[2]: Leaving directory '/home/arad/gitProjects/blender/altBlender/build_linux/CMakeFiles/CMakeTmp'
+make[1]: Leaving directory '/home/arad/gitProjects/blender/altBlender/build_linux/CMakeFiles/CMakeTmp'
+
+
+Determining if the function connect exists passed with the following output:
+Change Dir: /home/arad/gitProjects/blender/altBlender/build_linux/CMakeFiles/CMakeTmp
+
+Run Build Command:/usr/bin/make "cmTryCompileExec2850750670/fast"
+make[1]: Entering directory '/home/arad/gitProjects/blender/altBlender/build_linux/CMakeFiles/CMakeTmp'
+/usr/bin/make -f CMakeFiles/cmTryCompileExec2850750670.dir/build.make CMakeFiles/cmTryCompileExec2850750670.dir/build
+make[2]: Entering directory '/home/arad/gitProjects/blender/altBlender/build_linux/CMakeFiles/CMakeTmp'
+/usr/bin/cmake -E cmake_progress_report /home/arad/gitProjects/blender/altBlender/build_linux/CMakeFiles/CMakeTmp/CMakeFiles 1
+Building C object CMakeFiles/cmTryCompileExec2850750670.dir/CheckFunctionExists.c.o
+/usr/bin/cc   -DCHECK_FUNCTION_EXISTS=connect   -o CMakeFiles/cmTryCompileExec2850750670.dir/CheckFunctionExists.c.o   -c /usr/share/cmake-2.8/Modules/CheckFunctionExists.c
+Linking C executable cmTryCompileExec2850750670
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTryCompileExec2850750670.dir/link.txt --verbose=1
+/usr/bin/cc   -DCHECK_FUNCTION_EXISTS=connect    CMakeFiles/cmTryCompileExec2850750670.dir/CheckFunctionExists.c.o  -o cmTryCompileExec2850750670 -rdynamic 
+make[2]: Leaving directory '/home/arad/gitProjects/blender/altBlender/build_linux/CMakeFiles/CMakeTmp'
+make[1]: Leaving directory '/home/arad/gitProjects/blender/altBlender/build_linux/CMakeFiles/CMakeTmp'
+
+
+Determining if the function remove exists passed with the following output:
+Change Dir: /home/arad/gitProjects/blender/altBlender/build_linux/CMakeFiles/CMakeTmp
+
+Run Build Command:/usr/bin/make "cmTryCompileExec1926235699/fast"
+make[1]: Entering directory '/home/arad/gitProjects/blender/altBlender/build_linux/CMakeFiles/CMakeTmp'
+/usr/bin/make -f CMakeFiles/cmTryCompileExec1926235699.dir/build.make CMakeFiles/cmTryCompileExec1926235699.dir/build
+make[2]: Entering directory '/home/arad/gitProjects/blender/altBlender/build_linux/CMakeFiles/CMakeTmp'
+/usr/bin/cmake -E cmake_progress_report /home/arad/gitProjects/blender/altBlender/build_linux/CMakeFiles/CMakeTmp/CMakeFiles 1
+Building C object CMakeFiles/cmTryCompileExec1926235699.dir/CheckFunctionExists.c.o
+/usr/bin/cc   -DCHECK_FUNCTION_EXISTS=remove   -o CMakeFiles/cmTryCompileExec1926235699.dir/CheckFunctionExists.c.o   -c /usr/share/cmake-2.8/Modules/CheckFunctionExists.c
+Linking C executable cmTryCompileExec1926235699
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTryCompileExec1926235699.dir/link.txt --verbose=1
+/usr/bin/cc   -DCHECK_FUNCTION_EXISTS=remove    CMakeFiles/cmTryCompileExec1926235699.dir/CheckFunctionExists.c.o  -o cmTryCompileExec1926235699 -rdynamic 
+make[2]: Leaving directory '/home/arad/gitProjects/blender/altBlender/build_linux/CMakeFiles/CMakeTmp'
+make[1]: Leaving directory '/home/arad/gitProjects/blender/altBlender/build_linux/CMakeFiles/CMakeTmp'
+
+
+Determining if the function shmat exists passed with the following output:
+Change Dir: /home/arad/gitProjects/blender/altBlender/build_linux/CMakeFiles/CMakeTmp
+
+Run Build Command:/usr/bin/make "cmTryCompileExec2558132049/fast"
+make[1]: Entering directory '/home/arad/gitProjects/blender/altBlender/build_linux/CMakeFiles/CMakeTmp'
+/usr/bin/make -f CMakeFiles/cmTryCompileExec2558132049.dir/build.make CMakeFiles/cmTryCompileExec2558132049.dir/build
+make[2]: Entering directory '/home/arad/gitProjects/blender/altBlender/build_linux/CMakeFiles/CMakeTmp'
+/usr/bin/cmake -E cmake_progress_report /home/arad/gitProjects/blender/altBlender/build_linux/CMakeFiles/CMakeTmp/CMakeFiles 1
+Building C object CMakeFiles/cmTryCompileExec2558132049.dir/CheckFunctionExists.c.o
+/usr/bin/cc   -DCHECK_FUNCTION_EXISTS=shmat   -o CMakeFiles/cmTryCompileExec2558132049.dir/CheckFunctionExists.c.o   -c /usr/share/cmake-2.8/Modules/CheckFunctionExists.c
+Linking C executable cmTryCompileExec2558132049
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTryCompileExec2558132049.dir/link.txt --verbose=1
+/usr/bin/cc   -DCHECK_FUNCTION_EXISTS=shmat    CMakeFiles/cmTryCompileExec2558132049.dir/CheckFunctionExists.c.o  -o cmTryCompileExec2558132049 -rdynamic 
+make[2]: Leaving directory '/home/arad/gitProjects/blender/altBlender/build_linux/CMakeFiles/CMakeTmp'
+make[1]: Leaving directory '/home/arad/gitProjects/blender/altBlender/build_linux/CMakeFiles/CMakeTmp'
+
+
+Determining if the function IceConnectionNumber exists in the ICE passed with the following output:
+Change Dir: /home/arad/gitProjects/blender/altBlender/build_linux/CMakeFiles/CMakeTmp
+
+Run Build Command:/usr/bin/make "cmTryCompileExec3207729529/fast"
+make[1]: Entering directory '/home/arad/gitProjects/blender/altBlender/build_linux/CMakeFiles/CMakeTmp'
+/usr/bin/make -f CMakeFiles/cmTryCompileExec3207729529.dir/build.make CMakeFiles/cmTryCompileExec3207729529.dir/build
+make[2]: Entering directory '/home/arad/gitProjects/blender/altBlender/build_linux/CMakeFiles/CMakeTmp'
+/usr/bin/cmake -E cmake_progress_report /home/arad/gitProjects/blender/altBlender/build_linux/CMakeFiles/CMakeTmp/CMakeFiles 1
+Building C object CMakeFiles/cmTryCompileExec3207729529.dir/CheckFunctionExists.c.o
+/usr/bin/cc   -DCHECK_FUNCTION_EXISTS=IceConnectionNumber   -o CMakeFiles/cmTryCompileExec3207729529.dir/CheckFunctionExists.c.o   -c /usr/share/cmake-2.8/Modules/CheckFunctionExists.c
+Linking C executable cmTryCompileExec3207729529
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTryCompileExec3207729529.dir/link.txt --verbose=1
+/usr/bin/cc   -DCHECK_FUNCTION_EXISTS=IceConnectionNumber    CMakeFiles/cmTryCompileExec3207729529.dir/CheckFunctionExists.c.o  -o cmTryCompileExec3207729529 -rdynamic -lICE 
+make[2]: Leaving directory '/home/arad/gitProjects/blender/altBlender/build_linux/CMakeFiles/CMakeTmp'
+make[1]: Leaving directory '/home/arad/gitProjects/blender/altBlender/build_linux/CMakeFiles/CMakeTmp'
+
+
+Determining if the include file sys/types.h exists passed with the following output:
+Change Dir: /home/arad/gitProjects/blender/altBlender/build_linux/CMakeFiles/CMakeTmp
+
+Run Build Command:/usr/bin/make "cmTryCompileExec794230332/fast"
+make[1]: Entering directory '/home/arad/gitProjects/blender/altBlender/build_linux/CMakeFiles/CMakeTmp'
+/usr/bin/make -f CMakeFiles/cmTryCompileExec794230332.dir/build.make CMakeFiles/cmTryCompileExec794230332.dir/build
+make[2]: Entering directory '/home/arad/gitProjects/blender/altBlender/build_linux/CMakeFiles/CMakeTmp'
+/usr/bin/cmake -E cmake_progress_report /home/arad/gitProjects/blender/altBlender/build_linux/CMakeFiles/CMakeTmp/CMakeFiles 1
+Building C object CMakeFiles/cmTryCompileExec794230332.dir/CheckIncludeFile.c.o
+/usr/bin/cc    -o CMakeFiles/cmTryCompileExec794230332.dir/CheckIncludeFile.c.o   -c /home/arad/gitProjects/blender/altBlender/build_linux/CMakeFiles/CMakeTmp/CheckIncludeFile.c
+Linking C executable cmTryCompileExec794230332
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTryCompileExec794230332.dir/link.txt --verbose=1
+/usr/bin/cc       CMakeFiles/cmTryCompileExec794230332.dir/CheckIncludeFile.c.o  -o cmTryCompileExec794230332 -rdynamic 
+make[2]: Leaving directory '/home/arad/gitProjects/blender/altBlender/build_linux/CMakeFiles/CMakeTmp'
+make[1]: Leaving directory '/home/arad/gitProjects/blender/altBlender/build_linux/CMakeFiles/CMakeTmp'
+
+
+Determining if the include file stdint.h exists passed with the following output:
+Change Dir: /home/arad/gitProjects/blender/altBlender/build_linux/CMakeFiles/CMakeTmp
+
+Run Build Command:/usr/bin/make "cmTryCompileExec3147806372/fast"
+make[1]: Entering directory '/home/arad/gitProjects/blender/altBlender/build_linux/CMakeFiles/CMakeTmp'
+/usr/bin/make -f CMakeFiles/cmTryCompileExec3147806372.dir/build.make CMakeFiles/cmTryCompileExec3147806372.dir/build
+make[2]: Entering directory '/home/arad/gitProjects/blender/altBlender/build_linux/CMakeFiles/CMakeTmp'
+/usr/bin/cmake -E cmake_progress_report /home/arad/gitProjects/blender/altBlender/build_linux/CMakeFiles/CMakeTmp/CMakeFiles 1
+Building C object CMakeFiles/cmTryCompileExec3147806372.dir/CheckIncludeFile.c.o
+/usr/bin/cc    -o CMakeFiles/cmTryCompileExec3147806372.dir/CheckIncludeFile.c.o   -c /home/arad/gitProjects/blender/altBlender/build_linux/CMakeFiles/CMakeTmp/CheckIncludeFile.c
+Linking C executable cmTryCompileExec3147806372
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTryCompileExec3147806372.dir/link.txt --verbose=1
+/usr/bin/cc       CMakeFiles/cmTryCompileExec3147806372.dir/CheckIncludeFile.c.o  -o cmTryCompileExec3147806372 -rdynamic 
+make[2]: Leaving directory '/home/arad/gitProjects/blender/altBlender/build_linux/CMakeFiles/CMakeTmp'
+make[1]: Leaving directory '/home/arad/gitProjects/blender/altBlender/build_linux/CMakeFiles/CMakeTmp'
+
+
+Determining if the include file stddef.h exists passed with the following output:
+Change Dir: /home/arad/gitProjects/blender/altBlender/build_linux/CMakeFiles/CMakeTmp
+
+Run Build Command:/usr/bin/make "cmTryCompileExec183348028/fast"
+make[1]: Entering directory '/home/arad/gitProjects/blender/altBlender/build_linux/CMakeFiles/CMakeTmp'
+/usr/bin/make -f CMakeFiles/cmTryCompileExec183348028.dir/build.make CMakeFiles/cmTryCompileExec183348028.dir/build
+make[2]: Entering directory '/home/arad/gitProjects/blender/altBlender/build_linux/CMakeFiles/CMakeTmp'
+/usr/bin/cmake -E cmake_progress_report /home/arad/gitProjects/blender/altBlender/build_linux/CMakeFiles/CMakeTmp/CMakeFiles 1
+Building C object CMakeFiles/cmTryCompileExec183348028.dir/CheckIncludeFile.c.o
+/usr/bin/cc    -o CMakeFiles/cmTryCompileExec183348028.dir/CheckIncludeFile.c.o   -c /home/arad/gitProjects/blender/altBlender/build_linux/CMakeFiles/CMakeTmp/CheckIncludeFile.c
+Linking C executable cmTryCompileExec183348028
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTryCompileExec183348028.dir/link.txt --verbose=1
+/usr/bin/cc       CMakeFiles/cmTryCompileExec183348028.dir/CheckIncludeFile.c.o  -o cmTryCompileExec183348028 -rdynamic 
+make[2]: Leaving directory '/home/arad/gitProjects/blender/altBlender/build_linux/CMakeFiles/CMakeTmp'
+make[1]: Leaving directory '/home/arad/gitProjects/blender/altBlender/build_linux/CMakeFiles/CMakeTmp'
+
+
+Determining size of unsigned short passed with the following output:
+Change Dir: /home/arad/gitProjects/blender/altBlender/build_linux/CMakeFiles/CMakeTmp
+
+Run Build Command:/usr/bin/make "cmTryCompileExec1350397046/fast"
+make[1]: Entering directory '/home/arad/gitProjects/blender/altBlender/build_linux/CMakeFiles/CMakeTmp'
+/usr/bin/make -f CMakeFiles/cmTryCompileExec1350397046.dir/build.make CMakeFiles/cmTryCompileExec1350397046.dir/build
+make[2]: Entering directory '/home/arad/gitProjects/blender/altBlender/build_linux/CMakeFiles/CMakeTmp'
+/usr/bin/cmake -E cmake_progress_report /home/arad/gitProjects/blender/altBlender/build_linux/CMakeFiles/CMakeTmp/CMakeFiles 1
+Building C object CMakeFiles/cmTryCompileExec1350397046.dir/CMAKE_SIZEOF_UNSIGNED_SHORT.c.o
+/usr/bin/cc    -o CMakeFiles/cmTryCompileExec1350397046.dir/CMAKE_SIZEOF_UNSIGNED_SHORT.c.o   -c /home/arad/gitProjects/blender/altBlender/build_linux/CMakeFiles/CheckTypeSize/CMAKE_SIZEOF_UNSIGNED_SHORT.c
+Linking C executable cmTryCompileExec1350397046
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTryCompileExec1350397046.dir/link.txt --verbose=1
+/usr/bin/cc       CMakeFiles/cmTryCompileExec1350397046.dir/CMAKE_SIZEOF_UNSIGNED_SHORT.c.o  -o cmTryCompileExec1350397046 -rdynamic 
+make[2]: Leaving directory '/home/arad/gitProjects/blender/altBlender/build_linux/CMakeFiles/CMakeTmp'
+make[1]: Leaving directory '/home/arad/gitProjects/blender/altBlender/build_linux/CMakeFiles/CMakeTmp'
+
+
+Performing C SOURCE FILE Test OpenMP_FLAG_DETECTED succeded with the following output:
+Change Dir: /home/arad/gitProjects/blender/altBlender/build_linux/CMakeFiles/CMakeTmp
+
+Run Build Command:/usr/bin/make "cmTryCompileExec2404717658/fast"
+make[1]: Entering directory '/home/arad/gitProjects/blender/altBlender/build_linux/CMakeFiles/CMakeTmp'
+/usr/bin/make -f CMakeFiles/cmTryCompileExec2404717658.dir/build.make CMakeFiles/cmTryCompileExec2404717658.dir/build
+make[2]: Entering directory '/home/arad/gitProjects/blender/altBlender/build_linux/CMakeFiles/CMakeTmp'
+/usr/bin/cmake -E cmake_progress_report /home/arad/gitProjects/blender/altBlender/build_linux/CMakeFiles/CMakeTmp/CMakeFiles 1
+Building C object CMakeFiles/cmTryCompileExec2404717658.dir/src.c.o
+/usr/bin/cc   -DOpenMP_FLAG_DETECTED -fopenmp   -o CMakeFiles/cmTryCompileExec2404717658.dir/src.c.o   -c /home/arad/gitProjects/blender/altBlender/build_linux/CMakeFiles/CMakeTmp/src.c
+Linking C executable cmTryCompileExec2404717658
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTryCompileExec2404717658.dir/link.txt --verbose=1
+/usr/bin/cc   -DOpenMP_FLAG_DETECTED -fopenmp    CMakeFiles/cmTryCompileExec2404717658.dir/src.c.o  -o cmTryCompileExec2404717658 -rdynamic 
+make[2]: Leaving directory '/home/arad/gitProjects/blender/altBlender/build_linux/CMakeFiles/CMakeTmp'
+make[1]: Leaving directory '/home/arad/gitProjects/blender/altBlender/build_linux/CMakeFiles/CMakeTmp'
+
+Source file was:
+
+#include <omp.h>
+int main() {
+#ifdef _OPENMP
+  return 0;
+#else
+  breaks_on_purpose
+#endif
+}
+
+Performing C++ SOURCE FILE Test OpenMP_FLAG_DETECTED succeded with the following output:
+Change Dir: /home/arad/gitProjects/blender/altBlender/build_linux/CMakeFiles/CMakeTmp
+
+Run Build Command:/usr/bin/make "cmTryCompileExec1265212487/fast"
+make[1]: Entering directory '/home/arad/gitProjects/blender/altBlender/build_linux/CMakeFiles/CMakeTmp'
+/usr/bin/make -f CMakeFiles/cmTryCompileExec1265212487.dir/build.make CMakeFiles/cmTryCompileExec1265212487.dir/build
+make[2]: Entering directory '/home/arad/gitProjects/blender/altBlender/build_linux/CMakeFiles/CMakeTmp'
+/usr/bin/cmake -E cmake_progress_report /home/arad/gitProjects/blender/altBlender/build_linux/CMakeFiles/CMakeTmp/CMakeFiles 1
+Building CXX object CMakeFiles/cmTryCompileExec1265212487.dir/src.cxx.o
+/usr/bin/c++    -DOpenMP_FLAG_DETECTED -fopenmp   -o CMakeFiles/cmTryCompileExec1265212487.dir/src.cxx.o -c /home/arad/gitProjects/blender/altBlender/build_linux/CMakeFiles/CMakeTmp/src.cxx
+Linking CXX executable cmTryCompileExec1265212487
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTryCompileExec1265212487.dir/link.txt --verbose=1
+/usr/bin/c++    -DOpenMP_FLAG_DETECTED -fopenmp    CMakeFiles/cmTryCompileExec1265212487.dir/src.cxx.o  -o cmTryCompileExec1265212487 -rdynamic 
+make[2]: Leaving directory '/home/arad/gitProjects/blender/altBlender/build_linux/CMakeFiles/CMakeTmp'
+make[1]: Leaving directory '/home/arad/gitProjects/blender/altBlender/build_linux/CMakeFiles/CMakeTmp'
+
+Source file was:
+
+#include <omp.h>
+int main() {
+#ifdef _OPENMP
+  return 0;
+#else
+  breaks_on_purpose
+#endif
+}
+
+Performing C SOURCE FILE Test C_WARN_ALL succeded with the following output:
+Change Dir: /home/arad/gitProjects/blender/altBlender/build_linux/CMakeFiles/CMakeTmp
+
+Run Build Command:/usr/bin/make "cmTryCompileExec743739740/fast"
+make[1]: Entering directory '/home/arad/gitProjects/blender/altBlender/build_linux/CMakeFiles/CMakeTmp'
+/usr/bin/make -f CMakeFiles/cmTryCompileExec743739740.dir/build.make CMakeFiles/cmTryCompileExec743739740.dir/build
+make[2]: Entering directory '/home/arad/gitProjects/blender/altBlender/build_linux/CMakeFiles/CMakeTmp'
+/usr/bin/cmake -E cmake_progress_report /home/arad/gitProjects/blender/altBlender/build_linux/CMakeFiles/CMakeTmp/CMakeFiles 1
+Building C object CMakeFiles/cmTryCompileExec743739740.dir/src.c.o
+/usr/bin/cc   -fopenmp -DC_WARN_ALL   -Wall -o CMakeFiles/cmTryCompileExec743739740.dir/src.c.o   -c /home/arad/gitProjects/blender/altBlender/build_linux/CMakeFiles/CMakeTmp/src.c
+Linking C executable cmTryCompileExec743739740
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTryCompileExec743739740.dir/link.txt --verbose=1
+/usr/bin/cc   -fopenmp -DC_WARN_ALL    CMakeFiles/cmTryCompileExec743739740.dir/src.c.o  -o cmTryCompileExec743739740 -rdynamic 
+make[2]: Leaving directory '/home/arad/gitProjects/blender/altBlender/build_linux/CMakeFiles/CMakeTmp'
+make[1]: Leaving directory '/home/arad/gitProjects/blender/altBlender/build_linux/CMakeFiles/CMakeTmp'
+
+Source file was:
+int main(void) { return 0; }
+Performing C SOURCE FILE Test C_WARN_CAST_ALIGN succeded with the following output:
+Change Dir: /home/arad/gitProjects/blender/altBlender/build_linux/CMakeFiles/CMakeTmp
+
+Run Build Command:/usr/bin/make "cmTryCompileExec1547427208/fast"
+make[1]: Entering directory '/home/arad/gitProjects/blender/altBlender/build_linux/CMakeFiles/CMakeTmp'
+/usr/bin/make -f CMakeFiles/cmTryCompileExec1547427208.dir/build.make CMakeFiles/cmTryCompileExec1547427208.dir/build
+make[2]: Entering directory '/home/arad/gitProjects/blender/altBlender/build_linux/CMakeFiles/CMakeTmp'
+/usr/bin/cmake -E cmake_progress_report /home/arad/gitProjects/blender/altBlender/build_linux/CMakeFiles/CMakeTmp/CMakeFiles 1
+Building C object CMakeFiles/cmTryCompileExec1547427208.dir/src.c.o
+/usr/bin/cc   -fopenmp -DC_WARN_CAST_ALIGN   -Wcast-align -o CMakeFiles/cmTryCompileExec1547427208.dir/src.c.o   -c /home/arad/gitProjects/blender/altBlender/build_linux/CMakeFiles/CMakeTmp/src.c
+Linking C executable cmTryCompileExec1547427208
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTryCompileExec1547427208.dir/link.txt --verbose=1
+/usr/bin/cc   -fopenmp -DC_WARN_CAST_ALIGN    CMakeFiles/cmTryCompileExec1547427208.dir/src.c.o  -o cmTryCompileExec1547427208 -rdynamic 
+make[2]: Leaving directory '/home/arad/gitProjects/blender/altBlender/build_linux/CMakeFiles/CMakeTmp'
+make[1]: Leaving directory '/home/arad/gitProjects/blender/altBlender/build_linux/CMakeFiles/CMakeTmp'
+
+Source file was:
+int main(void) { return 0; }
+Performing C SOURCE FILE Test C_WARN_ERROR_DECLARATION_AFTER_STATEMENT succeded with the following output:
+Change Dir: /home/arad/gitProjects/blender/altBlender/build_linux/CMakeFiles/CMakeTmp
+
+Run Build Command:/usr/bin/make "cmTryCompileExec932575286/fast"
+make[1]: Entering directory '/home/arad/gitProjects/blender/altBlender/build_linux/CMakeFiles/CMakeTmp'
+/usr/bin/make -f CMakeFiles/cmTryCompileExec932575286.dir/build.make CMakeFiles/cmTryCompileExec932575286.dir/build
+make[2]: Entering directory '/home/arad/gitProjects/blender/altBlender/build_linux/CMakeFiles/CMakeTmp'
+/usr/bin/cmake -E cmake_progress_report /home/arad/gitProjects/blender/altBlender/build_linux/CMakeFiles/CMakeTmp/CMakeFiles 1
+Building C object CMakeFiles/cmTryCompileExec932575286.dir/src.c.o
+/usr/bin/cc   -fopenmp -DC_WARN_ERROR_DECLARATION_AFTER_STATEMENT   -Werror=declaration-after-statement -o CMakeFiles/cmTryCompileExec932575286.dir/src.c.o   -c /home/arad/gitProjects/blender/altBlender/build_linux/CMakeFiles/CMakeTmp/src.c
+Linking C executable cmTryCompileExec932575286
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTryCompileExec932575286.dir/link.txt --verbose=1
+/usr/bin/cc   -fopenmp -DC_WARN_ERROR_DECLARATION_AFTER_STATEMENT    CMakeFiles/cmTryCompileExec932575286.dir/src.c.o  -o cmTryCompileExec932575286 -rdynamic 
+make[2]: Leaving directory '/home/arad/gitProjects/blender/altBlender/build_linux/CMakeFiles/CMakeTmp'
+make[1]: Leaving directory '/home/arad/gitProjects/blender/altBlender/build_linux/CMakeFiles/CMakeTmp'
+
+Source file was:
+int main(void) { return 0; }
+Performing C SOURCE FILE Test C_WARN_ERROR_IMPLICIT_FUNCTION_DECLARATION succeded with the following output:
+Change Dir: /home/arad/gitProjects/blender/altBlender/build_linux/CMakeFiles/CMakeTmp
+
+Run Build Command:/usr/bin/make "cmTryCompileExec1546978172/fast"
+make[1]: Entering directory '/home/arad/gitProjects/blender/altBlender/build_linux/CMakeFiles/CMakeTmp'
+/usr/bin/make -f CMakeFiles/cmTryCompileExec1546978172.dir/build.make CMakeFiles/cmTryCompileExec1546978172.dir/build
+make[2]: Entering directory '/home/arad/gitProjects/blender/altBlender/build_linux/CMakeFiles/CMakeTmp'
+/usr/bin/cmake -E cmake_progress_report /home/arad/gitProjects/blender/altBlender/build_linux/CMakeFiles/CMakeTmp/CMakeFiles 1
+Building C object CMakeFiles/cmTryCompileExec1546978172.dir/src.c.o
+/usr/bin/cc   -fopenmp -DC_WARN_ERROR_IMPLICIT_FUNCTION_DECLARATION   -Werror=implicit-function-declaration -o CMakeFiles/cmTryCompileExec1546978172.dir/src.c.o   -c /home/arad/gitProjects/blender/altBlender/build_linux/CMakeFiles/CMakeTmp/src.c
+Linking C executable cmTryCompileExec1546978172
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTryCompileExec1546978172.dir/link.txt --verbose=1
+/usr/bin/cc   -fopenmp -DC_WARN_ERROR_IMPLICIT_FUNCTION_DECLARATION    CMakeFiles/cmTryCompileExec1546978172.dir/src.c.o  -o cmTryCompileExec1546978172 -rdynamic 
+make[2]: Leaving directory '/home/arad/gitProjects/blender/altBlender/build_linux/CMakeFiles/CMakeTmp'
+make[1]: Leaving directory '/home/arad/gitProjects/blender/altBlender/build_linux/CMakeFiles/CMakeTmp'
+
+Source file was:
+int main(void) { return 0; }
+Performing C SOURCE FILE Test C_WARN_ERROR_RETURN_TYPE succeded with the following output:
+Change Dir: /home/arad/gitProjects/blender/altBlender/build_linux/CMakeFiles/CMakeTmp
+
+Run Build Command:/usr/bin/make "cmTryCompileExec712270303/fast"
+make[1]: Entering directory '/home/arad/gitProjects/blender/altBlender/build_linux/CMakeFiles/CMakeTmp'
+/usr/bin/make -f CMakeFiles/cmTryCompileExec712270303.dir/build.make CMakeFiles/cmTryCompileExec712270303.dir/build
+make[2]: Entering directory '/home/arad/gitProjects/blender/altBlender/build_linux/CMakeFiles/CMakeTmp'
+/usr/bin/cmake -E cmake_progress_report /home/arad/gitProjects/blender/altBlender/build_linux/CMakeFiles/CMakeTmp/CMakeFiles 1
+Building C object CMakeFiles/cmTryCompileExec712270303.dir/src.c.o
+/usr/bin/cc   -fopenmp -DC_WARN_ERROR_RETURN_TYPE   -Werror=return-type -o CMakeFiles/cmTryCompileExec712270303.dir/src.c.o   -c /home/arad/gitProjects/blender/altBlender/build_linux/CMakeFiles/CMakeTmp/src.c
+Linking C executable cmTryCompileExec712270303
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTryCompileExec712270303.dir/link.txt --verbose=1
+/usr/bin/cc   -fopenmp -DC_WARN_ERROR_RETURN_TYPE    CMakeFiles/cmTryCompileExec712270303.dir/src.c.o  -o cmTryCompileExec712270303 -rdynamic 
+make[2]: Leaving directory '/home/arad/gitProjects/blender/altBlender/build_linux/CMakeFiles/CMakeTmp'
+make[1]: Leaving directory '/home/arad/gitProjects/blender/altBlender/build_linux/CMakeFiles/CMakeTmp'
+
+Source file was:
+int main(void) { return 0; }
+Performing C SOURCE FILE Test C_WARN_STRICT_PROTOTYPES succeded with the following output:
+Change Dir: /home/arad/gitProjects/blender/altBlender/build_linux/CMakeFiles/CMakeTmp
+
+Run Build Command:/usr/bin/make "cmTryCompileExec348552809/fast"
+make[1]: Entering directory '/home/arad/gitProjects/blender/altBlender/build_linux/CMakeFiles/CMakeTmp'
+/usr/bin/make -f CMakeFiles/cmTryCompileExec348552809.dir/build.make CMakeFiles/cmTryCompileExec348552809.dir/build
+make[2]: Entering directory '/home/arad/gitProjects/blender/altBlender/build_linux/CMakeFiles/CMakeTmp'
+/usr/bin/cmake -E cmake_progress_report /home/arad/gitProjects/blender/altBlender/build_linux/CMakeFiles/CMakeTmp/CMakeFiles 1
+Building C object CMakeFiles/cmTryCompileExec348552809.dir/src.c.o
+/usr/bin/cc   -fopenmp -DC_WARN_STRICT_PROTOTYPES   -Wstrict-prototypes -o CMakeFiles/cmTryCompileExec348552809.dir/src.c.o   -c /home/arad/gitProjects/blender/altBlender/build_linux/CMakeFiles/CMakeTmp/src.c
+Linking C executable cmTryCompileExec348552809
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTryCompileExec348552809.dir/link.txt --verbose=1
+/usr/bin/cc   -fopenmp -DC_WARN_STRICT_PROTOTYPES    CMakeFiles/cmTryCompileExec348552809.dir/src.c.o  -o cmTryCompileExec348552809 -rdynamic 
+make[2]: Leaving directory '/home/arad/gitProjects/blender/altBlender/build_linux/CMakeFiles/CMakeTmp'
+make[1]: Leaving directory '/home/arad/gitProjects/blender/altBlender/build_linux/CMakeFiles/CMakeTmp'
+
+Source file was:
+int main(void) { return 0; }
+Performing C SOURCE FILE Test C_WARN_MISSING_PROTOTYPES succeded with the following output:
+Change Dir: /home/arad/gitProjects/blender/altBlender/build_linux/CMakeFiles/CMakeTmp
+
+Run Build Command:/usr/bin/make "cmTryCompileExec1294723798/fast"
+make[1]: Entering directory '/home/arad/gitProjects/blender/altBlender/build_linux/CMakeFiles/CMakeTmp'
+/usr/bin/make -f CMakeFiles/cmTryCompileExec1294723798.dir/build.make CMakeFiles/cmTryCompileExec1294723798.dir/build
+make[2]: Entering directory '/home/arad/gitProjects/blender/altBlender/build_linux/CMakeFiles/CMakeTmp'
+/usr/bin/cmake -E cmake_progress_report /home/arad/gitProjects/blender/altBlender/build_linux/CMakeFiles/CMakeTmp/CMakeFiles 1
+Building C object CMakeFiles/cmTryCompileExec1294723798.dir/src.c.o
+/usr/bin/cc   -fopenmp -DC_WARN_MISSING_PROTOTYPES   -Wmissing-prototypes -o CMakeFiles/cmTryCompileExec1294723798.dir/src.c.o   -c /home/arad/gitProjects/blender/altBlender/build_linux/CMakeFiles/CMakeTmp/src.c
+Linking C executable cmTryCompileExec1294723798
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTryCompileExec1294723798.dir/link.txt --verbose=1
+/usr/bin/cc   -fopenmp -DC_WARN_MISSING_PROTOTYPES    CMakeFiles/cmTryCompileExec1294723798.dir/src.c.o  -o cmTryCompileExec1294723798 -rdynamic 
+make[2]: Leaving directory '/home/arad/gitProjects/blender/altBlender/build_linux/CMakeFiles/CMakeTmp'
+make[1]: Leaving directory '/home/arad/gitProjects/blender/altBlender/build_linux/CMakeFiles/CMakeTmp'
+
+Source file was:
+int main(void) { return 0; }
+Performing C SOURCE FILE Test C_WARN_NO_CHAR_SUBSCRIPTS succeded with the following output:
+Change Dir: /home/arad/gitProjects/blender/altBlender/build_linux/CMakeFiles/CMakeTmp
+
+Run Build Command:/usr/bin/make "cmTryCompileExec3775274927/fast"
+make[1]: Entering directory '/home/arad/gitProjects/blender/altBlender/build_linux/CMakeFiles/CMakeTmp'
+/usr/bin/make -f CMakeFiles/cmTryCompileExec3775274927.dir/build.make CMakeFiles/cmTryCompileExec3775274927.dir/build
+make[2]: Entering directory '/home/arad/gitProjects/blender/altBlender/build_linux/CMakeFiles/CMakeTmp'
+/usr/bin/cmake -E cmake_progress_report /home/arad/gitProjects/blender/altBlender/build_linux/CMakeFiles/CMakeTmp/CMakeFiles 1
+Building C object CMakeFiles/cmTryCompileExec3775274927.dir/src.c.o
+/usr/bin/cc   -fopenmp -DC_WARN_NO_CHAR_SUBSCRIPTS   -Wno-char-subscripts -o CMakeFiles/cmTryCompileExec3775274927.dir/src.c.o   -c /home/arad/gitProjects/blender/altBlender/build_linux/CMakeFiles/CMakeTmp/src.c
+Linking C executable cmTryCompileExec3775274927
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTryCompileExec3775274927.dir/link.txt --verbose=1
+/usr/bin/cc   -fopenmp -DC_WARN_NO_CHAR_SUBSCRIPTS    CMakeFiles/cmTryCompileExec3775274927.dir/src.c.o  -o cmTryCompileExec3775274927 -rdynamic 
+make[2]: Leaving directory '/home/arad/gitProjects/blender/altBlender/build_linux/CMakeFiles/CMakeTmp'
+make[1]: Leaving directory '/home/arad/gitProjects/blender/altBlender/build_linux/CMakeFiles/CMakeTmp'
+
+Source file was:
+int main(void) { return 0; }
+Performing C SOURCE FILE Test C_WARN_NO_UNKNOWN_PRAGMAS succeded with the following output:
+Change Dir: /home/arad/gitProjects/blender/altBlender/build_linux/CMakeFiles/CMakeTmp
+
+Run Build Command:/usr/bin/make "cmTryCompileExec1471511757/fast"
+make[1]: Entering directory '/home/arad/gitProjects/blender/altBlender/build_linux/CMakeFiles/CMakeTmp'
+/usr/bin/make -f CMakeFiles/cmTryCompileExec1471511757.dir/build.make CMakeFiles/cmTryCompileExec1471511757.dir/build
+make[2]: Entering directory '/home/arad/gitProjects/blender/altBlender/build_linux/CMakeFiles/CMakeTmp'
+/usr/bin/cmake -E cmake_progress_report /home/arad/gitProjects/blender/altBlender/build_linux/CMakeFiles/CMakeTmp/CMakeFiles 1
+Building C object CMakeFiles/cmTryCompileExec1471511757.dir/src.c.o
+/usr/bin/cc   -fopenmp -DC_WARN_NO_UNKNOWN_PRAGMAS   -Wno-unknown-pragmas -o CMakeFiles/cmTryCompileExec1471511757.dir/src.c.o   -c /home/arad/gitProjects/blender/altBlender/build_linux/CMakeFiles/CMakeTmp/src.c
+Linking C executable cmTryCompileExec1471511757
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTryCompileExec1471511757.dir/link.txt --verbose=1
+/usr/bin/cc   -fopenmp -DC_WARN_NO_UNKNOWN_PRAGMAS    CMakeFiles/cmTryCompileExec1471511757.dir/src.c.o  -o cmTryCompileExec1471511757 -rdynamic 
+make[2]: Leaving directory '/home/arad/gitProjects/blender/altBlender/build_linux/CMakeFiles/CMakeTmp'
+make[1]: Leaving directory '/home/arad/gitProjects/blender/altBlender/build_linux/CMakeFiles/CMakeTmp'
+
+Source file was:
+int main(void) { return 0; }
+Performing C SOURCE FILE Test C_WARN_POINTER_ARITH succeded with the following output:
+Change Dir: /home/arad/gitProjects/blender/altBlender/build_linux/CMakeFiles/CMakeTmp
+
+Run Build Command:/usr/bin/make "cmTryCompileExec2199830362/fast"
+make[1]: Entering directory '/home/arad/gitProjects/blender/altBlender/build_linux/CMakeFiles/CMakeTmp'
+/usr/bin/make -f CMakeFiles/cmTryCompileExec2199830362.dir/build.make CMakeFiles/cmTryCompileExec2199830362.dir/build
+make[2]: Entering directory '/home/arad/gitProjects/blender/altBlender/build_linux/CMakeFiles/CMakeTmp'
+/usr/bin/cmake -E cmake_progress_report /home/arad/gitProjects/blender/altBlender/build_linux/CMakeFiles/CMakeTmp/CMakeFiles 1
+Building C object CMakeFiles/cmTryCompileExec2199830362.dir/src.c.o
+/usr/bin/cc   -fopenmp -DC_WARN_POINTER_ARITH   -Wpointer-arith -o CMakeFiles/cmTryCompileExec2199830362.dir/src.c.o   -c /home/arad/gitProjects/blender/altBlender/build_linux/CMakeFiles/CMakeTmp/src.c
+Linking C executable cmTryCompileExec2199830362
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTryCompileExec2199830362.dir/link.txt --verbose=1
+/usr/bin/cc   -fopenmp -DC_WARN_POINTER_ARITH    CMakeFiles/cmTryCompileExec2199830362.dir/src.c.o  -o cmTryCompileExec2199830362 -rdynamic 
+make[2]: Leaving directory '/home/arad/gitProjects/blender/altBlender/build_linux/CMakeFiles/CMakeTmp'
+make[1]: Leaving directory '/home/arad/gitProjects/blender/altBlender/build_linux/CMakeFiles/CMakeTmp'
+
+Source file was:
+int main(void) { return 0; }
+Performing C SOURCE FILE Test C_WARN_UNUSED_PARAMETER succeded with the following output:
+Change Dir: /home/arad/gitProjects/blender/altBlender/build_linux/CMakeFiles/CMakeTmp
+
+Run Build Command:/usr/bin/make "cmTryCompileExec2406727423/fast"
+make[1]: Entering directory '/home/arad/gitProjects/blender/altBlender/build_linux/CMakeFiles/CMakeTmp'
+/usr/bin/make -f CMakeFiles/cmTryCompileExec2406727423.dir/build.make CMakeFiles/cmTryCompileExec2406727423.dir/build
+make[2]: Entering directory '/home/arad/gitProjects/blender/altBlender/build_linux/CMakeFiles/CMakeTmp'
+/usr/bin/cmake -E cmake_progress_report /home/arad/gitProjects/blender/altBlender/build_linux/CMakeFiles/CMakeTmp/CMakeFiles 1
+Building C object CMakeFiles/cmTryCompileExec2406727423.dir/src.c.o
+/usr/bin/cc   -fopenmp -DC_WARN_UNUSED_PARAMETER   -Wunused-parameter -o CMakeFiles/cmTryCompileExec2406727423.dir/src.c.o   -c /home/arad/gitProjects/blender/altBlender/build_linux/CMakeFiles/CMakeTmp/src.c
+Linking C executable cmTryCompileExec2406727423
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTryCompileExec2406727423.dir/link.txt --verbose=1
+/usr/bin/cc   -fopenmp -DC_WARN_UNUSED_PARAMETER    CMakeFiles/cmTryCompileExec2406727423.dir/src.c.o  -o cmTryCompileExec2406727423 -rdynamic 
+make[2]: Leaving directory '/home/arad/gitProjects/blender/altBlender/build_linux/CMakeFiles/CMakeTmp'
+make[1]: Leaving directory '/home/arad/gitProjects/blender/altBlender/build_linux/CMakeFiles/CMakeTmp'
+
+Source file was:
+int main(void) { return 0; }
+Performing C SOURCE FILE Test C_WARN_WRITE_STRINGS succeded with the following output:
+Change Dir: /home/arad/gitProjects/blender/altBlender/build_linux/CMakeFiles/CMakeTmp
+
+Run Build Command:/usr/bin/make "cmTryCompileExec2283456777/fast"
+make[1]: Entering directory '/home/arad/gitProjects/blender/altBlender/build_linux/CMakeFiles/CMakeTmp'
+/usr/bin/make -f CMakeFiles/cmTryCompileExec2283456777.dir/build.make CMakeFiles/cmTryCompileExec2283456777.dir/build
+make[2]: Entering directory '/home/arad/gitProjects/blender/altBlender/build_linux/CMakeFiles/CMakeTmp'
+/usr/bin/cmake -E cmake_progress_report /home/arad/gitProjects/blender/altBlender/build_linux/CMakeFiles/CMakeTmp/CMakeFiles 1
+Building C object CMakeFiles/cmTryCompileExec2283456777.dir/src.c.o
+/usr/bin/cc   -fopenmp -DC_WARN_WRITE_STRINGS   -Wwrite-strings -o CMakeFiles/cmTryCompileExec2283456777.dir/src.c.o   -c /home/arad/gitProjects/blender/altBlender/build_linux/CMakeFiles/CMakeTmp/src.c
+Linking C executable cmTryCompileExec2283456777
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTryCompileExec2283456777.dir/link.txt --verbose=1
+/usr/bin/cc   -fopenmp -DC_WARN_WRITE_STRINGS    CMakeFiles/cmTryCompileExec2283456777.dir/src.c.o  -o cmTryCompileExec2283456777 -rdynamic 
+make[2]: Leaving directory '/home/arad/gitProjects/blender/altBlender/build_linux/CMakeFiles/CMakeTmp'
+make[1]: Leaving directory '/home/arad/gitProjects/blender/altBlender/build_linux/CMakeFiles/CMakeTmp'
+
+Source file was:
+int main(void) { return 0; }
+Performing C SOURCE FILE Test C_WARN_LOGICAL_OP succeded with the following output:
+Change Dir: /home/arad/gitProjects/blender/altBlender/build_linux/CMakeFiles/CMakeTmp
+
+Run Build Command:/usr/bin/make "cmTryCompileExec445363746/fast"
+make[1]: Entering directory '/home/arad/gitProjects/blender/altBlender/build_linux/CMakeFiles/CMakeTmp'
+/usr/bin/make -f CMakeFiles/cmTryCompileExec445363746.dir/build.make CMakeFiles/cmTryCompileExec445363746.dir/build
+make[2]: Entering directory '/home/arad/gitProjects/blender/altBlender/build_linux/CMakeFiles/CMakeTmp'
+/usr/bin/cmake -E cmake_progress_report /home/arad/gitProjects/blender/altBlender/build_linux/CMakeFiles/CMakeTmp/CMakeFiles 1
+Building C object CMakeFiles/cmTryCompileExec445363746.dir/src.c.o
+/usr/bin/cc   -fopenmp -DC_WARN_LOGICAL_OP   -Wlogical-op -o CMakeFiles/cmTryCompileExec445363746.dir/src.c.o   -c /home/arad/gitProjects/blender/altBlender/build_linux/CMakeFiles/CMakeTmp/src.c
+Linking C executable cmTryCompileExec445363746
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTryCompileExec445363746.dir/link.txt --verbose=1
+/usr/bin/cc   -fopenmp -DC_WARN_LOGICAL_OP    CMakeFiles/cmTryCompileExec445363746.dir/src.c.o  -o cmTryCompileExec445363746 -rdynamic 
+make[2]: Leaving directory '/home/arad/gitProjects/blender/altBlender/build_linux/CMakeFiles/CMakeTmp'
+make[1]: Leaving directory '/home/arad/gitProjects/blender/altBlender/build_linux/CMakeFiles/CMakeTmp'
+
+Source file was:
+int main(void) { return 0; }
+Performing C SOURCE FILE Test C_WARN_UNDEF succeded with the following output:
+Change Dir: /home/arad/gitProjects/blender/altBlender/build_linux/CMakeFiles/CMakeTmp
+
+Run Build Command:/usr/bin/make "cmTryCompileExec95615509/fast"
+make[1]: Entering directory '/home/arad/gitProjects/blender/altBlender/build_linux/CMakeFiles/CMakeTmp'
+/usr/bin/make -f CMakeFiles/cmTryCompileExec95615509.dir/build.make CMakeFiles/cmTryCompileExec95615509.dir/build
+make[2]: Entering directory '/home/arad/gitProjects/blender/altBlender/build_linux/CMakeFiles/CMakeTmp'
+/usr/bin/cmake -E cmake_progress_report /home/arad/gitProjects/blender/altBlender/build_linux/CMakeFiles/CMakeTmp/CMakeFiles 1
+Building C object CMakeFiles/cmTryCompileExec95615509.dir/src.c.o
+/usr/bin/cc   -fopenmp -DC_WARN_UNDEF   -Wundef -o CMakeFiles/cmTryCompileExec95615509.dir/src.c.o   -c /home/arad/gitProjects/blender/altBlender/build_linux/CMakeFiles/CMakeTmp/src.c
+Linking C executable cmTryCompileExec95615509
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTryCompileExec95615509.dir/link.txt --verbose=1
+/usr/bin/cc   -fopenmp -DC_WARN_UNDEF    CMakeFiles/cmTryCompileExec95615509.dir/src.c.o  -o cmTryCompileExec95615509 -rdynamic 
+make[2]: Leaving directory '/home/arad/gitProjects/blender/altBlender/build_linux/CMakeFiles/CMakeTmp'
+make[1]: Leaving directory '/home/arad/gitProjects/blender/altBlender/build_linux/CMakeFiles/CMakeTmp'
+
+Source file was:
+int main(void) { return 0; }
+Performing C SOURCE FILE Test C_WARN_INIT_SELF succeded with the following output:
+Change Dir: /home/arad/gitProjects/blender/altBlender/build_linux/CMakeFiles/CMakeTmp
+
+Run Build Command:/usr/bin/make "cmTryCompileExec3822622788/fast"
+make[1]: Entering directory '/home/arad/gitProjects/blender/altBlender/build_linux/CMakeFiles/CMakeTmp'
+/usr/bin/make -f CMakeFiles/cmTryCompileExec3822622788.dir/build.make CMakeFiles/cmTryCompileExec3822622788.dir/build
+make[2]: Entering directory '/home/arad/gitProjects/blender/altBlender/build_linux/CMakeFiles/CMakeTmp'
+/usr/bin/cmake -E cmake_progress_report /home/arad/gitProjects/blender/altBlender/build_linux/CMakeFiles/CMakeTmp/CMakeFiles 1
+Building C object CMakeFiles/cmTryCompileExec3822622788.dir/src.c.o
+/usr/bin/cc   -fopenmp -DC_WARN_INIT_SELF   -Winit-self -o CMakeFiles/cmTryCompileExec3822622788.dir/src.c.o   -c /home/arad/gitProjects/blender/altBlender/build_linux/CMakeFiles/CMakeTmp/src.c
+Linking C executable cmTryCompileExec3822622788
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTryCompileExec3822622788.dir/link.txt --verbose=1
+/usr/bin/cc   -fopenmp -DC_WARN_INIT_SELF    CMakeFiles/cmTryCompileExec3822622788.dir/src.c.o  -o cmTryCompileExec3822622788 -rdynamic 
+make[2]: Leaving directory '/home/arad/gitProjects/blender/altBlender/build_linux/CMakeFiles/CMakeTmp'
+make[1]: Leaving directory '/home/arad/gitProjects/blender/altBlender/build_linux/CMakeFiles/CMakeTmp'
+
+Source file was:
+int main(void) { return 0; }
+Performing C SOURCE FILE Test C_WARN_NO_NULL succeded with the following output:
+Change Dir: /home/arad/gitProjects/blender/altBlender/build_linux/CMakeFiles/CMakeTmp
+
+Run Build Command:/usr/bin/make "cmTryCompileExec561169818/fast"
+make[1]: Entering directory '/home/arad/gitProjects/blender/altBlender/build_linux/CMakeFiles/CMakeTmp'
+/usr/bin/make -f CMakeFiles/cmTryCompileExec561169818.dir/build.make CMakeFiles/cmTryCompileExec561169818.dir/build
+make[2]: Entering directory '/home/arad/gitProjects/blender/altBlender/build_linux/CMakeFiles/CMakeTmp'
+/usr/bin/cmake -E cmake_progress_report /home/arad/gitProjects/blender/altBlender/build_linux/CMakeFiles/CMakeTmp/CMakeFiles 1
+Building C object CMakeFiles/cmTryCompileExec561169818.dir/src.c.o
+/usr/bin/cc   -fopenmp -DC_WARN_NO_NULL   -Wnonnull -o CMakeFiles/cmTryCompileExec561169818.dir/src.c.o   -c /home/arad/gitProjects/blender/altBlender/build_linux/CMakeFiles/CMakeTmp/src.c
+Linking C executable cmTryCompileExec561169818
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTryCompileExec561169818.dir/link.txt --verbose=1
+/usr/bin/cc   -fopenmp -DC_WARN_NO_NULL    CMakeFiles/cmTryCompileExec561169818.dir/src.c.o  -o cmTryCompileExec561169818 -rdynamic 
+make[2]: Leaving directory '/home/arad/gitProjects/blender/altBlender/build_linux/CMakeFiles/CMakeTmp'
+make[1]: Leaving directory '/home/arad/gitProjects/blender/altBlender/build_linux/CMakeFiles/CMakeTmp'
+
+Source file was:
+int main(void) { return 0; }
+Performing C SOURCE FILE Test C_WARN_MISSING_INCLUDE_DIRS succeded with the following output:
+Change Dir: /home/arad/gitProjects/blender/altBlender/build_linux/CMakeFiles/CMakeTmp
+
+Run Build Command:/usr/bin/make "cmTryCompileExec1862974190/fast"
+make[1]: Entering directory '/home/arad/gitProjects/blender/altBlender/build_linux/CMakeFiles/CMakeTmp'
+/usr/bin/make -f CMakeFiles/cmTryCompileExec1862974190.dir/build.make CMakeFiles/cmTryCompileExec1862974190.dir/build
+make[2]: Entering directory '/home/arad/gitProjects/blender/altBlender/build_linux/CMakeFiles/CMakeTmp'
+/usr/bin/cmake -E cmake_progress_report /home/arad/gitProjects/blender/altBlender/build_linux/CMakeFiles/CMakeTmp/CMakeFiles 1
+Building C object CMakeFiles/cmTryCompileExec1862974190.dir/src.c.o
+/usr/bin/cc   -fopenmp -DC_WARN_MISSING_INCLUDE_DIRS   -Wmissing-include-dirs -o CMakeFiles/cmTryCompileExec1862974190.dir/src.c.o   -c /home/arad/gitProjects/blender/altBlender/build_linux/CMakeFiles/CMakeTmp/src.c
+Linking C executable cmTryCompileExec1862974190
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTryCompileExec1862974190.dir/link.txt --verbose=1
+/usr/bin/cc   -fopenmp -DC_WARN_MISSING_INCLUDE_DIRS    CMakeFiles/cmTryCompileExec1862974190.dir/src.c.o  -o cmTryCompileExec1862974190 -rdynamic 
+make[2]: Leaving directory '/home/arad/gitProjects/blender/altBlender/build_linux/CMakeFiles/CMakeTmp'
+make[1]: Leaving directory '/home/arad/gitProjects/blender/altBlender/build_linux/CMakeFiles/CMakeTmp'
+
+Source file was:
+int main(void) { return 0; }
+Performing C SOURCE FILE Test C_WARN_NO_DIV_BY_ZERO succeded with the following output:
+Change Dir: /home/arad/gitProjects/blender/altBlender/build_linux/CMakeFiles/CMakeTmp
+
+Run Build Command:/usr/bin/make "cmTryCompileExec595333929/fast"
+make[1]: Entering directory '/home/arad/gitProjects/blender/altBlender/build_linux/CMakeFiles/CMakeTmp'
+/usr/bin/make -f CMakeFiles/cmTryCompileExec595333929.dir/build.make CMakeFiles/cmTryCompileExec595333929.dir/build
+make[2]: Entering directory '/home/arad/gitProjects/blender/altBlender/build_linux/CMakeFiles/CMakeTmp'
+/usr/bin/cmake -E cmake_progress_report /home/arad/gitProjects/blender/altBlender/build_linux/CMakeFiles/CMakeTmp/CMakeFiles 1
+Building C object CMakeFiles/cmTryCompileExec595333929.dir/src.c.o
+/usr/bin/cc   -fopenmp -DC_WARN_NO_DIV_BY_ZERO   -Wno-div-by-zero -o CMakeFiles/cmTryCompileExec595333929.dir/src.c.o   -c /home/arad/gitProjects/blender/altBlender/build_linux/CMakeFiles/CMakeTmp/src.c
+Linking C executable cmTryCompileExec595333929
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTryCompileExec595333929.dir/link.txt --verbose=1
+/usr/bin/cc   -fopenmp -DC_WARN_NO_DIV_BY_ZERO    CMakeFiles/cmTryCompileExec595333929.dir/src.c.o  -o cmTryCompileExec595333929 -rdynamic 
+make[2]: Leaving directory '/home/arad/gitProjects/blender/altBlender/build_linux/CMakeFiles/CMakeTmp'
+make[1]: Leaving directory '/home/arad/gitProjects/blender/altBlender/build_linux/CMakeFiles/CMakeTmp'
+
+Source file was:
+int main(void) { return 0; }
+Performing C SOURCE FILE Test C_WARN_TYPE_LIMITS succeded with the following output:
+Change Dir: /home/arad/gitProjects/blender/altBlender/build_linux/CMakeFiles/CMakeTmp
+
+Run Build Command:/usr/bin/make "cmTryCompileExec2839383285/fast"
+make[1]: Entering directory '/home/arad/gitProjects/blender/altBlender/build_linux/CMakeFiles/CMakeTmp'
+/usr/bin/make -f CMakeFiles/cmTryCompileExec2839383285.dir/build.make CMakeFiles/cmTryCompileExec2839383285.dir/build
+make[2]: Entering directory '/home/arad/gitProjects/blender/altBlender/build_linux/CMakeFiles/CMakeTmp'
+/usr/bin/cmake -E cmake_progress_report /home/arad/gitProjects/blender/altBlender/build_linux/CMakeFiles/CMakeTmp/CMakeFiles 1
+Building C object CMakeFiles/cmTryCompileExec2839383285.dir/src.c.o
+/usr/bin/cc   -fopenmp -DC_WARN_TYPE_LIMITS   -Wtype-limits -o CMakeFiles/cmTryCompileExec2839383285.dir/src.c.o   -c /home/arad/gitProjects/blender/altBlender/build_linux/CMakeFiles/CMakeTmp/src.c
+Linking C executable cmTryCompileExec2839383285
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTryCompileExec2839383285.dir/link.txt --verbose=1
+/usr/bin/cc   -fopenmp -DC_WARN_TYPE_LIMITS    CMakeFiles/cmTryCompileExec2839383285.dir/src.c.o  -o cmTryCompileExec2839383285 -rdynamic 
+make[2]: Leaving directory '/home/arad/gitProjects/blender/altBlender/build_linux/CMakeFiles/CMakeTmp'
+make[1]: Leaving directory '/home/arad/gitProjects/blender/altBlender/build_linux/CMakeFiles/CMakeTmp'
+
+Source file was:
+int main(void) { return 0; }
+Performing C SOURCE FILE Test C_WARN_UNINITIALIZED succeded with the following output:
+Change Dir: /home/arad/gitProjects/blender/altBlender/build_linux/CMakeFiles/CMakeTmp
+
+Run Build Command:/usr/bin/make "cmTryCompileExec513114431/fast"
+make[1]: Entering directory '/home/arad/gitProjects/blender/altBlender/build_linux/CMakeFiles/CMakeTmp'
+/usr/bin/make -f CMakeFiles/cmTryCompileExec513114431.dir/build.make CMakeFiles/cmTryCompileExec513114431.dir/build
+make[2]: Entering directory '/home/arad/gitProjects/blender/altBlender/build_linux/CMakeFiles/CMakeTmp'
+/usr/bin/cmake -E cmake_progress_report /home/arad/gitProjects/blender/altBlender/build_linux/CMakeFiles/CMakeTmp/CMakeFiles 1
+Building C object CMakeFiles/cmTryCompileExec513114431.dir/src.c.o
+/usr/bin/cc   -fopenmp -DC_WARN_UNINITIALIZED   -Wuninitialized -o CMakeFiles/cmTryCompileExec513114431.dir/src.c.o   -c /home/arad/gitProjects/blender/altBlender/build_linux/CMakeFiles/CMakeTmp/src.c
+Linking C executable cmTryCompileExec513114431
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTryCompileExec513114431.dir/link.txt --verbose=1
+/usr/bin/cc   -fopenmp -DC_WARN_UNINITIALIZED    CMakeFiles/cmTryCompileExec513114431.dir/src.c.o  -o cmTryCompileExec513114431 -rdynamic 
+make[2]: Leaving directory '/home/arad/gitProjects/blender/altBlender/build_linux/CMakeFiles/CMakeTmp'
+make[1]: Leaving directory '/home/arad/gitProjects/blender/altBlender/build_linux/CMakeFiles/CMakeTmp'
+
+Source file was:
+int main(void) { return 0; }
+Performing C SOURCE FILE Test C_WARN_REDUNDANT_DECLS succeded with the following output:
+Change Dir: /home/arad/gitProjects/blender/altBlender/build_linux/CMakeFiles/CMakeTmp
+
+Run Build Command:/usr/bin/make "cmTryCompileExec1165113786/fast"
+make[1]: Entering directory '/home/arad/gitProjects/blender/altBlender/build_linux/CMakeFiles/CMakeTmp'
+/usr/bin/make -f CMakeFiles/cmTryCompileExec1165113786.dir/build.make CMakeFiles/cmTryCompileExec1165113786.dir/build
+make[2]: Entering directory '/home/arad/gitProjects/blender/altBlender/build_linux/CMakeFiles/CMakeTmp'
+/usr/bin/cmake -E cmake_progress_report /home/arad/gitProjects/blender/altBlender/build_linux/CMakeFiles/CMakeTmp/CMakeFiles 1
+Building C object CMakeFiles/cmTryCompileExec1165113786.dir/src.c.o
+/usr/bin/cc   -fopenmp -DC_WARN_REDUNDANT_DECLS   -Wredundant-decls -o CMakeFiles/cmTryCompileExec1165113786.dir/src.c.o   -c /home/arad/gitProjects/blender/altBlender/build_linux/CMakeFiles/CMakeTmp/src.c
+Linking C executable cmTryCompileExec1165113786
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTryCompileExec1165113786.dir/link.txt --verbose=1
+/usr/bin/cc   -fopenmp -DC_WARN_REDUNDANT_DECLS    CMakeFiles/cmTryCompileExec1165113786.dir/src.c.o  -o cmTryCompileExec1165113786 -rdynamic 
+make[2]: Leaving directory '/home/arad/gitProjects/blender/altBlender/build_linux/CMakeFiles/CMakeTmp'
+make[1]: Leaving directory '/home/arad/gitProjects/blender/altBlender/build_linux/CMakeFiles/CMakeTmp'
+
+Source file was:
+int main(void) { return 0; }
+Performing C++ SOURCE FILE Test CXX_WARN_REDUNDANT_DECLS succeded with the following output:
+Change Dir: /home/arad/gitProjects/blender/altBlender/build_linux/CMakeFiles/CMakeTmp
+
+Run Build Command:/usr/bin/make "cmTryCompileExec1123493553/fast"
+make[1]: Entering directory '/home/arad/gitProjects/blender/altBlender/build_linux/CMakeFiles/CMakeTmp'
+/usr/bin/make -f CMakeFiles/cmTryCompileExec1123493553.dir/build.make CMakeFiles/cmTryCompileExec1123493553.dir/build
+make[2]: Entering directory '/home/arad/gitProjects/blender/altBlender/build_linux/CMakeFiles/CMakeTmp'
+/usr/bin/cmake -E cmake_progress_report /home/arad/gitProjects/blender/altBlender/build_linux/CMakeFiles/CMakeTmp/CMakeFiles 1
+Building CXX object CMakeFiles/cmTryCompileExec1123493553.dir/src.cxx.o
+/usr/bin/c++    -fopenmp -DCXX_WARN_REDUNDANT_DECLS   -Wredundant-decls -o CMakeFiles/cmTryCompileExec1123493553.dir/src.cxx.o -c /home/arad/gitProjects/blender/altBlender/build_linux/CMakeFiles/CMakeTmp/src.cxx
+Linking CXX executable cmTryCompileExec1123493553
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTryCompileExec1123493553.dir/link.txt --verbose=1
+/usr/bin/c++    -fopenmp -DCXX_WARN_REDUNDANT_DECLS    CMakeFiles/cmTryCompileExec1123493553.dir/src.cxx.o  -o cmTryCompileExec1123493553 -rdynamic 
+make[2]: Leaving directory '/home/arad/gitProjects/blender/altBlender/build_linux/CMakeFiles/CMakeTmp'
+make[1]: Leaving directory '/home/arad/gitProjects/blender/altBlender/build_linux/CMakeFiles/CMakeTmp'
+
+Source file was:
+int main() { return 0;}
+Performing C SOURCE FILE Test C_WARN_NO_ERROR_UNUSED_BUT_SET_VARIABLE succeded with the following output:
+Change Dir: /home/arad/gitProjects/blender/altBlender/build_linux/CMakeFiles/CMakeTmp
+
+Run Build Command:/usr/bin/make "cmTryCompileExec375498183/fast"
+make[1]: Entering directory '/home/arad/gitProjects/blender/altBlender/build_linux/CMakeFiles/CMakeTmp'
+/usr/bin/make -f CMakeFiles/cmTryCompileExec375498183.dir/build.make CMakeFiles/cmTryCompileExec375498183.dir/build
+make[2]: Entering directory '/home/arad/gitProjects/blender/altBlender/build_linux/CMakeFiles/CMakeTmp'
+/usr/bin/cmake -E cmake_progress_report /home/arad/gitProjects/blender/altBlender/build_linux/CMakeFiles/CMakeTmp/CMakeFiles 1
+Building C object CMakeFiles/cmTryCompileExec375498183.dir/src.c.o
+/usr/bin/cc   -fopenmp -DC_WARN_NO_ERROR_UNUSED_BUT_SET_VARIABLE   -Wno-error=unused-but-set-variable -o CMakeFiles/cmTryCompileExec375498183.dir/src.c.o   -c /home/arad/gitProjects/blender/altBlender/build_linux/CMakeFiles/CMakeTmp/src.c
+Linking C executable cmTryCompileExec375498183
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTryCompileExec375498183.dir/link.txt --verbose=1
+/usr/bin/cc   -fopenmp -DC_WARN_NO_ERROR_UNUSED_BUT_SET_VARIABLE    CMakeFiles/cmTryCompileExec375498183.dir/src.c.o  -o cmTryCompileExec375498183 -rdynamic 
+make[2]: Leaving directory '/home/arad/gitProjects/blender/altBlender/build_linux/CMakeFiles/CMakeTmp'
+make[1]: Leaving directory '/home/arad/gitProjects/blender/altBlender/build_linux/CMakeFiles/CMakeTmp'
+
+Source file was:
+int main(void) { return 0; }
+Performing C++ SOURCE FILE Test CXX_WARN_ALL succeded with the following output:
+Change Dir: /home/arad/gitProjects/blender/altBlender/build_linux/CMakeFiles/CMakeTmp
+
+Run Build Command:/usr/bin/make "cmTryCompileExec1199625294/fast"
+make[1]: Entering directory '/home/arad/gitProjects/blender/altBlender/build_linux/CMakeFiles/CMakeTmp'
+/usr/bin/make -f CMakeFiles/cmTryCompileExec1199625294.dir/build.make CMakeFiles/cmTryCompileExec1199625294.dir/build
+make[2]: Entering directory '/home/arad/gitProjects/blender/altBlender/build_linux/CMakeFiles/CMakeTmp'
+/usr/bin/cmake -E cmake_progress_report /home/arad/gitProjects/blender/altBlender/build_linux/CMakeFiles/CMakeTmp/CMakeFiles 1
+Building CXX object CMakeFiles/cmTryCompileExec1199625294.dir/src.cxx.o
+/usr/bin/c++    -fopenmp -DCXX_WARN_ALL   -Wall -o CMakeFiles/cmTryCompileExec1199625294.dir/src.cxx.o -c /home/arad/gitProjects/blender/altBlender/build_linux/CMakeFiles/CMakeTmp/src.cxx
+Linking CXX executable cmTryCompileExec1199625294
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTryCompileExec1199625294.dir/link.txt --verbose=1
+/usr/bin/c++    -fopenmp -DCXX_WARN_ALL    CMakeFiles/cmTryCompileExec1199625294.dir/src.cxx.o  -o cmTryCompileExec1199625294 -rdynamic 
+make[2]: Leaving directory '/home/arad/gitProjects/blender/altBlender/build_linux/CMakeFiles/CMakeTmp'
+make[1]: Leaving directory '/home/arad/gitProjects/blender/altBlender/build_linux/CMakeFiles/CMakeTmp'
+
+Source file was:
+int main() { return 0;}
+Performing C++ SOURCE FILE Test CXX_WARN_NO_INVALID_OFFSETOF succeded with the following output:
+Change Dir: /home/arad/gitProjects/blender/altBlender/build_linux/CMakeFiles/CMakeTmp
+
+Run Build Command:/usr/bin/make "cmTryCompileExec3593284820/fast"
+make[1]: Entering directory '/home/arad/gitProjects/blender/altBlender/build_linux/CMakeFiles/CMakeTmp'
+/usr/bin/make -f CMakeFiles/cmTryCompileExec3593284820.dir/build.make CMakeFiles/cmTryCompileExec3593284820.dir/build
+make[2]: Entering directory '/home/arad/gitProjects/blender/altBlender/build_linux/CMakeFiles/CMakeTmp'
+/usr/bin/cmake -E cmake_progress_report /home/arad/gitProjects/blender/altBlender/build_linux/CMakeFiles/CMakeTmp/CMakeFiles 1
+Building CXX object CMakeFiles/cmTryCompileExec3593284820.dir/src.cxx.o
+/usr/bin/c++    -fopenmp -DCXX_WARN_NO_INVALID_OFFSETOF   -Wno-invalid-offsetof -o CMakeFiles/cmTryCompileExec3593284820.dir/src.cxx.o -c /home/arad/gitProjects/blender/altBlender/build_linux/CMakeFiles/CMakeTmp/src.cxx
+Linking CXX executable cmTryCompileExec3593284820
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTryCompileExec3593284820.dir/link.txt --verbose=1
+/usr/bin/c++    -fopenmp -DCXX_WARN_NO_INVALID_OFFSETOF    CMakeFiles/cmTryCompileExec3593284820.dir/src.cxx.o  -o cmTryCompileExec3593284820 -rdynamic 
+make[2]: Leaving directory '/home/arad/gitProjects/blender/altBlender/build_linux/CMakeFiles/CMakeTmp'
+make[1]: Leaving directory '/home/arad/gitProjects/blender/altBlender/build_linux/CMakeFiles/CMakeTmp'
+
+Source file was:
+int main() { return 0;}
+Performing C++ SOURCE FILE Test CXX_WARN_NO_SIGN_COMPARE succeded with the following output:
+Change Dir: /home/arad/gitProjects/blender/altBlender/build_linux/CMakeFiles/CMakeTmp
+
+Run Build Command:/usr/bin/make "cmTryCompileExec487831009/fast"
+make[1]: Entering directory '/home/arad/gitProjects/blender/altBlender/build_linux/CMakeFiles/CMakeTmp'
+/usr/bin/make -f CMakeFiles/cmTryCompileExec487831009.dir/build.make CMakeFiles/cmTryCompileExec487831009.dir/build
+make[2]: Entering directory '/home/arad/gitProjects/blender/altBlender/build_linux/CMakeFiles/CMakeTmp'
+/usr/bin/cmake -E cmake_progress_report /home/arad/gitProjects/blender/altBlender/build_linux/CMakeFiles/CMakeTmp/CMakeFiles 1
+Building CXX object CMakeFiles/cmTryCompileExec487831009.dir/src.cxx.o
+/usr/bin/c++    -fopenmp -DCXX_WARN_NO_SIGN_COMPARE   -Wno-sign-compare -o CMakeFiles/cmTryCompileExec487831009.dir/src.cxx.o -c /home/arad/gitProjects/blender/altBlender/build_linux/CMakeFiles/CMakeTmp/src.cxx
+Linking CXX executable cmTryCompileExec487831009
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTryCompileExec487831009.dir/link.txt --verbose=1
+/usr/bin/c++    -fopenmp -DCXX_WARN_NO_SIGN_COMPARE    CMakeFiles/cmTryCompileExec487831009.dir/src.cxx.o  -o cmTryCompileExec487831009 -rdynamic 
+make[2]: Leaving directory '/home/arad/gitProjects/blender/altBlender/build_linux/CMakeFiles/CMakeTmp'
+make[1]: Leaving directory '/home/arad/gitProjects/blender/altBlender/build_linux/CMakeFiles/CMakeTmp'
+
+Source file was:
+int main() { return 0;}
+Performing C++ SOURCE FILE Test CXX_WARN_LOGICAL_OP succeded with the following output:
+Change Dir: /home/arad/gitProjects/blender/altBlender/build_linux/CMakeFiles/CMakeTmp
+
+Run Build Command:/usr/bin/make "cmTryCompileExec1057166975/fast"
+make[1]: Entering directory '/home/arad/gitProjects/blender/altBlender/build_linux/CMakeFiles/CMakeTmp'
+/usr/bin/make -f CMakeFiles/cmTryCompileExec1057166975.dir/build.make CMakeFiles/cmTryCompileExec1057166975.dir/build
+make[2]: Entering directory '/home/arad/gitProjects/blender/altBlender/build_linux/CMakeFiles/CMakeTmp'
+/usr/bin/cmake -E cmake_progress_report /home/arad/gitProjects/blender/altBlender/build_linux/CMakeFiles/CMakeTmp/CMakeFiles 1
+Building CXX object CMakeFiles/cmTryCompileExec1057166975.dir/src.cxx.o
+/usr/bin/c++    -fopenmp -DCXX_WARN_LOGICAL_OP   -Wlogical-op -o CMakeFiles/cmTryCompileExec1057166975.dir/src.cxx.o -c /home/arad/gitProjects/blender/altBlender/build_linux/CMakeFiles/CMakeTmp/src.cxx
+Linking CXX executable cmTryCompileExec1057166975
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTryCompileExec1057166975.dir/link.txt --verbose=1
+/usr/bin/c++    -fopenmp -DCXX_WARN_LOGICAL_OP    CMakeFiles/cmTryCompileExec1057166975.dir/src.cxx.o  -o cmTryCompileExec1057166975 -rdynamic 
+make[2]: Leaving directory '/home/arad/gitProjects/blender/altBlender/build_linux/CMakeFiles/CMakeTmp'
+make[1]: Leaving directory '/home/arad/gitProjects/blender/altBlender/build_linux/CMakeFiles/CMakeTmp'
+
+Source file was:
+int main() { return 0;}
+Performing C++ SOURCE FILE Test CXX_WARN_INIT_SELF succeded with the following output:
+Change Dir: /home/arad/gitProjects/blender/altBlender/build_linux/CMakeFiles/CMakeTmp
+
+Run Build Command:/usr/bin/make "cmTryCompileExec517745120/fast"
+make[1]: Entering directory '/home/arad/gitProjects/blender/altBlender/build_linux/CMakeFiles/CMakeTmp'
+/usr/bin/make -f CMakeFiles/cmTryCompileExec517745120.dir/build.make CMakeFiles/cmTryCompileExec517745120.dir/build
+make[2]: Entering directory '/home/arad/gitProjects/blender/altBlender/build_linux/CMakeFiles/CMakeTmp'
+/usr/bin/cmake -E cmake_progress_report /home/arad/gitProjects/blender/altBlender/build_linux/CMakeFiles/CMakeTmp/CMakeFiles 1
+Building CXX object CMakeFiles/cmTryCompileExec517745120.dir/src.cxx.o
+/usr/bin/c++    -fopenmp -DCXX_WARN_INIT_SELF   -Winit-self -o CMakeFiles/cmTryCompileExec517745120.dir/src.cxx.o -c /home/arad/gitProjects/blender/altBlender/build_linux/CMakeFiles/CMakeTmp/src.cxx
+Linking CXX executable cmTryCompileExec517745120
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTryCompileExec517745120.dir/link.txt --verbose=1
+/usr/bin/c++    -fopenmp -DCXX_WARN_INIT_SELF    CMakeFiles/cmTryCompileExec517745120.dir/src.cxx.o  -o cmTryCompileExec517745120 -rdynamic 
+make[2]: Leaving directory '/home/arad/gitProjects/blender/altBlender/build_linux/CMakeFiles/CMakeTmp'
+make[1]: Leaving directory '/home/arad/gitProjects/blender/altBlender/build_linux/CMakeFiles/CMakeTmp'
+
+Source file was:
+int main() { return 0;}
+Performing C++ SOURCE FILE Test CXX_WARN_MISSING_INCLUDE_DIRS succeded with the following output:
+Change Dir: /home/arad/gitProjects/blender/altBlender/build_linux/CMakeFiles/CMakeTmp
+
+Run Build Command:/usr/bin/make "cmTryCompileExec3375950399/fast"
+make[1]: Entering directory '/home/arad/gitProjects/blender/altBlender/build_linux/CMakeFiles/CMakeTmp'
+/usr/bin/make -f CMakeFiles/cmTryCompileExec3375950399.dir/build.make CMakeFiles/cmTryCompileExec3375950399.dir/build
+make[2]: Entering directory '/home/arad/gitProjects/blender/altBlender/build_linux/CMakeFiles/CMakeTmp'
+/usr/bin/cmake -E cmake_progress_report /home/arad/gitProjects/blender/altBlender/build_linux/CMakeFiles/CMakeTmp/CMakeFiles 1
+Building CXX object CMakeFiles/cmTryCompileExec3375950399.dir/src.cxx.o
+/usr/bin/c++    -fopenmp -DCXX_WARN_MISSING_INCLUDE_DIRS   -Wmissing-include-dirs -o CMakeFiles/cmTryCompileExec3375950399.dir/src.cxx.o -c /home/arad/gitProjects/blender/altBlender/build_linux/CMakeFiles/CMakeTmp/src.cxx
+Linking CXX executable cmTryCompileExec3375950399
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTryCompileExec3375950399.dir/link.txt --verbose=1
+/usr/bin/c++    -fopenmp -DCXX_WARN_MISSING_INCLUDE_DIRS    CMakeFiles/cmTryCompileExec3375950399.dir/src.cxx.o  -o cmTryCompileExec3375950399 -rdynamic 
+make[2]: Leaving directory '/home/arad/gitProjects/blender/altBlender/build_linux/CMakeFiles/CMakeTmp'
+make[1]: Leaving directory '/home/arad/gitProjects/blender/altBlender/build_linux/CMakeFiles/CMakeTmp'
+
+Source file was:
+int main() { return 0;}
+Performing C++ SOURCE FILE Test CXX_WARN_NO_DIV_BY_ZERO succeded with the following output:
+Change Dir: /home/arad/gitProjects/blender/altBlender/build_linux/CMakeFiles/CMakeTmp
+
+Run Build Command:/usr/bin/make "cmTryCompileExec2162783183/fast"
+make[1]: Entering directory '/home/arad/gitProjects/blender/altBlender/build_linux/CMakeFiles/CMakeTmp'
+/usr/bin/make -f CMakeFiles/cmTryCompileExec2162783183.dir/build.make CMakeFiles/cmTryCompileExec2162783183.dir/build
+make[2]: Entering directory '/home/arad/gitProjects/blender/altBlender/build_linux/CMakeFiles/CMakeTmp'
+/usr/bin/cmake -E cmake_progress_report /home/arad/gitProjects/blender/altBlender/build_linux/CMakeFiles/CMakeTmp/CMakeFiles 1
+Building CXX object CMakeFiles/cmTryCompileExec2162783183.dir/src.cxx.o
+/usr/bin/c++    -fopenmp -DCXX_WARN_NO_DIV_BY_ZERO   -Wno-div-by-zero -o CMakeFiles/cmTryCompileExec2162783183.dir/src.cxx.o -c /home/arad/gitProjects/blender/altBlender/build_linux/CMakeFiles/CMakeTmp/src.cxx
+Linking CXX executable cmTryCompileExec2162783183
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTryCompileExec2162783183.dir/link.txt --verbose=1
+/usr/bin/c++    -fopenmp -DCXX_WARN_NO_DIV_BY_ZERO    CMakeFiles/cmTryCompileExec2162783183.dir/src.cxx.o  -o cmTryCompileExec2162783183 -rdynamic 
+make[2]: Leaving directory '/home/arad/gitProjects/blender/altBlender/build_linux/CMakeFiles/CMakeTmp'
+make[1]: Leaving directory '/home/arad/gitProjects/blender/altBlender/build_linux/CMakeFiles/CMakeTmp'
+
+Source file was:
+int main() { return 0;}
+Performing C++ SOURCE FILE Test CXX_WARN_TYPE_LIMITS succeded with the following output:
+Change Dir: /home/arad/gitProjects/blender/altBlender/build_linux/CMakeFiles/CMakeTmp
+
+Run Build Command:/usr/bin/make "cmTryCompileExec2066969140/fast"
+make[1]: Entering directory '/home/arad/gitProjects/blender/altBlender/build_linux/CMakeFiles/CMakeTmp'
+/usr/bin/make -f CMakeFiles/cmTryCompileExec2066969140.dir/build.make CMakeFiles/cmTryCompileExec2066969140.dir/build
+make[2]: Entering directory '/home/arad/gitProjects/blender/altBlender/build_linux/CMakeFiles/CMakeTmp'
+/usr/bin/cmake -E cmake_progress_report /home/arad/gitProjects/blender/altBlender/build_linux/CMakeFiles/CMakeTmp/CMakeFiles 1
+Building CXX object CMakeFiles/cmTryCompileExec2066969140.dir/src.cxx.o
+/usr/bin/c++    -fopenmp -DCXX_WARN_TYPE_LIMITS   -Wtype-limits -o CMakeFiles/cmTryCompileExec2066969140.dir/src.cxx.o -c /home/arad/gitProjects/blender/altBlender/build_linux/CMakeFiles/CMakeTmp/src.cxx
+Linking CXX executable cmTryCompileExec2066969140
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTryCompileExec2066969140.dir/link.txt --verbose=1
+/usr/bin/c++    -fopenmp -DCXX_WARN_TYPE_LIMITS    CMakeFiles/cmTryCompileExec2066969140.dir/src.cxx.o  -o cmTryCompileExec2066969140 -rdynamic 
+make[2]: Leaving directory '/home/arad/gitProjects/blender/altBlender/build_linux/CMakeFiles/CMakeTmp'
+make[1]: Leaving directory '/home/arad/gitProjects/blender/altBlender/build_linux/CMakeFiles/CMakeTmp'
+
+Source file was:
+int main() { return 0;}
+Performing C++ SOURCE FILE Test CXX_WARN_UNINITIALIZED succeded with the following output:
+Change Dir: /home/arad/gitProjects/blender/altBlender/build_linux/CMakeFiles/CMakeTmp
+
+Run Build Command:/usr/bin/make "cmTryCompileExec440034249/fast"
+make[1]: Entering directory '/home/arad/gitProjects/blender/altBlender/build_linux/CMakeFiles/CMakeTmp'
+/usr/bin/make -f CMakeFiles/cmTryCompileExec440034249.dir/build.make CMakeFiles/cmTryCompileExec440034249.dir/build
+make[2]: Entering directory '/home/arad/gitProjects/blender/altBlender/build_linux/CMakeFiles/CMakeTmp'
+/usr/bin/cmake -E cmake_progress_report /home/arad/gitProjects/blender/altBlender/build_linux/CMakeFiles/CMakeTmp/CMakeFiles 1
+Building CXX object CMakeFiles/cmTryCompileExec440034249.dir/src.cxx.o
+/usr/bin/c++    -fopenmp -DCXX_WARN_UNINITIALIZED   -Wuninitialized -o CMakeFiles/cmTryCompileExec440034249.dir/src.cxx.o -c /home/arad/gitProjects/blender/altBlender/build_linux/CMakeFiles/CMakeTmp/src.cxx
+Linking CXX executable cmTryCompileExec440034249
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTryCompileExec440034249.dir/link.txt --verbose=1
+/usr/bin/c++    -fopenmp -DCXX_WARN_UNINITIALIZED    CMakeFiles/cmTryCompileExec440034249.dir/src.cxx.o  -o cmTryCompileExec440034249 -rdynamic 
+make[2]: Leaving directory '/home/arad/gitProjects/blender/altBlender/build_linux/CMakeFiles/CMakeTmp'
+make[1]: Leaving directory '/home/arad/gitProjects/blender/altBlender/build_linux/CMakeFiles/CMakeTmp'
+
+Source file was:
+int main() { return 0;}
+Performing C++ SOURCE FILE Test CXX_WARN_UNDEF succeded with the following output:
+Change Dir: /home/arad/gitProjects/blender/altBlender/build_linux/CMakeFiles/CMakeTmp
+
+Run Build Command:/usr/bin/make "cmTryCompileExec2068586565/fast"
+make[1]: Entering directory '/home/arad/gitProjects/blender/altBlender/build_linux/CMakeFiles/CMakeTmp'
+/usr/bin/make -f CMakeFiles/cmTryCompileExec2068586565.dir/build.make CMakeFiles/cmTryCompileExec2068586565.dir/build
+make[2]: Entering directory '/home/arad/gitProjects/blender/altBlender/build_linux/CMakeFiles/CMakeTmp'
+/usr/bin/cmake -E cmake_progress_report /home/arad/gitProjects/blender/altBlender/build_linux/CMakeFiles/CMakeTmp/CMakeFiles 1
+Building CXX object CMakeFiles/cmTryCompileExec2068586565.dir/src.cxx.o
+/usr/bin/c++    -fopenmp -DCXX_WARN_UNDEF   -Wundef -o CMakeFiles/cmTryCompileExec2068586565.dir/src.cxx.o -c /home/arad/gitProjects/blender/altBlender/build_linux/CMakeFiles/CMakeTmp/src.cxx
+Linking CXX executable cmTryCompileExec2068586565
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTryCompileExec2068586565.dir/link.txt --verbose=1
+/usr/bin/c++    -fopenmp -DCXX_WARN_UNDEF    CMakeFiles/cmTryCompileExec2068586565.dir/src.cxx.o  -o cmTryCompileExec2068586565 -rdynamic 
+make[2]: Leaving directory '/home/arad/gitProjects/blender/altBlender/build_linux/CMakeFiles/CMakeTmp'
+make[1]: Leaving directory '/home/arad/gitProjects/blender/altBlender/build_linux/CMakeFiles/CMakeTmp'
+
+Source file was:
+int main() { return 0;}
+Performing C++ SOURCE FILE Test CXX_WARN_MISSING_DECLARATIONS succeded with the following output:
+Change Dir: /home/arad/gitProjects/blender/altBlender/build_linux/CMakeFiles/CMakeTmp
+
+Run Build Command:/usr/bin/make "cmTryCompileExec528399685/fast"
+make[1]: Entering directory '/home/arad/gitProjects/blender/altBlender/build_linux/CMakeFiles/CMakeTmp'
+/usr/bin/make -f CMakeFiles/cmTryCompileExec528399685.dir/build.make CMakeFiles/cmTryCompileExec528399685.dir/build
+make[2]: Entering directory '/home/arad/gitProjects/blender/altBlender/build_linux/CMakeFiles/CMakeTmp'
+/usr/bin/cmake -E cmake_progress_report /home/arad/gitProjects/blender/altBlender/build_linux/CMakeFiles/CMakeTmp/CMakeFiles 1
+Building CXX object CMakeFiles/cmTryCompileExec528399685.dir/src.cxx.o
+/usr/bin/c++    -fopenmp -DCXX_WARN_MISSING_DECLARATIONS   -Wmissing-declarations -o CMakeFiles/cmTryCompileExec528399685.dir/src.cxx.o -c /home/arad/gitProjects/blender/altBlender/build_linux/CMakeFiles/CMakeTmp/src.cxx
+Linking CXX executable cmTryCompileExec528399685
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTryCompileExec528399685.dir/link.txt --verbose=1
+/usr/bin/c++    -fopenmp -DCXX_WARN_MISSING_DECLARATIONS    CMakeFiles/cmTryCompileExec528399685.dir/src.cxx.o  -o cmTryCompileExec528399685 -rdynamic 
+make[2]: Leaving directory '/home/arad/gitProjects/blender/altBlender/build_linux/CMakeFiles/CMakeTmp'
+make[1]: Leaving directory '/home/arad/gitProjects/blender/altBlender/build_linux/CMakeFiles/CMakeTmp'
+
+Source file was:
+int main() { return 0;}
+Performing C SOURCE FILE Test C_WARN_NO_DEPRECATED_DECLARATIONS succeded with the following output:
+Change Dir: /home/arad/gitProjects/blender/altBlender/build_linux/CMakeFiles/CMakeTmp
+
+Run Build Command:/usr/bin/make "cmTryCompileExec2768923932/fast"
+make[1]: Entering directory '/home/arad/gitProjects/blender/altBlender/build_linux/CMakeFiles/CMakeTmp'
+/usr/bin/make -f CMakeFiles/cmTryCompileExec2768923932.dir/build.make CMakeFiles/cmTryCompileExec2768923932.dir/build
+make[2]: Entering directory '/home/arad/gitProjects/blender/altBlender/build_linux/CMakeFiles/CMakeTmp'
+/usr/bin/cmake -E cmake_progress_report /home/arad/gitProjects/blender/altBlender/build_linux/CMakeFiles/CMakeTmp/CMakeFiles 1
+Building C object CMakeFiles/cmTryCompileExec2768923932.dir/src.c.o
+/usr/bin/cc   -fopenmp -DC_WARN_NO_DEPRECATED_DECLARATIONS   -Wno-deprecated-declarations -o CMakeFiles/cmTryCompileExec2768923932.dir/src.c.o   -c /home/arad/gitProjects/blender/altBlender/build_linux/CMakeFiles/CMakeTmp/src.c
+Linking C executable cmTryCompileExec2768923932
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTryCompileExec2768923932.dir/link.txt --verbose=1
+/usr/bin/cc   -fopenmp -DC_WARN_NO_DEPRECATED_DECLARATIONS    CMakeFiles/cmTryCompileExec2768923932.dir/src.c.o  -o cmTryCompileExec2768923932 -rdynamic 
+make[2]: Leaving directory '/home/arad/gitProjects/blender/altBlender/build_linux/CMakeFiles/CMakeTmp'
+make[1]: Leaving directory '/home/arad/gitProjects/blender/altBlender/build_linux/CMakeFiles/CMakeTmp'
+
+Source file was:
+int main(void) { return 0; }
+Performing C SOURCE FILE Test C_WARN_NO_UNUSED_PARAMETER succeded with the following output:
+Change Dir: /home/arad/gitProjects/blender/altBlender/build_linux/CMakeFiles/CMakeTmp
+
+Run Build Command:/usr/bin/make "cmTryCompileExec3401186923/fast"
+make[1]: Entering directory '/home/arad/gitProjects/blender/altBlender/build_linux/CMakeFiles/CMakeTmp'
+/usr/bin/make -f CMakeFiles/cmTryCompileExec3401186923.dir/build.make CMakeFiles/cmTryCompileExec3401186923.dir/build
+make[2]: Entering directory '/home/arad/gitProjects/blender/altBlender/build_linux/CMakeFiles/CMakeTmp'
+/usr/bin/cmake -E cmake_progress_report /home/arad/gitProjects/blender/altBlender/build_linux/CMakeFiles/CMakeTmp/CMakeFiles 1
+Building C object CMakeFiles/cmTryCompileExec3401186923.dir/src.c.o
+/usr/bin/cc   -fopenmp -DC_WARN_NO_UNUSED_PARAMETER   -Wno-unused-parameter -o CMakeFiles/cmTryCompileExec3401186923.dir/src.c.o   -c /home/arad/gitProjects/blender/altBlender/build_linux/CMakeFiles/CMakeTmp/src.c
+Linking C executable cmTryCompileExec3401186923
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTryCompileExec3401186923.dir/link.txt --verbose=1
+/usr/bin/cc   -fopenmp -DC_WARN_NO_UNUSED_PARAMETER    CMakeFiles/cmTryCompileExec3401186923.dir/src.c.o  -o cmTryCompileExec3401186923 -rdynamic 
+make[2]: Leaving directory '/home/arad/gitProjects/blender/altBlender/build_linux/CMakeFiles/CMakeTmp'
+make[1]: Leaving directory '/home/arad/gitProjects/blender/altBlender/build_linux/CMakeFiles/CMakeTmp'
+
+Source file was:
+int main(void) { return 0; }
+Performing C++ SOURCE FILE Test CXX_HAS_SSE succeded with the following output:
+Change Dir: /home/arad/gitProjects/blender/altBlender/build_linux/CMakeFiles/CMakeTmp
+
+Run Build Command:/usr/bin/make "cmTryCompileExec166246265/fast"
+make[1]: Entering directory '/home/arad/gitProjects/blender/altBlender/build_linux/CMakeFiles/CMakeTmp'
+/usr/bin/make -f CMakeFiles/cmTryCompileExec166246265.dir/build.make CMakeFiles/cmTryCompileExec166246265.dir/build
+make[2]: Entering directory '/home/arad/gitProjects/blender/altBlender/build_linux/CMakeFiles/CMakeTmp'
+/usr/bin/cmake -E cmake_progress_report /home/arad/gitProjects/blender/altBlender/build_linux/CMakeFiles/CMakeTmp/CMakeFiles 1
+Building CXX object CMakeFiles/cmTryCompileExec166246265.dir/src.cxx.o
+/usr/bin/c++    -Wredundant-decls -Wall -Wno-invalid-offsetof -Wno-sign-compare -Wlogical-op -Winit-self -Wmissing-include-dirs -Wno-div-by-zero -Wtype-limits -Wuninitialized -Wundef -Wmissing-declarations  -fopenmp  -msse2  -msse -pipe -fPIC -funsigned-char -fno-strict-aliasing -DCXX_HAS_SSE   -msse -o CMakeFiles/cmTryCompileExec166246265.dir/src.cxx.o -c /home/arad/gitProjects/blender/altBlender/build_linux/CMakeFiles/CMakeTmp/src.cxx
+Linking CXX executable cmTryCompileExec166246265
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTryCompileExec166246265.dir/link.txt --verbose=1
+/usr/bin/c++    -Wredundant-decls -Wall -Wno-invalid-offsetof -Wno-sign-compare -Wlogical-op -Winit-self -Wmissing-include-dirs -Wno-div-by-zero -Wtype-limits -Wuninitialized -Wundef -Wmissing-declarations  -fopenmp  -msse2  -msse -pipe -fPIC -funsigned-char -fno-strict-aliasing -DCXX_HAS_SSE    CMakeFiles/cmTryCompileExec166246265.dir/src.cxx.o  -o cmTryCompileExec166246265 -rdynamic 
+make[2]: Leaving directory '/home/arad/gitProjects/blender/altBlender/build_linux/CMakeFiles/CMakeTmp'
+make[1]: Leaving directory '/home/arad/gitProjects/blender/altBlender/build_linux/CMakeFiles/CMakeTmp'
+
+Source file was:
+int main() { return 0;}
+Performing C++ SOURCE FILE Test _has_cxxflag_float_conversion succeded with the following output:
+Change Dir: /home/arad/gitProjects/blender/altBlender/build_linux/CMakeFiles/CMakeTmp
+
+Run Build Command:/usr/bin/make "cmTryCompileExec1779590279/fast"
+make[1]: Entering directory '/home/arad/gitProjects/blender/altBlender/build_linux/CMakeFiles/CMakeTmp'
+/usr/bin/make -f CMakeFiles/cmTryCompileExec1779590279.dir/build.make CMakeFiles/cmTryCompileExec1779590279.dir/build
+make[2]: Entering directory '/home/arad/gitProjects/blender/altBlender/build_linux/CMakeFiles/CMakeTmp'
+/usr/bin/cmake -E cmake_progress_report /home/arad/gitProjects/blender/altBlender/build_linux/CMakeFiles/CMakeTmp/CMakeFiles 1
+Building CXX object CMakeFiles/cmTryCompileExec1779590279.dir/src.cxx.o
+/usr/bin/c++    -Wredundant-decls -Wall -Wno-invalid-offsetof -Wno-sign-compare -Wlogical-op -Winit-self -Wmissing-include-dirs -Wno-div-by-zero -Wtype-limits -Wuninitialized -Wundef -Wmissing-declarations  -fopenmp  -msse2  -msse -pipe -fPIC -funsigned-char -fno-strict-aliasing -ffast-math -D_has_cxxflag_float_conversion   -Werror=float-conversion -o CMakeFiles/cmTryCompileExec1779590279.dir/src.cxx.o -c /home/arad/gitProjects/blender/altBlender/build_linux/CMakeFiles/CMakeTmp/src.cxx
+Linking CXX executable cmTryCompileExec1779590279
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTryCompileExec1779590279.dir/link.txt --verbose=1
+/usr/bin/c++    -Wredundant-decls -Wall -Wno-invalid-offsetof -Wno-sign-compare -Wlogical-op -Winit-self -Wmissing-include-dirs -Wno-div-by-zero -Wtype-limits -Wuninitialized -Wundef -Wmissing-declarations  -fopenmp  -msse2  -msse -pipe -fPIC -funsigned-char -fno-strict-aliasing -ffast-math -D_has_cxxflag_float_conversion    CMakeFiles/cmTryCompileExec1779590279.dir/src.cxx.o  -o cmTryCompileExec1779590279 -rdynamic 
+make[2]: Leaving directory '/home/arad/gitProjects/blender/altBlender/build_linux/CMakeFiles/CMakeTmp'
+make[1]: Leaving directory '/home/arad/gitProjects/blender/altBlender/build_linux/CMakeFiles/CMakeTmp'
+
+Source file was:
+int main() { return 0;}
+Determining if the include file tr1/unordered_map exists passed with the following output:
+Change Dir: /home/arad/gitProjects/blender/altBlender/build_linux/CMakeFiles/CMakeTmp
+
+Run Build Command:/usr/bin/make "cmTryCompileExec1890545639/fast"
+make[1]: Entering directory '/home/arad/gitProjects/blender/altBlender/build_linux/CMakeFiles/CMakeTmp'
+/usr/bin/make -f CMakeFiles/cmTryCompileExec1890545639.dir/build.make CMakeFiles/cmTryCompileExec1890545639.dir/build
+make[2]: Entering directory '/home/arad/gitProjects/blender/altBlender/build_linux/CMakeFiles/CMakeTmp'
+/usr/bin/cmake -E cmake_progress_report /home/arad/gitProjects/blender/altBlender/build_linux/CMakeFiles/CMakeTmp/CMakeFiles 1
+Building CXX object CMakeFiles/cmTryCompileExec1890545639.dir/CheckIncludeFile.cxx.o
+/usr/bin/c++    -Wall -Wno-invalid-offsetof -Wno-sign-compare -Wlogical-op -Winit-self -Wmissing-include-dirs -Wno-div-by-zero -Wtype-limits -Wuninitialized  -Wmissing-declarations  -fopenmp  -msse2  -msse -pipe -fPIC -funsigned-char -fno-strict-aliasing  -Wno-deprecated-declarations -Wno-unused-parameter -Wno-error=unused-but-set-variable    -o CMakeFiles/cmTryCompileExec1890545639.dir/CheckIncludeFile.cxx.o -c /home/arad/gitProjects/blender/altBlender/build_linux/CMakeFiles/CMakeTmp/CheckIncludeFile.cxx
+Linking CXX executable cmTryCompileExec1890545639
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTryCompileExec1890545639.dir/link.txt --verbose=1
+/usr/bin/c++     -Wall -Wno-invalid-offsetof -Wno-sign-compare -Wlogical-op -Winit-self -Wmissing-include-dirs -Wno-div-by-zero -Wtype-limits -Wuninitialized  -Wmissing-declarations  -fopenmp  -msse2  -msse -pipe -fPIC -funsigned-char -fno-strict-aliasing  -Wno-deprecated-declarations -Wno-unused-parameter -Wno-error=unused-but-set-variable     CMakeFiles/cmTryCompileExec1890545639.dir/CheckIncludeFile.cxx.o  -o cmTryCompileExec1890545639 -rdynamic 
+make[2]: Leaving directory '/home/arad/gitProjects/blender/altBlender/build_linux/CMakeFiles/CMakeTmp'
+make[1]: Leaving directory '/home/arad/gitProjects/blender/altBlender/build_linux/CMakeFiles/CMakeTmp'
+
+

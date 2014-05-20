@@ -128,6 +128,7 @@ protected:
 	BL_ActionManager* GetActionManager();
 	
 	bool								m_bRecordAnimation;
+        //bool								m_modifiedSinceReplication=false;
 public:
 	bool								m_isDeformable;
 
@@ -999,6 +1000,8 @@ public:
 	KX_PYMETHOD_DOC(KX_GameObject, getActionFrame);
 	KX_PYMETHOD_DOC(KX_GameObject, setActionFrame);
 	KX_PYMETHOD_DOC(KX_GameObject, isPlayingAction);
+
+	//KX_PYMETHOD_DOC(KX_GameObject, modifiedSinceReplication);
 	
 	/* Dict access */
 	KX_PYMETHOD_VARARGS(KX_GameObject,get);

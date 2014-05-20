@@ -1,0 +1,2 @@
+/usr/bin/ar cr ../../lib/libbf_intern_opencl.a  CMakeFiles/bf_intern_opencl.dir/intern/clew.c.o CMakeFiles/bf_intern_opencl.dir/intern/OCL_opencl.c.o
+/usr/bin/ranlib ../../lib/libbf_intern_opencl.a

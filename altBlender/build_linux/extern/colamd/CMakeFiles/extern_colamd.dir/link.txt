@@ -1,0 +1,2 @@
+/usr/bin/ar cr ../../lib/libextern_colamd.a  CMakeFiles/extern_colamd.dir/Source/colamd.c.o CMakeFiles/extern_colamd.dir/Source/colamd_global.c.o
+/usr/bin/ranlib ../../lib/libextern_colamd.a

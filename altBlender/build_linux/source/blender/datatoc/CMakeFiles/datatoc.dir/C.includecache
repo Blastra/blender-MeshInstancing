@@ -1,0 +1,16 @@
+#IncludeRegexLine: ^[ 	]*#[ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/arad/gitProjects/blender/altBlender/blender/source/blender/datatoc/datatoc.c
+stdio.h
+-
+string.h
+-
+stdlib.h
+-
+

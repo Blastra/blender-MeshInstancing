@@ -1,0 +1,26 @@
+#IncludeRegexLine: ^[ 	]*#[ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/arad/gitProjects/blender/altBlender/blender/extern/rangetree/range_tree.hh
+cassert
+-
+climits
+-
+iostream
+-
+set
+-
+
+/home/arad/gitProjects/blender/altBlender/blender/extern/rangetree/range_tree_c_api.cc
+range_tree.hh
+/home/arad/gitProjects/blender/altBlender/blender/extern/rangetree/range_tree.hh
+range_tree_c_api.h
+/home/arad/gitProjects/blender/altBlender/blender/extern/rangetree/range_tree_c_api.h
+
+/home/arad/gitProjects/blender/altBlender/blender/extern/rangetree/range_tree_c_api.h
+

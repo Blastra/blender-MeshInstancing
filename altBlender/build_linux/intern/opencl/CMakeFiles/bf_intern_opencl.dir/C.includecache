@@ -1,0 +1,34 @@
+#IncludeRegexLine: ^[ 	]*#[ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/arad/gitProjects/blender/altBlender/blender/intern/opencl/OCL_opencl.h
+intern/clew.h
+/home/arad/gitProjects/blender/altBlender/blender/intern/opencl/intern/clew.h
+
+/home/arad/gitProjects/blender/altBlender/blender/intern/opencl/intern/OCL_opencl.c
+OCL_opencl.h
+/home/arad/gitProjects/blender/altBlender/blender/intern/opencl/intern/OCL_opencl.h
+
+/home/arad/gitProjects/blender/altBlender/blender/intern/opencl/intern/clew.c
+clew.h
+/home/arad/gitProjects/blender/altBlender/blender/intern/opencl/intern/clew.h
+windows.h
+-
+dlfcn.h
+-
+stdlib.h
+-
+
+/home/arad/gitProjects/blender/altBlender/blender/intern/opencl/intern/clew.h
+AvailabilityMacros.h
+-
+stdint.h
+-
+stddef.h
+-
+

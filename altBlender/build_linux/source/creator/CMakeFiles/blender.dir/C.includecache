@@ -1,0 +1,14 @@
+#IncludeRegexLine: ^[ 	]*#[ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/arad/gitProjects/blender/altBlender/blender/source/creator/buildinfo.c
+buildinfo.h
+/home/arad/gitProjects/blender/altBlender/blender/source/creator/buildinfo.h
+
+source/creator/buildinfo.h
+
