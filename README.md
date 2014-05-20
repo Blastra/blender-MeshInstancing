@@ -1,1 +1,1 @@
-- [ ] Subtask test box
+- [X] Subtask test box
