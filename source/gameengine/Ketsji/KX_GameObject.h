@@ -128,7 +128,6 @@ protected:
 	BL_ActionManager* GetActionManager();
 	
 	bool								m_bRecordAnimation;
-        //bool								m_modifiedSinceReplication=false;
 public:
 	bool								m_isDeformable;
 
@@ -934,13 +933,26 @@ public:
 	{
 		m_pObstacleSimulation = NULL;
 	}
+
+	//When the mesh of an instanced object is changed,
+	//this function is called to trigger the creation of a new
+	//mesh object.
 	
+	void RegisterAlterationOfMesh()
+	{
+		m_alteredSinceReplication = true;
+	}
+
+
+
 	KX_ClientObjectInfo* getClientInfo() { return m_pClient_info; }
 	
 	CListValue* GetChildren();
 	CListValue* GetChildrenRecursive();
 
 	KX_Scene*	GetScene();
+
+	bool m_alteredSinceReplication;
 
 #ifdef WITH_PYTHON
 	/**
@@ -1000,8 +1012,7 @@ public:
 	KX_PYMETHOD_DOC(KX_GameObject, getActionFrame);
 	KX_PYMETHOD_DOC(KX_GameObject, setActionFrame);
 	KX_PYMETHOD_DOC(KX_GameObject, isPlayingAction);
-
-	//KX_PYMETHOD_DOC(KX_GameObject, modifiedSinceReplication);
+	KX_PYMETHOD_NOARGS(KX_GameObject, alteredSinceReplication);
 	
 	/* Dict access */
 	KX_PYMETHOD_VARARGS(KX_GameObject,get);
@@ -1068,6 +1079,7 @@ public:
 	static PyObject*	pyattr_get_sensors(void *self_v, const KX_PYATTRIBUTE_DEF *attrdef);
 	static PyObject*	pyattr_get_controllers(void *self_v, const KX_PYATTRIBUTE_DEF *attrdef);
 	static PyObject*	pyattr_get_actuators(void *self_v, const KX_PYATTRIBUTE_DEF *attrdef);
+	static PyObject*	pyattr_get_alteredSinceReplication(void *self_v, const KX_PYATTRIBUTE_DEF *attrdef);
 	
 	/* getitem/setitem */
 	static PyMappingMethods	Mapping;

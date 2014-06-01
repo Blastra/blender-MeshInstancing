@@ -37,6 +37,8 @@
 #include "RAS_TexVert.h"
 
 #include "KX_PyMath.h"
+#include <stdio.h> //printf for testing, remove if no longer needed
+
 
 PyTypeObject KX_VertexProxy::Type = {
 	PyVarObject_HEAD_INIT(NULL, 0)
@@ -217,7 +219,7 @@ int KX_VertexProxy::pyattr_set_x(void *self_v, const struct KX_PYATTRIBUTE_DEF *
 		MT_Point3 pos(self->m_vertex->getXYZ());
 		pos.x() = val;
 		self->m_vertex->SetXYZ(pos);
-		self->m_mesh->SetMeshModified(true);
+		self->m_mesh->SetMeshModified(true);		
 		return PY_SET_ATTR_SUCCESS;
 	}
 	return PY_SET_ATTR_FAIL;
@@ -391,9 +393,11 @@ int KX_VertexProxy::pyattr_set_XYZ(void *self_v, const struct KX_PYATTRIBUTE_DEF
 		{
 			self->m_vertex->SetXYZ(vec);
 			self->m_mesh->SetMeshModified(true);
+			printf("Yup");
 			return PY_SET_ATTR_SUCCESS;
 		}
 	}
+	printf("Wakka");
 	return PY_SET_ATTR_FAIL;
 }
 

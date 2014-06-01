@@ -113,8 +113,8 @@ KX_GameObject::KX_GameObject(
       m_pDupliGroupObject(NULL),
       m_actionManager(NULL),
       m_bRecordAnimation(false),
-      m_isDeformable(false)
-      //m_modifiedSinceReplication(false)
+      m_isDeformable(false),
+      m_alteredSinceReplication(false)
 
 #ifdef WITH_PYTHON
     , m_attr_dict(NULL),
@@ -724,6 +724,13 @@ void KX_GameObject::UpdateBuckets( bool recursive )
 		}
 	}
 }
+
+/*
+void KX_GameObject::RegisterAlterationOfMesh()
+{
+	printf("Wakka wakka");
+}
+*/
 
 void KX_GameObject::RemoveMeshes()
 {
@@ -1860,12 +1867,13 @@ PyAttributeDef KX_GameObject::Attributes[] = {
 	KX_PYATTRIBUTE_RO_FUNCTION("childrenRecursive",	KX_GameObject, pyattr_get_children_recursive),
 	KX_PYATTRIBUTE_RO_FUNCTION("attrDict",	KX_GameObject, pyattr_get_attrDict),
 	KX_PYATTRIBUTE_RW_FUNCTION("color", KX_GameObject, pyattr_get_obcolor, pyattr_set_obcolor),
-	
+		
 	/* experimental, don't rely on these yet */
 	KX_PYATTRIBUTE_RO_FUNCTION("sensors",		KX_GameObject, pyattr_get_sensors),
 	KX_PYATTRIBUTE_RO_FUNCTION("controllers",	KX_GameObject, pyattr_get_controllers),
 	KX_PYATTRIBUTE_RO_FUNCTION("actuators",		KX_GameObject, pyattr_get_actuators),
-	{NULL} //Sentinel
+	KX_PYATTRIBUTE_BOOL_RO("alteredSinceReplication",	KX_GameObject, m_alteredSinceReplication),
+	{NULL} //Sentinel, Turjake
 };
 
 PyObject *KX_GameObject::PyReplaceMesh(PyObject *args)
@@ -2745,6 +2753,14 @@ PyObject *KX_GameObject::pyattr_get_actuators(void *self_v, const KX_PYATTRIBUTE
 {
 	return KX_PythonSeq_CreatePyObject((static_cast<KX_GameObject*>(self_v))->m_proxy, KX_PYGENSEQ_OB_TYPE_ACTUATORS);
 }
+
+/*
+PyObject *KX_GameObject::pyattr_get_alteredSinceReplication(void *self_v, const KX_PYATTRIBUTE_DEF *attrdef)
+{
+        return KX_PythonSeq_CreatePyObject((static_cast<KX_GameObject*>(self_v))->m_proxy, bool);
+}
+*/
+
 /* End experimental */
 
 PyObject *KX_GameObject::pyattr_get_children(void *self_v, const KX_PYATTRIBUTE_DEF *attrdef)
