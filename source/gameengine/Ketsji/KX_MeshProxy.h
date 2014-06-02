@@ -39,6 +39,10 @@
 /* utility conversion function */
 bool ConvertPythonToMesh(PyObject *value, class RAS_MeshObject **object, bool py_none_ok, const char *error_prefix);
 
+// Mesh Instancing stuff
+bool instancedMeshObject;      //Determined by a boolean checkbox in the add object logic brick
+bool alteredSinceReplication;   //If any of the vertices have been altered since the object's creation, this will become true 
+
 class KX_MeshProxy	: public CValue
 {
 	Py_Header

@@ -393,11 +393,9 @@ int KX_VertexProxy::pyattr_set_XYZ(void *self_v, const struct KX_PYATTRIBUTE_DEF
 		{
 			self->m_vertex->SetXYZ(vec);
 			self->m_mesh->SetMeshModified(true);
-			printf("Yup");
 			return PY_SET_ATTR_SUCCESS;
 		}
 	}
-	printf("Wakka");
 	return PY_SET_ATTR_FAIL;
 }
 
@@ -512,7 +510,10 @@ PyObject *KX_VertexProxy::PySetXYZ(PyObject *value)
 	MT_Point3 vec;
 	if (!PyVecTo(value, vec))
 		return NULL;
-
+	//if (true == true)
+	//{
+	//printf("Shuubidu");
+	//}
 	m_vertex->SetXYZ(vec);
 	m_mesh->SetMeshModified(true);
 	Py_RETURN_NONE;
