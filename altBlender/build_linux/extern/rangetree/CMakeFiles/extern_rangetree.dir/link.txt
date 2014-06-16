@@ -1,2 +1,0 @@
-/usr/bin/ar cr ../../lib/libextern_rangetree.a  CMakeFiles/extern_rangetree.dir/range_tree_c_api.cc.o
-/usr/bin/ranlib ../../lib/libextern_rangetree.a

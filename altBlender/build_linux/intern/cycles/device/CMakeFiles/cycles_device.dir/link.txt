@@ -1,2 +1,0 @@
-/usr/bin/ar cr ../../../lib/libcycles_device.a  CMakeFiles/cycles_device.dir/device.cpp.o CMakeFiles/cycles_device.dir/device_cpu.cpp.o CMakeFiles/cycles_device.dir/device_cuda.cpp.o CMakeFiles/cycles_device.dir/device_multi.cpp.o CMakeFiles/cycles_device.dir/device_opencl.cpp.o CMakeFiles/cycles_device.dir/device_task.cpp.o
-/usr/bin/ranlib ../../../lib/libcycles_device.a

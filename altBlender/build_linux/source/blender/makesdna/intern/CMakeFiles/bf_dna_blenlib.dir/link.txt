@@ -1,2 +1,0 @@
-/usr/bin/ar cr ../../../../lib/libbf_dna_blenlib.a  CMakeFiles/bf_dna_blenlib.dir/__/__/blenlib/intern/BLI_mempool.c.o CMakeFiles/bf_dna_blenlib.dir/__/__/blenlib/intern/listbase.c.o CMakeFiles/bf_dna_blenlib.dir/__/__/blenlib/intern/BLI_ghash.c.o
-/usr/bin/ranlib ../../../../lib/libbf_dna_blenlib.a

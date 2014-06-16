@@ -39,10 +39,6 @@
 /* utility conversion function */
 bool ConvertPythonToMesh(PyObject *value, class RAS_MeshObject **object, bool py_none_ok, const char *error_prefix);
 
-// Mesh Instancing stuff
-bool instancedMeshObject;      //Determined by a boolean checkbox in the add object logic brick
-bool alteredSinceReplication;   //If any of the vertices have been altered since the object's creation, this will become true 
-
 class KX_MeshProxy	: public CValue
 {
 	Py_Header
@@ -51,6 +47,10 @@ class KX_MeshProxy	: public CValue
 public:
 	KX_MeshProxy(class RAS_MeshObject* mesh);
 	virtual ~KX_MeshProxy();
+	// Mesh Instancing stuff
+	bool individuallyAlterable;      //Determined by a boolean checkbox in the add object logic brick
+	bool instanceAltered;   /*If any of the vertices have been altered and individuallyAlterable is true,
+				this will become true*/  //Turjake 
 
 	void SetMeshModified(bool v);
 
@@ -80,7 +80,9 @@ public:
 	
 	static PyObject *pyattr_get_materials(void *self_v, const KX_PYATTRIBUTE_DEF *attrdef);
 	static PyObject *pyattr_get_numMaterials(void *self, const KX_PYATTRIBUTE_DEF * attrdef);
-	static PyObject *pyattr_get_numPolygons(void *self, const KX_PYATTRIBUTE_DEF * attrdef);
+	static PyObject *pyattr_get_individuallyAlterable(void *self, const KX_PYATTRIBUTE_DEF * attrdef);
+	static PyObject *pyattr_get_instanceAltered(void *self, const KX_PYATTRIBUTE_DEF * attrdef);
+	
 };
 
 #endif  /* WITH_PYTHON */

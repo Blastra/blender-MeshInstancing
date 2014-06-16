@@ -1,2 +1,0 @@
-/usr/bin/ar cr ../../../lib/libcycles_kernel.a  CMakeFiles/cycles_kernel.dir/kernel.cpp.o CMakeFiles/cycles_kernel.dir/kernel_sse2.cpp.o CMakeFiles/cycles_kernel.dir/kernel_sse3.cpp.o CMakeFiles/cycles_kernel.dir/kernel_sse41.cpp.o CMakeFiles/cycles_kernel.dir/kernel_avx.cpp.o
-/usr/bin/ranlib ../../../lib/libcycles_kernel.a

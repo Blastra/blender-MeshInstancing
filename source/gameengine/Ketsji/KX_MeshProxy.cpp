@@ -83,6 +83,8 @@ PyAttributeDef KX_MeshProxy::Attributes[] = {
 	KX_PYATTRIBUTE_RO_FUNCTION("materials",		KX_MeshProxy, pyattr_get_materials),
 	KX_PYATTRIBUTE_RO_FUNCTION("numPolygons",	KX_MeshProxy, pyattr_get_numPolygons),
 	KX_PYATTRIBUTE_RO_FUNCTION("numMaterials",	KX_MeshProxy, pyattr_get_numMaterials),
+	KX_PYATTRIBUTE_RO_FUNCTION("instancedReplica",      KX_MeshProxy, pyattr_get_individuallyAlterable),
+	KX_PYATTRIBUTE_RO_FUNCTION("alteredSinceCreation",      KX_MeshProxy, pyattr_get_instanceAltered),
 
 	{ NULL }	//Sentinel
 };
@@ -403,6 +405,18 @@ PyObject *KX_MeshProxy::pyattr_get_numPolygons(void *self_v, const KX_PYATTRIBUT
 	KX_MeshProxy * self = static_cast<KX_MeshProxy *> (self_v);
 	return PyLong_FromLong(self->m_meshobj->NumPolygons());
 }
+PyObject *KX_MeshProxy::pyattr_get_instancedReplica(void *self_v, const KX_PYATTRIBUTE_DEF *attrdef)
+{
+        KX_MeshProxy * self = static_cast<KX_MeshProxy *> (self_v);
+        return self->m_meshobj->InstancedReplica;
+}
+PyObject *KX_MeshProxy::pyattr_get_instanceAltered(void *self_v, const KX_PYATTRIBUTE_DEF *attrdef)
+{
+        KX_MeshProxy * self = static_cast<KX_MeshProxy *> (self_v);
+        return self->m_meshobj->InstanceAltered;
+}
+
+
 
 /* a close copy of ConvertPythonToGameObject but for meshes */
 bool ConvertPythonToMesh(PyObject *value, RAS_MeshObject **object, bool py_none_ok, const char *error_prefix)

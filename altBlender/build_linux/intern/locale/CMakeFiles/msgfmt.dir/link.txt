@@ -1,1 +1,0 @@
-/usr/bin/c++    -Wredundant-decls -Wall -Wno-invalid-offsetof -Wno-sign-compare -Wlogical-op -Winit-self -Wmissing-include-dirs -Wno-div-by-zero -Wtype-limits -Wuninitialized -Wundef -Wmissing-declarations  -fopenmp  -msse2  -msse -pipe -fPIC -funsigned-char -fno-strict-aliasing -O2 -DNDEBUG    CMakeFiles/msgfmt.dir/msgfmt.cc.o  -o ../../bin/msgfmt -rdynamic  

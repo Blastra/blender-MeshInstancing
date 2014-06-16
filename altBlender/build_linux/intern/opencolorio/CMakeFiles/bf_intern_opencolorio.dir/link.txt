@@ -1,2 +1,0 @@
-/usr/bin/ar cr ../../lib/libbf_intern_opencolorio.a  CMakeFiles/bf_intern_opencolorio.dir/ocio_capi.cc.o CMakeFiles/bf_intern_opencolorio.dir/fallback_impl.cc.o CMakeFiles/bf_intern_opencolorio.dir/ocio_impl.cc.o CMakeFiles/bf_intern_opencolorio.dir/ocio_impl_glsl.cc.o CMakeFiles/bf_intern_opencolorio.dir/gpu_shader_display_transform.glsl.c.o
-/usr/bin/ranlib ../../lib/libbf_intern_opencolorio.a
