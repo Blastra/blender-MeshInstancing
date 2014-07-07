@@ -65,7 +65,7 @@ class KX_SCA_AddObjectActuator : public SCA_IActuator
 	float  m_angular_velocity[3];
 	/// Apply the velocity locally 
 	bool m_localAngvFlag; 
-	
+	// This boolean determines whether the modification of one mesh alters all copies of it	
 	bool m_instancedProduction;	
 	
 	

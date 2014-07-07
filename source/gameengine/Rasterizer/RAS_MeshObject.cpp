@@ -103,7 +103,9 @@ STR_String RAS_MeshObject::s_emptyname = "";
 RAS_MeshObject::RAS_MeshObject(Mesh* mesh)
 	: m_bModified(true),
 	m_bMeshModified(true),
-	m_mesh(mesh)
+	m_mesh(mesh),
+	m_instanceAltered(false),
+	m_individuallyModifiable(false)
 {
 	if (m_mesh && m_mesh->key)
 	{
@@ -133,6 +135,8 @@ bool RAS_MeshObject::MeshModified()
 {
 	return m_bMeshModified;
 }
+
+
 
 //unsigned int RAS_MeshObject::GetLightLayer()
 //{
@@ -213,7 +217,21 @@ STR_String& RAS_MeshObject::GetName()
 	return m_name;
 }
 
+bool RAS_MeshObject::individuallyAlterable()
+{
+	return m_individuallyModifiable;
+}
 
+bool RAS_MeshObject::instanceAltered()
+{
+        return m_instanceAltered;
+}
+
+//void RAS_MeshObject::SetInstanceAltered(bool hur)
+
+//{
+//	m_instanceAltered = hur;
+//}
 
 const STR_String& RAS_MeshObject::GetTextureName(unsigned int matid)
 { 

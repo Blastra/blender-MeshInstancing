@@ -44,17 +44,17 @@
 /* Native functions                                                          */
 /* ------------------------------------------------------------------------- */
 
-KX_SCA_AddObjectActuator::KX_SCA_AddObjectActuator(SCA_IObject *gameobj,
-												   SCA_IObject *original,
-												   int time,
-												   SCA_IScene* scene,
-												   const float *linvel,
-												   bool linv_local,
-												   const float *angvel,
-												   bool angv_local,
-		
-		   bool instancedProduction	
-											   )
+KX_SCA_AddObjectActuator::KX_SCA_AddObjectActuator(
+							SCA_IObject *gameobj,
+							SCA_IObject *original,
+							int time,
+							SCA_IScene* scene,
+							const float *linvel,
+							bool linv_local,
+							const float *angvel,
+							bool angv_local,
+							bool instancedProduction	
+						   )
 	: 
 	SCA_IActuator(gameobj, KX_ACT_ADD_OBJECT),
 	m_OriginalObject(original),
@@ -76,7 +76,7 @@ KX_SCA_AddObjectActuator::KX_SCA_AddObjectActuator(SCA_IObject *gameobj,
 
 	m_lastCreatedObject = NULL;
 	m_timeProp = time;
-		
+	m_instancedProduction = instancedProduction;	
 } 
 
 

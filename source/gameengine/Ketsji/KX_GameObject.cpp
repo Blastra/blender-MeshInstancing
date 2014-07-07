@@ -114,7 +114,8 @@ KX_GameObject::KX_GameObject(
       m_actionManager(NULL),
       m_bRecordAnimation(false),
       m_isDeformable(false),
-      m_alteredSinceReplication(false)
+      m_alteredSinceReplication(false),
+      m_instancedProduction(false)
 
 #ifdef WITH_PYTHON
     , m_attr_dict(NULL),
@@ -724,13 +725,6 @@ void KX_GameObject::UpdateBuckets( bool recursive )
 		}
 	}
 }
-
-/*
-void KX_GameObject::RegisterAlterationOfMesh()
-{
-	printf("Wakka wakka");
-}
-*/
 
 void KX_GameObject::RemoveMeshes()
 {
@@ -1873,6 +1867,8 @@ PyAttributeDef KX_GameObject::Attributes[] = {
 	KX_PYATTRIBUTE_RO_FUNCTION("controllers",	KX_GameObject, pyattr_get_controllers),
 	KX_PYATTRIBUTE_RO_FUNCTION("actuators",		KX_GameObject, pyattr_get_actuators),
 	KX_PYATTRIBUTE_BOOL_RO("alteredSinceReplication",	KX_GameObject, m_alteredSinceReplication),
+	//KX_PYATTRIBUTE_BOOL_RO("instancedProduction",	KX_GameObject, m_instancedProduction),
+	KX_PYATTRIBUTE_BOOL_RW("instancedProduction", KX_GameObject, m_instancedProduction),
 	{NULL} //Sentinel, Turjake
 };
 

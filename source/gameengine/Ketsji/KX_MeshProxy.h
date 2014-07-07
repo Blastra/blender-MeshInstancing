@@ -48,12 +48,12 @@ public:
 	KX_MeshProxy(class RAS_MeshObject* mesh);
 	virtual ~KX_MeshProxy();
 	// Mesh Instancing stuff
-	bool individuallyAlterable;      //Determined by a boolean checkbox in the add object logic brick
-	bool instanceAltered;   /*If any of the vertices have been altered and individuallyAlterable is true,
+	virtual bool individuallyAlterable();      //Determined by a boolean checkbox in the add object logic brick
+	virtual bool instanceAltered();   /*If any of the vertices have been altered and individuallyAlterable is true,
 				this will become true*/  //Turjake 
 
 	void SetMeshModified(bool v);
-
+	void SetInstanceAltered(bool hur);
 	// stuff for cvalue related things
 	virtual CValue*		Calc(VALUE_OPERATOR op, CValue *val);
 	virtual CValue*		CalcFinal(VALUE_DATA_TYPE dtype, VALUE_OPERATOR op, CValue *val);
@@ -77,11 +77,14 @@ public:
 	KX_PYMETHOD(KX_MeshProxy,GetPolygon);
 	KX_PYMETHOD(KX_MeshProxy,Transform);
 	KX_PYMETHOD(KX_MeshProxy,TransformUV);
+	KX_PYMETHOD(KX_MeshProxy,individuallyAlterable);
+	KX_PYMETHOD(KX_MeshProxy,instanceAltered);
 	
 	static PyObject *pyattr_get_materials(void *self_v, const KX_PYATTRIBUTE_DEF *attrdef);
 	static PyObject *pyattr_get_numMaterials(void *self, const KX_PYATTRIBUTE_DEF * attrdef);
 	static PyObject *pyattr_get_individuallyAlterable(void *self, const KX_PYATTRIBUTE_DEF * attrdef);
 	static PyObject *pyattr_get_instanceAltered(void *self, const KX_PYATTRIBUTE_DEF * attrdef);
+	static PyObject *pyattr_get_numPolygons(void *self, const KX_PYATTRIBUTE_DEF * attrdef);
 	
 };
 

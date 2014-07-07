@@ -128,9 +128,10 @@ protected:
 	BL_ActionManager* GetActionManager();
 	
 	bool								m_bRecordAnimation;
+	bool								m_instancedProduction;
 public:
 	bool								m_isDeformable;
-
+	//bool 								m_instancedProduction;
 	/**
 	 * Helper function for modules that can't include KX_ClientObjectInfo.h
 	 */
@@ -1013,6 +1014,7 @@ public:
 	KX_PYMETHOD_DOC(KX_GameObject, setActionFrame);
 	KX_PYMETHOD_DOC(KX_GameObject, isPlayingAction);
 	KX_PYMETHOD_NOARGS(KX_GameObject, alteredSinceReplication);
+	KX_PYMETHOD_NOARGS(KX_GameObject, instancedProduction);
 	
 	/* Dict access */
 	KX_PYMETHOD_VARARGS(KX_GameObject,get);
@@ -1080,6 +1082,7 @@ public:
 	static PyObject*	pyattr_get_controllers(void *self_v, const KX_PYATTRIBUTE_DEF *attrdef);
 	static PyObject*	pyattr_get_actuators(void *self_v, const KX_PYATTRIBUTE_DEF *attrdef);
 	static PyObject*	pyattr_get_alteredSinceReplication(void *self_v, const KX_PYATTRIBUTE_DEF *attrdef);
+	static PyObject*	pyattr_get_instancedProduction(void *self_v, const KX_PYATTRIBUTE_DEF *attrdef);
 	
 	/* getitem/setitem */
 	static PyMappingMethods	Mapping;

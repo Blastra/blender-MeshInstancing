@@ -59,7 +59,7 @@ private:
 
 	bool						m_bModified;
 	bool						m_bMeshModified;
-
+	bool						m_individuallyModifiable;
 	STR_String					m_name;
 	static STR_String			s_emptyname;
 
@@ -79,6 +79,7 @@ public:
 	// for now, meshes need to be in a certain layer (to avoid sorting on lights in realtime)
 	RAS_MeshObject(Mesh* mesh);
 	virtual ~RAS_MeshObject();
+	bool                                            m_instanceAltered;
 
 
 	/* materials */
@@ -100,9 +101,11 @@ public:
 	STR_String&			GetName();
 
 	/* modification state */
-	bool				MeshModified();
+	bool				MeshModified();   //Not part of instancing, here from an older time
+	bool				individuallyAlterable();
+	bool				instanceAltered();
 	void				SetMeshModified(bool v) { m_bMeshModified = v; }
-
+	void				SetInstanceAltered(bool hur) { m_instanceAltered = hur;}
 	/* original blender mesh */
 	Mesh*				GetMesh() { return m_mesh; }
 
