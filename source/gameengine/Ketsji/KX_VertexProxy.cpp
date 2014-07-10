@@ -218,9 +218,14 @@ int KX_VertexProxy::pyattr_set_x(void *self_v, const struct KX_PYATTRIBUTE_DEF *
 		float val = PyFloat_AsDouble(value);
 		MT_Point3 pos(self->m_vertex->getXYZ());
 		pos.x() = val;
+		if (self->m_mesh->m_meshobj->m_individuallyModifiable == true)
+                {
+                cout << self->m_mesh->m_meshobj->m_instanceAltered << endl;
+                }
 		self->m_vertex->SetXYZ(pos);
 		self->m_mesh->SetMeshModified(true);
 		self->m_mesh->m_meshobj->SetInstanceAltered(true);
+		
 		return PY_SET_ATTR_SUCCESS;
 	}
 	return PY_SET_ATTR_FAIL;

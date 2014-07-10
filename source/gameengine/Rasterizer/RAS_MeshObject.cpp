@@ -222,9 +222,10 @@ bool RAS_MeshObject::individuallyAlterable()
 	return m_individuallyModifiable;
 }
 
-bool RAS_MeshObject::instanceAltered()
+bool RAS_MeshObject::instanceAltered(bool insAltered)
 {
-        return m_instanceAltered;
+        m_instanceAltered = insAltered;
+	return m_instanceAltered;
 }
 
 //void RAS_MeshObject::SetInstanceAltered(bool hur)

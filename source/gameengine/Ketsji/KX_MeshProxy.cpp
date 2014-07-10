@@ -115,7 +115,7 @@ STR_String&	KX_MeshProxy::GetName() { return m_meshobj->GetName();}
 void		KX_MeshProxy::SetName(const char *name) { };
 CValue*		KX_MeshProxy::GetReplica() { return NULL;}
 bool		KX_MeshProxy::individuallyAlterable() {return m_meshobj->individuallyAlterable();}
-bool		KX_MeshProxy::instanceAltered() {return m_meshobj->instanceAltered();}
+bool		KX_MeshProxy::instanceAltered(bool inAl) {return m_meshobj->instanceAltered(m_meshobj->instanceAltered(inAl));}
 
 // stuff for python integration
 
@@ -414,7 +414,7 @@ PyObject *KX_MeshProxy::pyattr_get_individuallyAlterable(void *self_v, const KX_
 PyObject *KX_MeshProxy::pyattr_get_instanceAltered(void *self_v, const KX_PYATTRIBUTE_DEF *attrdef)
 {
         KX_MeshProxy * self = static_cast<KX_MeshProxy *> (self_v);
-        return PyBool_FromLong(self->m_meshobj->instanceAltered());
+        return PyBool_FromLong(self->m_meshobj->m_instanceAltered);
 }
 
 

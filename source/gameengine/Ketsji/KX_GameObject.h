@@ -943,6 +943,11 @@ public:
 	{
 		m_alteredSinceReplication = true;
 	}
+	
+	void GetInstancedProduction(bool insProd)
+        {
+                m_instancedProduction = insProd;
+        }
 
 
 

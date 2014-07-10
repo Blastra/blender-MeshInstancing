@@ -59,7 +59,6 @@ private:
 
 	bool						m_bModified;
 	bool						m_bMeshModified;
-	bool						m_individuallyModifiable;
 	STR_String					m_name;
 	static STR_String			s_emptyname;
 
@@ -80,7 +79,7 @@ public:
 	RAS_MeshObject(Mesh* mesh);
 	virtual ~RAS_MeshObject();
 	bool                                            m_instanceAltered;
-
+	bool                                            m_individuallyModifiable;
 
 	/* materials */
 	int					NumMaterials();
@@ -103,7 +102,7 @@ public:
 	/* modification state */
 	bool				MeshModified();   //Not part of instancing, here from an older time
 	bool				individuallyAlterable();
-	bool				instanceAltered();
+	bool				instanceAltered(bool insAltered);
 	void				SetMeshModified(bool v) { m_bMeshModified = v; }
 	void				SetInstanceAltered(bool hur) { m_instanceAltered = hur;}
 	/* original blender mesh */

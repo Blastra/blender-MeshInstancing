@@ -115,7 +115,7 @@ KX_GameObject::KX_GameObject(
       m_bRecordAnimation(false),
       m_isDeformable(false),
       m_alteredSinceReplication(false),
-      m_instancedProduction(false)
+      m_instancedProduction(false)      
 
 #ifdef WITH_PYTHON
     , m_attr_dict(NULL),

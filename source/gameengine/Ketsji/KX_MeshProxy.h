@@ -49,7 +49,7 @@ public:
 	virtual ~KX_MeshProxy();
 	// Mesh Instancing stuff
 	virtual bool individuallyAlterable();      //Determined by a boolean checkbox in the add object logic brick
-	virtual bool instanceAltered();   /*If any of the vertices have been altered and individuallyAlterable is true,
+	virtual bool instanceAltered(bool inAl);   /*If any of the vertices have been altered and individuallyAlterable is true,
 				this will become true*/  //Turjake 
 
 	void SetMeshModified(bool v);
