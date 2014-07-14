@@ -115,8 +115,7 @@ KX_GameObject::KX_GameObject(
       m_bRecordAnimation(false),
       m_isDeformable(false),
       m_alteredSinceReplication(false),
-      m_instancedProduction(false)      
-
+      m_instancedProduction(false)      	
 #ifdef WITH_PYTHON
     , m_attr_dict(NULL),
     m_collisionCallbacks(NULL)
@@ -665,6 +664,7 @@ void KX_GameObject::AddMeshUser()
 	for (size_t i=0;i<m_meshes.size();i++)
 	{
 		m_meshes[i]->AddMeshUser(this, &m_meshSlots, GetDeformer());
+		//m_pubMeshes[i]->AddMeshUser(this, &m_meshSlots, GetDeformer());
 	}
 	// set the part of the mesh slot that never change
 	double* fl = GetOpenGLMatrixPtr()->getPointer();
@@ -730,10 +730,12 @@ void KX_GameObject::RemoveMeshes()
 {
 	for (size_t i=0;i<m_meshes.size();i++)
 		m_meshes[i]->RemoveFromBuckets(this);
+		//m_pubMeshes[i]->RemoveFromBuckets(this);
 
 	//note: meshes can be shared, and are deleted by KX_BlenderSceneConverter
 
 	m_meshes.clear();
+	//m_pubMeshes.clear();
 }
 
 void KX_GameObject::AddLodMesh(RAS_MeshObject* mesh)
@@ -808,6 +810,7 @@ void KX_GameObject::SetDebugColor(unsigned int bgra)
 {
 	for (size_t i=0;i<m_meshes.size();i++)
 		m_meshes[i]->DebugColor(bgra);
+		//m_pubMeshes[i]->DebugColor(bgra);
 }
 
 
@@ -879,7 +882,7 @@ KX_GameObject::UpdateMaterialData(
 					{
 						m->UpdateIPO(rgba, specrgb,hard,spec,ref,emit, alpha);
 						m_meshes[mesh]->SetVertexColor(poly,rgba);
-						
+						//m_pubMeshes[mesh]->SetVertexColor(poly,rgba);
 						// no break here, because one blender material can be split into several game engine materials
 						// (e.g. one uvsphere material is split into one material at poles with ras_mode TRIANGLE and one material for the body
 						// if here was a break then would miss some vertices if material was split

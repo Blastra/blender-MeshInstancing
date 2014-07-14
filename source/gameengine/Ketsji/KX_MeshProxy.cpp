@@ -114,7 +114,7 @@ double		KX_MeshProxy::GetNumber() { return -1;}
 STR_String&	KX_MeshProxy::GetName() { return m_meshobj->GetName();}
 void		KX_MeshProxy::SetName(const char *name) { };
 CValue*		KX_MeshProxy::GetReplica() { return NULL;}
-bool		KX_MeshProxy::individuallyAlterable() {return m_meshobj->individuallyAlterable();}
+bool		KX_MeshProxy::individuallyAlterable() {return m_meshobj->m_individuallyModifiable;}
 bool		KX_MeshProxy::instanceAltered(bool inAl) {return m_meshobj->instanceAltered(m_meshobj->instanceAltered(inAl));}
 
 // stuff for python integration

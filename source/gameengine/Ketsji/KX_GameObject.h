@@ -106,6 +106,7 @@ protected:
 	bool       							m_bVisible; 
 	bool       							m_bCulled; 
 	bool								m_bOccluder;
+	bool								m_alteredSinceReplication;
 
 	PHY_IPhysicsController*				m_pPhysicsController;
 	PHY_IGraphicController*				m_pGraphicController;
@@ -131,11 +132,12 @@ protected:
 	bool								m_instancedProduction;
 public:
 	bool								m_isDeformable;
-	//bool 								m_instancedProduction;
 	/**
 	 * Helper function for modules that can't include KX_ClientObjectInfo.h
 	 */
 	static KX_GameObject* GetClientObject(KX_ClientObjectInfo* info);
+	//std::vector<RAS_MeshObject*>            m_pubMeshes;
+
 
 #ifdef WITH_PYTHON
 	// Python attributes that wont convert into CValue
@@ -944,9 +946,9 @@ public:
 		m_alteredSinceReplication = true;
 	}
 	
-	void GetInstancedProduction(bool insProd)
+	bool GetInstancedProduction()
         {
-                m_instancedProduction = insProd;
+		return m_instancedProduction;	
         }
 
 
@@ -957,8 +959,6 @@ public:
 	CListValue* GetChildrenRecursive();
 
 	KX_Scene*	GetScene();
-
-	bool m_alteredSinceReplication;
 
 #ifdef WITH_PYTHON
 	/**

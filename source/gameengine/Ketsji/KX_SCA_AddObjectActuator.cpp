@@ -265,7 +265,8 @@ void	KX_SCA_AddObjectActuator::InstantAddObject()
 		game_obj->setLinearVelocity(m_linear_velocity, m_localLinvFlag);
 		game_obj->setAngularVelocity(m_angular_velocity,m_localAngvFlag);
 		game_obj->ResolveCombinedVelocities(m_linear_velocity, m_angular_velocity, m_localLinvFlag, m_localAngvFlag);
-		game_obj->GetInstancedProduction(m_instancedProduction);
+		game_obj->GetInstancedProduction();
+		//game_obj->m_pubMeshes[0]->m_meshObj->m_individuallyModifiable = m_instancedProduction;
 		// keep a copy of the last object, to allow python scripters to change it
 		if (m_lastCreatedObject)
 		{

@@ -105,7 +105,7 @@ RAS_MeshObject::RAS_MeshObject(Mesh* mesh)
 	m_bMeshModified(true),
 	m_mesh(mesh),
 	m_instanceAltered(false),
-	m_individuallyModifiable(false)
+	m_individuallyModifiable(true)
 {
 	if (m_mesh && m_mesh->key)
 	{
@@ -224,7 +224,10 @@ bool RAS_MeshObject::individuallyAlterable()
 
 bool RAS_MeshObject::instanceAltered(bool insAltered)
 {
-        m_instanceAltered = insAltered;
+	if (insAltered == true and m_instanceAltered == false)
+        {
+	m_instanceAltered = insAltered;
+	}
 	return m_instanceAltered;
 }
 
