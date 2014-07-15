@@ -709,7 +709,12 @@ typedef struct GameData {
 	short obstacleSimulation;
 	short raster_storage;
 	float levelHeight;
-	float deactivationtime, lineardeactthreshold, angulardeactthreshold, pad2;
+	float deactivationtime, lineardeactthreshold, angulardeactthreshold;
+	short mesh_instancing, paddington[2];
+	short pad[2], padminton[2];
+	char padder[2];
+	int padint;
+	
 } GameData;
 
 #define STEREO_NOSTEREO		1
@@ -765,6 +770,8 @@ typedef struct GameData {
 #define GAME_GLSL_NO_COLOR_MANAGEMENT		(1 << 15)
 #define GAME_SHOW_OBSTACLE_SIMULATION		(1 << 16)
 #define GAME_NO_MATERIAL_CACHING			(1 << 17)
+#define GAME_MESH_INSTANCING				(1 << 18)
+
 /* Note: GameData.flag is now an int (max 32 flags). A short could only take 16 flags */
 
 /* GameData.playerflag */

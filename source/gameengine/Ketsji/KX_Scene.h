@@ -261,6 +261,10 @@ protected:
 	 */
 	bool m_dbvt_culling;
 	
+	// Toggle each mesh to be individually alterable when the game engine starts
+
+	bool mesh_instancing;
+	
 	/**
 	 * Occlusion culling resolution
 	 */ 
@@ -284,6 +288,9 @@ protected:
 	void MarkVisible(SG_Tree *node, RAS_IRasterizer* rasty, KX_Camera*cam,int layer=0);
 	void MarkSubTreeVisible(SG_Tree *node, RAS_IRasterizer* rasty, bool visible, KX_Camera*cam,int layer=0);
 	void MarkVisible(RAS_IRasterizer* rasty, KX_GameObject* gameobj, KX_Camera*cam, int layer=0);
+
+	bool GetInstancedMeshAlteration(bool UISignalMeshAlt);	
+
 	static void PhysicsCullingCallback(KX_ClientObjectInfo* objectInfo, void* cullingInfo);
 
 	double				m_suspendedtime;

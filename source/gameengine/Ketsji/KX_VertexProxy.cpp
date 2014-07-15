@@ -57,8 +57,10 @@ PyTypeObject KX_VertexProxy::Type = {
 	0,
 	&CValue::Type,
 	0,0,0,0,0,0,
-	py_base_new
+	py_base_new,
 };
+
+bool m_alteredSinceReplication = false;
 
 PyMethodDef KX_VertexProxy::Methods[] = {
 	{"getXYZ", (PyCFunction)KX_VertexProxy::sPyGetXYZ,METH_NOARGS},

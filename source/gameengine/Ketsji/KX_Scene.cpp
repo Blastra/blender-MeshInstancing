@@ -230,7 +230,6 @@ KX_Scene::KX_Scene(class SCA_IInputDevice* keyboarddevice,
 	default:
 		m_obstacleSimulation = NULL;
 	}
-	
 #ifdef WITH_PYTHON
 	m_attr_dict = NULL;
 	m_draw_call_pre = NULL;

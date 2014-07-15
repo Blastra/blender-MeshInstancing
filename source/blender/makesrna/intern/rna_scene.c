@@ -5724,6 +5724,14 @@ void RNA_def_scene(BlenderRNA *brna)
 	RNA_def_property_ui_text(prop, "Active Movie Clip", "Active movie clip used for constraints and viewport drawing");
 	RNA_def_property_update(prop, NC_SPACE | ND_SPACE_VIEW3D, NULL);
 
+	/* Global mesh instancing  */
+
+	prop = RNA_def_property(srna, "mesh_instancing", PROP_BOOLEAN, PROP_NONE);
+	RNA_def_property_boolean_sdna(prop, NULL, "mesh_instancing", GAME_MESH_INSTANCING);
+        RNA_def_property_ui_text(prop, "Mesh Instancing", "Each mesh replica produced in game engine runtime is individually modifiable");
+	//RNA_def_property_update(prop, NC_SCENE, NULL);
+
+
 	/* color management */
 	prop = RNA_def_property(srna, "view_settings", PROP_POINTER, PROP_NONE);
 	RNA_def_property_pointer_sdna(prop, NULL, "view_settings");

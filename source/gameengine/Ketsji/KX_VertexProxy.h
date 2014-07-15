@@ -43,6 +43,7 @@ protected:
 
 	class RAS_TexVert*	m_vertex;
 	class KX_MeshProxy*	m_mesh;
+	bool	m_alteredSinceReplication;
 public:
 	KX_VertexProxy(class KX_MeshProxy*mesh, class RAS_TexVert* vertex);
 	virtual ~KX_VertexProxy();
